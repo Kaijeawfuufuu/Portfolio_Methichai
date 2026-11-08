@@ -370,6 +370,8 @@
       desc: 'Complete survival exploration game presentation sheet created for the 48-Hour Space Exploration Game Jam. Depicts high-stakes oxygen survival, planetary monster evasion, and extraction contract upgrades.',
       thumb: 'assets/images/games/oxie_death_master.jpg',
       fullSheet: 'assets/images/games/oxie_death_master.jpg',
+      externalUrl: 'https://drive.google.com/drive/folders/1PCrKt4xwoiRjHyeOumY1-foBduX_dLKU?usp=sharing',
+      externalLabel: 'Play Prototype (Google Drive)',
       tags: ['Game Jam', '2.5D / 2D Art', 'Unity', 'Survival Mechanics'],
       views: [
         { label: 'OXIE DEATH Game Jam Master Sheet', src: 'assets/images/games/oxie_death_master.jpg' }
