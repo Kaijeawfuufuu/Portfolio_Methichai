@@ -7,316 +7,322 @@
   'use strict';
 
   const ARTWORKS = [
-    // ---------------- CHARACTERS & CREATURES ----------------
+    // ---------------- 3D CHARACTERS ----------------
     {
       id: 'chouri-characters',
       featured: true,
-      category: 'characters',
+      category: 'character',
       badge: '3D CHARACTER',
       year: 'WE ARE CHOURI',
-      spec: 'CHARACTER MODEL',
-      title: 'Guidi & Zeppe — Player Characters',
-      desc: 'Main playable duo designed and modeled for the 3D Unity adventure We Are Chouri. Includes 2D color palette explorations and full front, side, and back 3D turnarounds.',
+      spec: 'DUAL PROTAGONISTS',
+      title: 'Guidi & Zeppe — Playable Characters & Turnarounds',
+      desc: 'Complete master character design board for the 3D Unity adventure We Are Chouri. Features playable protagonists Guidi & Zeppe, color palette studies, 3D orthographic turnarounds, and detailed topological modeling.',
       thumb: 'assets/images/web/page_02.jpg',
       fullSheet: 'assets/images/page_02.png',
       tags: ['Character Modeling', 'Blender / Maya', 'Substance 3D Painter', 'Unity'],
       views: [
-        { label: 'Complete Presentation Sheet', src: 'assets/images/web/page_02.jpg' },
-        { label: '3D Turnaround Render', src: 'assets/images/crops/chouri_characters.jpg' },
-        { label: 'Monsters & Lanterns', src: 'assets/images/web/page_03.jpg' },
-        { label: 'Fantasy Props (15)', src: 'assets/images/web/page_04.jpg' },
-        { label: 'In-Engine Unity World', src: 'assets/images/web/page_05.jpg' }
+        { label: 'Complete Character Presentation Sheet', src: 'assets/images/web/page_02.jpg' }
+      ]
+    },
+    {
+      id: 'purple-jester',
+      featured: true,
+      category: 'character',
+      badge: '3D CHARACTER',
+      year: 'CHARACTER MODEL',
+      spec: 'CHARACTER & RIGGING',
+      title: 'Purple Jester — 3D Character Modeling & Rigging',
+      desc: 'Stylized purple jester character model featuring multi-angle turnarounds, joint deformation rigging, clean wireframe topology, and whimsical costume tailoring.',
+      thumb: 'assets/images/crops/jester_rig.jpg',
+      fullSheet: 'assets/images/crops/jester_rig.jpg',
+      tags: ['Character Modeling', 'Rigging', 'Topology', 'Autodesk Maya'],
+      views: [
+        { label: 'Purple Jester Model & Rig', src: 'assets/images/crops/jester_rig.jpg' },
+        { label: 'Front Orthographic View', src: 'Project/Pic/3D_Art/Joker_Front.png' },
+        { label: 'Side Orthographic View', src: 'Project/Pic/3D_Art/Joker_Side.png' }
       ]
     },
     {
       id: 'roblox-bosses',
       featured: false,
-      category: 'characters',
+      category: 'character',
       badge: 'BOSS & CREATURES',
       year: 'ROBLOX GAME',
-      spec: '6 CREATURE MODELS',
-      title: 'No More Rat! — Boss & Enemy Lineup',
-      desc: 'Six original boss and enemy creature 3D models created for the Roblox hack-and-slash game [Updated] No More Rat!, featuring mutant brutes, a four-armed boss, venomous beast, mounted spear rider, and dark rat demon.',
+      spec: '6 CREATURE LINEUP',
+      title: 'No More Rat! — 6 Boss & Creature Lineup',
+      desc: 'Complete creature lineup presentation sheet created for the Roblox hack-and-slash game [Updated] No More Rat!, featuring all six original mutant boss models: four-armed rat brute, venomous beast, dark rat demon, mounted spear rider, and mutant warriors.',
       thumb: 'assets/images/web/page_07.jpg',
       fullSheet: 'assets/images/page_07.png',
       tags: ['Creature Modeling', 'ZBrush', 'Blender', 'Roblox Studio'],
+      externalUrl: 'https://www.roblox.com/games/79475326799719/No-More-Rat',
+      externalLabel: 'Play No More Rat! on Roblox',
       views: [
-        { label: '6 Boss Lineup Sheet', src: 'assets/images/web/page_07.jpg' },
-        { label: 'Four-Arm Rat', src: 'Project/Pic/3D_Art/Four_Arm_Rat.png' },
-        { label: 'Dark Rat Demon', src: 'Project/Pic/3D_Art/Rat_demon.png' },
-        { label: 'Mutant Green Rat', src: 'Project/Pic/3D_Art/Green_Rat.png' },
-        { label: 'Game Overview Sheet', src: 'assets/images/web/page_06.jpg' }
+        { label: '6 Boss Lineup Master Sheet', src: 'assets/images/web/page_07.jpg' }
       ]
     },
     {
       id: 'roblox-game',
       featured: false,
-      category: 'characters',
+      category: 'character',
       badge: 'ROBLOX CHARACTER',
       year: 'ROBLOX GAME',
-      spec: 'HERO & BOSS ART',
-      title: 'No More Rat! — Exterminator Hamster & Key Art',
-      desc: 'Playable trenchcoat hamster character model, combat key art, and in-game winter stage showcase for [Updated] No More Rat! by MidnightParadise on Roblox.',
+      spec: 'HERO & KEY ART',
+      title: 'No More Rat! — Hamster Hero & Game Key Art',
+      desc: 'Complete game overview sheet for [Updated] No More Rat! on Roblox, showcasing the stylized trenchcoat exterminator hamster hero model, combat key art, and in-game stage lighting.',
       thumb: 'assets/images/web/page_06.jpg',
       fullSheet: 'assets/images/page_06.png',
       tags: ['3D Character', 'Roblox Studio', 'Key Art'],
-      externalUrl: 'https://www.roblox.com/users/2594844006/profile',
-      externalLabel: 'Roblox Profile (Dngo_Kiwrn)',
+      externalUrl: 'https://www.roblox.com/games/79475326799719/No-More-Rat',
+      externalLabel: 'Play No More Rat! on Roblox',
       views: [
-        { label: 'Full Game Sheet', src: 'assets/images/web/page_06.jpg' },
-        { label: 'Combat Key Art', src: 'assets/images/crops/roblox_keyart.jpg' },
-        { label: 'In-Game Stage', src: 'assets/images/crops/roblox_gameplay.jpg' }
+        { label: 'Game & Key Art Master Sheet', src: 'assets/images/web/page_06.jpg' }
       ]
     },
     {
       id: 'chouri-monsters',
       featured: false,
-      category: 'characters',
+      category: 'character',
       badge: 'MONSTERS & UVs',
       year: 'WE ARE CHOURI',
-      spec: 'UV & TEXTURING',
+      spec: 'UV & TOPOLOGY',
       title: 'We Are Chouri — Monsters & Tiki Lanterns',
-      desc: 'Plush-inspired monster enemies, horned shrine guardian with 1001 UDIM UV unwrap, and modular tiki lanterns showing wireframe topology, UV checker, and glowing emissive variants.',
+      desc: 'Unified presentation sheet featuring plush bear monsters, horned stone shrine demon with 1001 UDIM UV layout, and modular carved tiki lanterns with wireframe topology and emissive glowing textures.',
       thumb: 'assets/images/web/page_03.jpg',
       fullSheet: 'assets/images/page_03.png',
       tags: ['Monster Modeling', 'UV Unwrapping', 'Substance 3D Painter'],
       views: [
-        { label: 'Full UV & Lantern Sheet', src: 'assets/images/web/page_03.jpg' },
-        { label: 'Monster Models Render', src: 'assets/images/crops/chouri_monsters.jpg' }
+        { label: 'Monsters & Tiki Lanterns Master Sheet', src: 'assets/images/web/page_03.jpg' }
       ]
     },
     {
       id: 'zbrush-sculpts',
       featured: true,
-      category: 'characters',
+      category: 'character',
       badge: 'DIGITAL SCULPT',
       year: 'SCULPT STUDY',
       spec: 'ZBRUSH • HIGH POLY',
       title: 'Stylized Figure & Warrior Bust Sculpts',
-      desc: 'High-poly ZBrush character and anatomy sculpting showcase featuring a stylized metallic stage figure flanked by expressive elf-eared warrior busts across four material studies.',
+      desc: 'Unified high-poly ZBrush digital sculpting showcase combining stylized metallic stage figure with expressive elf-eared warrior busts across four distinct material and anatomy render studies.',
       thumb: 'assets/images/web/page_17.jpg',
       fullSheet: 'assets/images/page_17.png',
       tags: ['ZBrush', 'Digital Sculpting', 'Character Anatomy', 'Materials'],
       views: [
-        { label: 'High-Poly Sculpt Presentation Sheet', src: 'assets/images/web/page_17.jpg' }
+        { label: 'ZBrush High-Poly Sculpt Master Sheet', src: 'assets/images/web/page_17.jpg' }
       ]
     },
 
-    // ---------------- ENVIRONMENTS & PROPS ----------------
+    // ---------------- 3D PROPS & WEAPONS ----------------
     {
-      id: 'alley-lighting',
-      featured: true,
-      category: 'environments',
-      badge: 'ENVIRONMENT',
-      year: 'LIGHTING STUDY',
-      spec: 'SCENE & LIGHTING',
-      title: 'Japanese Sunset Alley & Interior Lighting',
-      desc: 'Atmospheric 3D environment lighting studies exploring golden-hour bounce light through a lantern-lined Japanese alleyway alongside a warm modern living room interior.',
-      thumb: 'assets/images/web/page_10.jpg',
-      fullSheet: 'assets/images/page_10.png',
-      tags: ['3D Environment', 'Lighting & Rendering', 'Blender / Maya'],
-      views: [
-        { label: 'Full 4-Scene Lighting Sheet', src: 'assets/images/web/page_10.jpg' },
-        { label: 'Japanese Sunset Alley Render', src: 'assets/images/crops/alley_sunset.jpg' },
-        { label: 'Modern Living Room Interior', src: 'assets/images/crops/modern_interior.jpg' },
-        { label: 'Cel-Shaded Creature', src: 'assets/images/crops/cel_creature.jpg' },
-        { label: 'Sunset Fisheye Street Render', src: 'assets/images/crops/street_character.jpg' }
-      ]
-    },
-    {
-      id: 'isometric-studio',
-      featured: true,
-      category: 'environments',
-      badge: 'ISOMETRIC ROOM',
-      year: '3D DIORAMA',
-      spec: 'INTERIOR & PROPS',
-      title: 'Isometric Artist Studio Diorama',
-      desc: 'Cozy nocturnal artist bedroom diorama packed with framed paintings, easels, drafting desk sketches, miniature figures, paint jars, and cool moonlight streaming through frosted windows.',
-      thumb: 'assets/images/web/page_11.jpg',
-      fullSheet: 'assets/images/page_11.png',
-      tags: ['3D Environment', 'Isometric Diorama', 'Lighting', 'Props'],
-      views: [
-        { label: 'Full Studio & Jester Sheet', src: 'assets/images/web/page_11.jpg' },
-        { label: 'Isometric Studio 3D Render', src: 'Project/Pic/Intillia/Room_Team_Kokocrunch.jpg' }
-      ]
-    },
-    {
-      id: 'chouri-world',
+      id: 'chouri-props',
       featured: false,
-      category: 'environments',
-      badge: 'UNITY WORLD',
+      category: 'prop',
+      badge: 'GAME PROPS',
       year: 'WE ARE CHOURI',
-      spec: 'IN-ENGINE LEVEL',
-      title: 'We Are Chouri — In-Engine Unity Environments',
-      desc: 'Real-time Unity environment assembly showcasing waffle bridges, glowing tiki totems, monster shrines, and bioluminescent crystal caverns.',
-      thumb: 'assets/images/web/page_05.jpg',
-      fullSheet: 'assets/images/page_05.png',
-      tags: ['Unity Engine', 'Level Art', 'Environment Lighting'],
+      spec: '15 ASSET COLLECTION',
+      title: 'Stylized Candy & Fantasy Props Collection',
+      desc: 'Complete collection presentation board displaying fifteen game-ready stylized props for We Are Chouri: macarons, waffles, candy canes, frosted donuts, glowing candles, and organic artifacts arranged together.',
+      thumb: 'assets/images/web/page_04.jpg',
+      fullSheet: 'assets/images/page_04.png',
+      tags: ['Prop Modeling', 'Stylized Texturing', 'Game Assets'],
       views: [
-        { label: 'Full 4-Shot Environment Sheet', src: 'assets/images/web/page_05.jpg' },
-        { label: 'Totem Shrine Render', src: 'assets/images/crops/chouri_shrine.jpg' },
-        { label: 'Waffle Bridge Render', src: 'assets/images/crops/chouri_bridge.jpg' },
-        { label: 'Crystal Cavern Render', src: 'assets/images/crops/chouri_cavern.jpg' }
-      ]
-    },
-    {
-      id: 'render-scenes-props',
-      featured: false,
-      category: 'environments',
-      badge: 'SCENES & MODELS',
-      year: '3D PROJECTS',
-      spec: 'ENVIRONMENT & PROPS',
-      title: 'Neon Boss Hall, Pokémon Center & Banana House',
-      desc: 'Collection of stylized architectural models and lit boss arenas: three material passes of a Pokémon Center (clean, weathered, horror), wireframe Banana House, sculpted hand on ice pedestal, and dramatic Unity boss scenes.',
-      thumb: 'assets/images/web/page_09.jpg',
-      fullSheet: 'assets/images/page_09.png',
-      tags: ['3D Modeling', 'Texturing', 'Scene Lighting', 'Unity'],
-      views: [
-        { label: 'Full 3D Projects Sheet', src: 'assets/images/web/page_09.jpg' },
-        { label: 'Neon Shrine Scene', src: 'Project/Pic/Unity/Rat_scene1.png' },
-        { label: 'Boss Arena Battle', src: 'Project/Pic/Unity/Rat_scene2.png' },
-        { label: 'Pokémon Center (Dark)', src: 'Project/Pic/Intillia/Pokemon_Center_Dark.png' },
-        { label: 'Banana House', src: 'Project/Pic/Intillia/Banana_House.png' },
-        { label: 'Ice Pedestal Hand', src: 'Project/Pic/3D_Art/Hand.png' }
-      ]
-    },
-    {
-      id: 'tiki-island',
-      featured: false,
-      category: 'environments',
-      badge: 'LOW-POLY DIORAMA',
-      year: 'STYLIZED SCENE',
-      spec: 'LOW POLY',
-      title: 'Stylized Kraken & Tiki Island Diorama',
-      desc: 'Vibrant low-poly island diorama surrounded by giant purple tentacles, cyan tiki statues, wooden docks, barrels, and glowing crystals.',
-      thumb: 'assets/images/web/page_13.jpg',
-      fullSheet: 'assets/images/page_13.png',
-      tags: ['Low-Poly Art', 'Blender / Maya', 'Stylized Environment'],
-      views: [
-        { label: 'Full Island Diorama Sheet', src: 'assets/images/web/page_13.jpg' }
+        { label: '15 Fantasy Props Master Sheet', src: 'assets/images/web/page_04.jpg' }
       ]
     },
     {
       id: 'weapon-models',
       featured: false,
-      category: 'environments',
+      category: 'prop',
       badge: 'HARD SURFACE',
       year: '3D WEAPONS',
-      spec: 'PBR TEXTURING',
+      spec: 'FIREARMS PACK',
       title: 'M16 & AK-47 Assault Rifle Models',
-      desc: 'Hard-surface 3D firearm models of an M16A1 and AK-47 featuring worn metal edge wear, polymer furniture, and wood-grain stock textures.',
+      desc: 'Unified hard-surface firearm presentation board presenting both M16A1 and AK-47 assault rifles with worn metal edge wear, polymer furniture, and rich wood-grain stock textures.',
       thumb: 'assets/images/web/page_12.jpg',
       fullSheet: 'assets/images/page_12.png',
       tags: ['Hard-Surface Modeling', 'Substance 3D Painter', 'Game Weapons'],
       views: [
-        { label: 'Full Weapons Sheet', src: 'assets/images/web/page_12.jpg' }
+        { label: 'M16 & AK-47 Weapons Master Sheet', src: 'assets/images/web/page_12.jpg' }
       ]
     },
     {
-      id: 'chouri-props',
+      id: 'banana-house',
       featured: false,
-      category: 'environments',
-      badge: 'GAME PROPS',
-      year: 'WE ARE CHOURI',
-      spec: '15 ASSET PACK',
-      title: 'Stylized Candy & Fantasy Props Collection',
-      desc: 'Fifteen game-ready stylized props created for We Are Chouri, including macarons, waffles, candy canes, frosted donuts, glowing candles, mushrooms, and surreal organic artifacts.',
-      thumb: 'assets/images/web/page_04.jpg',
-      fullSheet: 'assets/images/page_04.png',
-      tags: ['Prop Modeling', 'Stylized Texturing', 'Game Assets'],
+      category: 'prop',
+      badge: '3D PROP',
+      year: 'STYLIZED PROP',
+      spec: 'MODEL & WIREFRAME',
+      title: 'Stylized Banana House & Wireframe Topology',
+      desc: 'Whimsical tropical banana beach hut prop featuring hand-painted peeling banana peel roof tiles, wooden stilts, hanging lantern signage, and clean subdivision wireframe.',
+      thumb: 'Project/Pic/Intillia/Banana_House.png',
+      fullSheet: 'Project/Pic/Intillia/Banana_House.png',
+      tags: ['3D Prop Art', 'Subdivision Topology', 'Stylized Modeling'],
       views: [
-        { label: 'Full 15 Props Sheet', src: 'assets/images/web/page_04.jpg' }
+        { label: 'Banana House Render', src: 'Project/Pic/Intillia/Banana_House.png' }
       ]
     },
     {
-      id: 'fantasy-trees',
+      id: 'sculpted-hand',
       featured: false,
-      category: 'environments',
-      badge: 'FOLIAGE ASSETS',
-      year: 'STYLIZED PROPS',
-      spec: '3 COLORWAYS',
-      title: 'Stylized Twisted Fantasy Trees',
-      desc: 'Sculptural fantasy tree assets with spiraled patterned trunks and layered canopy silhouettes in three vibrant color palettes.',
-      thumb: 'assets/images/web/page_14.jpg',
-      fullSheet: 'assets/images/page_14.png',
-      tags: ['Stylized Foliage', '3D Prop Art', 'Color Variants'],
+      category: 'prop',
+      badge: 'DIGITAL SCULPT',
+      year: 'SCULPT STUDY',
+      spec: 'HIGH-POLY SCULPT',
+      title: 'Sculpted Ice Pedestal Hand',
+      desc: 'Expressive organic digital sculpt of a reaching human hand rising from an icy crystalline rock pedestal, capturing detailed muscular tension, skin creases, and stylized ice facets.',
+      thumb: 'Project/Pic/3D_Art/Hand.png',
+      fullSheet: 'Project/Pic/3D_Art/Hand.png',
+      tags: ['ZBrush', 'Organic Sculpting', 'Anatomy', 'Ice Pedestal'],
       views: [
-        { label: 'Full Tree Variants Sheet', src: 'assets/images/web/page_14.jpg' }
+        { label: 'Sculpted Hand on Ice Pedestal', src: 'Project/Pic/3D_Art/Hand.png' }
       ]
     },
     {
       id: 'carton-props',
       featured: false,
-      category: 'environments',
+      category: 'prop',
       badge: 'NPR / CEL PROP',
       year: 'STYLIZED PROPS',
       spec: 'TOON OUTLINE',
       title: 'Hand-Drawn Cel-Shaded Carton Props',
-      desc: 'Pop-art 3D carton props combining bold ink outlines, floating graphic accents, and vibrant gradient fills across cyan, sunset, and violet variations.',
+      desc: 'Complete NPR cartoon prop presentation board uniting bold ink outlines, graphic accents, and vibrant gradient fills across cyan, sunset orange, and violet color variations.',
       thumb: 'assets/images/web/page_15.jpg',
       fullSheet: 'assets/images/page_15.png',
       tags: ['NPR / Toon Shading', '2D/3D Hybrid', 'Blender'],
       views: [
-        { label: 'Full Carton Props Sheet', src: 'assets/images/web/page_15.jpg' }
+        { label: 'Cel-Shaded Carton Props Master Sheet', src: 'assets/images/web/page_15.jpg' }
       ]
     },
 
-    // ---------------- ANIMATION, SHADERS & TECH ART ----------------
+    // ---------------- 3D ENVIRONMENTS ----------------
     {
-      id: 'anim-creature-motion',
+      id: 'alley-lighting',
       featured: true,
-      category: 'tech',
-      badge: '3D ANIMATION',
-      year: 'ANIMATION REEL',
-      spec: 'CHARACTER LOCOMOTION',
-      title: 'Four-Arm Character Run Cycle & Motion Animation',
-      desc: 'Multi-limbed character locomotion animation reel, weight shifts, and procedural motion trail staging.',
-      thumb: 'assets/images/web/page_08.jpg',
-      videoId: 'wsLVAP0mqXw',
-      externalUrl: 'https://www.youtube.com/watch?v=wsLVAP0mqXw',
-      externalLabel: 'Watch on YouTube',
-      fullSheet: 'assets/images/page_08.png',
-      tags: ['3D Animation', 'Character Rigging', 'Autodesk Maya', 'Locomotion'],
+      category: 'environment',
+      badge: 'ENVIRONMENT',
+      year: 'LIGHTING STUDY',
+      spec: '4-SCENE LIGHTING',
+      title: 'Japanese Sunset Alley & Interior Lighting',
+      desc: 'Complete four-scene 3D lighting study board showcasing golden-hour bounce lighting through a lantern-lined Japanese alleyway, warm modern living room interior, fisheye street character, and cel-shaded creature.',
+      thumb: 'assets/images/web/page_10.jpg',
+      fullSheet: 'assets/images/page_10.png',
+      tags: ['3D Environment', 'Lighting & Rendering', 'Blender / Maya'],
       views: [
-        { label: 'Play Animation Video', videoId: 'wsLVAP0mqXw', thumb: 'assets/images/crops/anim_boss_run.jpg' },
-        { label: 'Full Animation Reel Sheet', src: 'assets/images/web/page_08.jpg' }
+        { label: '4-Scene Lighting Master Sheet', src: 'assets/images/web/page_10.jpg' }
       ]
     },
     {
-      id: 'anim-chouri',
+      id: 'isometric-studio',
       featured: true,
-      category: 'tech',
-      badge: 'UNITY CUTSCENE',
-      year: 'WE ARE CHOURI',
-      spec: 'CINEMATIC',
-      title: 'We Are Chouri — Forest Awakening Cutscene',
-      desc: 'In-engine 3D cutscene animation created in Unity for We Are Chouri, staging character acting, camera framing, and atmospheric forest lighting.',
-      thumb: 'assets/images/web/page_08.jpg',
-      videoId: '4QMDKKF5QoQ',
-      externalUrl: 'https://youtu.be/4QMDKKF5QoQ',
-      externalLabel: 'Watch on YouTube',
-      fullSheet: 'assets/images/page_08.png',
-      tags: ['Unity Timeline', '3D Cutscene', 'Camera Staging'],
+      category: 'environment',
+      badge: 'ISOMETRIC ROOM',
+      year: '3D DIORAMA',
+      spec: 'STUDIO DIORAMA',
+      title: 'Isometric Artist Studio Diorama',
+      desc: 'Cozy nocturnal artist bedroom diorama packed with framed paintings, easels, drafting desk sketches, miniature figures, paint jars, and cool moonlight streaming through frosted windows.',
+      thumb: 'Project/Pic/Intillia/Room_Team_Kokocrunch.jpg',
+      fullSheet: 'Project/Pic/Intillia/Room_Team_Kokocrunch.jpg',
+      tags: ['3D Environment', 'Isometric Diorama', 'Lighting', 'Props'],
       views: [
-        { label: 'Play Cutscene Video', videoId: '4QMDKKF5QoQ', thumb: 'assets/images/crops/anim_chouri.jpg' },
-        { label: 'Full Animation Reel Sheet', src: 'assets/images/web/page_08.jpg' }
+        { label: 'Isometric Studio Diorama Render', src: 'Project/Pic/Intillia/Room_Team_Kokocrunch.jpg' }
+      ]
+    },
+    {
+      id: 'neon-shrine-scene',
+      featured: true,
+      category: 'environment',
+      badge: '3D ENVIRONMENT',
+      year: 'SCENE LIGHTING',
+      spec: 'UNITY BOSS ARENA',
+      title: 'Neon Shrine Boss Arena & Torii Scene',
+      desc: 'Atmospheric in-engine Unity boss encounter scene showcasing a dramatic glowing neon Torii shrine, moody volumetric fog, and dynamic battle lighting.',
+      thumb: 'Project/Pic/Unity/Rat_scene1.png',
+      fullSheet: 'Project/Pic/Unity/Rat_scene1.png',
+      tags: ['Unity Engine', 'Scene Lighting', 'Level Art', 'Atmosphere'],
+      views: [
+        { label: 'Neon Shrine Main Shot', src: 'Project/Pic/Unity/Rat_scene1.png' },
+        { label: 'Boss Arena Battle View', src: 'Project/Pic/Unity/Rat_scene2.png' }
+      ]
+    },
+    {
+      id: 'pokemon-center',
+      featured: false,
+      category: 'environment',
+      badge: '3D ENVIRONMENT',
+      year: 'ARCHITECTURE',
+      spec: '3 MATERIAL PASSES',
+      title: 'Stylized Pokémon Center — 3 Material Passes',
+      desc: 'Stylized architectural model of a Pokémon Center explored across three distinct material finishes: pristine clean cartoon, weathered realistic brick, and dark horror overgrown edition.',
+      thumb: 'Project/Pic/Intillia/Pokemon_Center_Dark.png',
+      fullSheet: 'Project/Pic/Intillia/Pokemon_Center_Dark.png',
+      tags: ['3D Architecture', 'Material Look-Dev', 'Texturing', 'Substance Painter'],
+      views: [
+        { label: 'Dark Horror Edition', src: 'Project/Pic/Intillia/Pokemon_Center_Dark.png' },
+        { label: 'Weathered Texture Pass', src: 'Project/Pic/Intillia/Pokemon_Center_Texture.png' },
+        { label: 'Clean Cartoon Pass', src: 'Project/Pic/Intillia/Pokemon_Center_Basic.png' }
+      ]
+    },
+    {
+      id: 'chouri-world',
+      featured: false,
+      category: 'environment',
+      badge: 'UNITY WORLD',
+      year: 'WE ARE CHOURI',
+      spec: 'LEVEL DESIGN',
+      title: 'We Are Chouri — In-Engine Unity Environments',
+      desc: 'Complete real-time Unity environment showcase combining waffle suspension bridges, illuminated tiki totems, monster shrines, and bioluminescent crystal caverns into a unified world board.',
+      thumb: 'assets/images/web/page_05.jpg',
+      fullSheet: 'assets/images/page_05.png',
+      tags: ['Unity Engine', 'Level Art', 'Environment Lighting'],
+      views: [
+        { label: 'In-Engine Unity Environments Master Sheet', src: 'assets/images/web/page_05.jpg' }
+      ]
+    },
+    {
+      id: 'tiki-island',
+      featured: false,
+      category: 'environment',
+      badge: 'LOW-POLY DIORAMA',
+      year: 'STYLIZED SCENE',
+      spec: 'LOW POLY',
+      title: 'Stylized Kraken & Tiki Island Diorama',
+      desc: 'Complete stylized island diorama presentation board surrounded by giant purple kraken tentacles, carved tiki totems, wooden docks, barrels, and glowing crystals.',
+      thumb: 'assets/images/web/page_13.jpg',
+      fullSheet: 'assets/images/page_13.png',
+      tags: ['Low-Poly Art', 'Blender / Maya', 'Stylized Environment'],
+      views: [
+        { label: 'Kraken & Tiki Island Master Sheet', src: 'assets/images/web/page_13.jpg' }
+      ]
+    },
+    {
+      id: 'fantasy-trees',
+      featured: false,
+      category: 'environment',
+      badge: 'FOLIAGE ASSETS',
+      year: 'STYLIZED PROPS',
+      spec: '3 COLORWAYS',
+      title: 'Stylized Twisted Fantasy Trees',
+      desc: 'Complete foliage presentation sheet showcasing twisted fantasy trees with spiraled trunks and layered canopy silhouettes across three vibrant color palettes.',
+      thumb: 'assets/images/web/page_14.jpg',
+      fullSheet: 'assets/images/page_14.png',
+      tags: ['Stylized Foliage', '3D Prop Art', 'Color Variants'],
+      views: [
+        { label: 'Fantasy Trees 3-Colorway Master Sheet', src: 'assets/images/web/page_14.jpg' }
       ]
     },
     {
       id: 'shader-studies',
       featured: false,
-      category: 'tech',
+      category: 'environment',
       badge: 'SHADERS & MATERIALS',
       year: 'TECH ART',
-      spec: 'EMISSIVE • GLASS',
+      spec: 'LOOK-DEV',
       title: 'Procedural Holographic, Contour & Glass Shaders',
-      desc: 'Shader and material look-dev experiments testing soft emissive glow, topographic contour wireframe lines, Fresnel X-ray translucency, and refractive glass.',
+      desc: 'Complete shader development presentation board demonstrating soft emissive glow, topographic contour wireframes, Fresnel translucency, and refractive glass materials.',
       thumb: 'assets/images/web/page_16.jpg',
       fullSheet: 'assets/images/page_16.png',
       tags: ['Shader Look-Dev', 'Fresnel / Refraction', 'Blender / Unity'],
       views: [
-        { label: 'Full Shader Sheet', src: 'assets/images/web/page_16.jpg' },
-        { label: 'Shader Strip Detail', src: 'assets/images/crops/shader_ducks.jpg' }
+        { label: 'Shader Studies Master Sheet', src: 'assets/images/web/page_16.jpg' }
       ]
     },
 
@@ -327,16 +333,14 @@
       category: '2d',
       badge: 'PC GAME UX/UI',
       year: '2D HORROR SHOT',
-      spec: 'HUD & MENUS',
+      spec: 'COMPLETE UX/UI',
       title: 'TiTLE’s Nightmare — 2D Horror PC Game UX/UI',
-      desc: 'Complete UX/UI visual design for a 2D first-person horror shooter: app icon, eerie hallway title screen, revolver combat HUD, and audio/system configuration menus.',
+      desc: 'Complete unified UX/UI presentation sheet for a 2D first-person horror shooter: app icon, eerie hallway title screen, revolver combat HUD, and audio/system configuration menus.',
       thumb: 'assets/images/web/page_18.jpg',
       fullSheet: 'assets/images/page_18.png',
       tags: ['Game UX/UI', 'HUD Design', 'Figma', 'Photoshop'],
       views: [
-        { label: 'Full UX/UI Sheet', src: 'assets/images/web/page_18.jpg' },
-        { label: 'Combat HUD View', src: 'assets/images/crops/horror_hud.jpg' },
-        { label: 'Title Screen UI', src: 'assets/images/crops/horror_menu.jpg' }
+        { label: 'Horror PC Game UX/UI Master Sheet', src: 'assets/images/web/page_18.jpg' }
       ]
     },
     {
@@ -345,17 +349,14 @@
       category: '2d',
       badge: '2D GAMES & TILES',
       year: 'MOBILE & UNITY 2D',
-      spec: 'SPRITES • TILEMAP',
+      spec: 'MOBILE & TILESET',
       title: 'Juukie!!, Dominion’s War & Seamless 2D Tilesets',
-      desc: 'Designed and developed 2D mobile games (Juukie!! The Mouse : Adventures and Dominion’s War : The Card Game) alongside original 2D character sprites and seamless Unity cave Tile Palettes.',
+      desc: 'Complete mobile game and tileset presentation board featuring Juukie!! The Mouse, Dominion’s War card game, custom 2D character sprites, and seamless Unity 2D cave Tile Palettes.',
       thumb: 'assets/images/web/page_19.jpg',
       fullSheet: 'assets/images/page_19.png',
       tags: ['2D Game Art', 'Unity Tilemap', 'Mobile Game Design'],
       views: [
-        { label: 'Full Mobile Games Sheet', src: 'assets/images/web/page_19.jpg' },
-        { label: 'Characters & Tileset Sheet', src: 'assets/images/web/page_20.jpg' },
-        { label: 'Juukie Gameplay View', src: 'Project/Pic/Unity/Juukie.png' },
-        { label: 'Dominion Card Game View', src: 'assets/images/crops/dominion_cardgame.jpg' }
+        { label: '2D Mobile Games & Tilesets Master Sheet', src: 'assets/images/web/page_19.jpg' }
       ]
     },
     {
@@ -364,16 +365,14 @@
       category: '2d',
       badge: 'GAME JAM 2026',
       year: 'GAME JAM',
-      spec: '2.5D SURVIVAL EXPLORATION',
+      spec: 'SPACE SURVIVAL',
       title: 'OXIE DEATH (OxieRun) — Space Survival Extraction',
-      desc: 'High-stakes survival exploration game created for the 48-Hour Space Exploration Game Jam. Manage critical depleting oxygen, evade deadly monstrosities, extract rare artifacts, and upgrade suit gear.',
-      thumb: 'assets/images/games/oxie_death_title.png',
-      fullSheet: 'assets/images/games/oxie_death_title.png',
+      desc: 'Complete survival exploration game presentation sheet created for the 48-Hour Space Exploration Game Jam. Depicts high-stakes oxygen survival, planetary monster evasion, and extraction contract upgrades.',
+      thumb: 'assets/images/games/oxie_death_master.jpg',
+      fullSheet: 'assets/images/games/oxie_death_master.jpg',
       tags: ['Game Jam', '2.5D / 2D Art', 'Unity', 'Survival Mechanics'],
       views: [
-        { label: 'Title Art & Poster', src: 'assets/images/games/oxie_death_title.png' },
-        { label: 'Game Jam Overview', src: 'assets/images/games/oxie_death_banner.jpg' },
-        { label: 'Key Art & Atmosphere', src: 'assets/images/crops/oxie_death_keyart.jpg' }
+        { label: 'OXIE DEATH Game Jam Master Sheet', src: 'assets/images/games/oxie_death_master.jpg' }
       ]
     },
     {
@@ -382,16 +381,16 @@
       category: '2d',
       badge: 'ITCH.IO GAME',
       year: 'PC FIGHTING',
-      spec: 'ACTION COMBAT',
+      spec: 'FIGHTING ACTION',
       title: 'WingBeat — Fast-Paced PC Fighting Game',
-      desc: 'Action-packed indie PC fighting game published on itch.io featuring responsive aerial maneuvers, impact visual effects, stylized character combat, and fast-paced competitive gameplay.',
+      desc: 'Complete widescreen presentation art for the indie PC fighting game WingBeat published on itch.io, featuring responsive aerial maneuvers, impact visual effects, and fluid combat mechanics.',
       thumb: 'assets/images/games/wingbeat_cover.jpg',
       fullSheet: 'assets/images/games/wingbeat_cover.jpg',
       externalUrl: 'https://newskung.itch.io/wingbeat',
       externalLabel: 'Play on Itch.io',
       tags: ['Fighting Game', 'Unity', 'PC Game', 'Combat Mechanics'],
       views: [
-        { label: 'Itch.io Cover Art', src: 'assets/images/games/wingbeat_cover.jpg' }
+        { label: 'WingBeat PC Game Master Sheet', src: 'assets/images/games/wingbeat_cover.jpg' }
       ]
     },
     {
@@ -400,15 +399,14 @@
       category: '2d',
       badge: '2D ILLUSTRATION',
       year: 'NOODLE ART',
-      spec: 'LINE & COLOR',
+      spec: 'PANORAMIC DOODLE',
       title: 'Panoramic Noodle Art Illustration',
-      desc: 'Intricate widescreen doodle illustration contrasting vibrant psychedelic color rendering on the left with dense hand-inked linework on the right.',
+      desc: 'Complete widescreen doodle art presentation sheet contrasting vivid psychedelic colors on the left with intricate hand-inked line art on the right.',
       thumb: 'assets/images/web/page_21.jpg',
       fullSheet: 'assets/images/page_21.png',
       tags: ['Digital Illustration', 'Procreate', 'Line Art'],
       views: [
-        { label: 'Full Noodle Art Sheet', src: 'assets/images/web/page_21.jpg' },
-        { label: 'Panoramic Crop View', src: 'assets/images/crops/noodle_art.jpg' }
+        { label: 'Panoramic Noodle Art Master Sheet', src: 'assets/images/web/page_21.jpg' }
       ]
     },
     {
@@ -417,16 +415,14 @@
       category: '2d',
       badge: 'PORTRAITS & POSTERS',
       year: '2D DIGITAL ART',
-      spec: 'VECTOR & PAINTING',
+      spec: 'GRAPHIC POSTERS',
       title: 'Digital Portraits & Graphic Character Illustrations',
-      desc: 'Selected 2D portrait paintings, high-contrast pop character posters, and Adobe Illustrator crosshatch/vector portrait studies.',
+      desc: 'Complete 2D illustration presentation board featuring expressive pop character posters, digital portrait paintings, and vector crosshatch studies.',
       thumb: 'assets/images/web/page_24.jpg',
       fullSheet: 'assets/images/page_24.png',
       tags: ['Adobe Illustrator', 'Photoshop', 'Procreate', 'Portraits'],
       views: [
-        { label: 'Graphic Character Posters', src: 'assets/images/web/page_24.jpg' },
-        { label: 'Digital Portrait Series', src: 'assets/images/web/page_23.jpg' },
-        { label: 'Vector & Crosshatch Portraits', src: 'assets/images/crops/vector_portraits.jpg' }
+        { label: 'Graphic Character Posters Master Sheet', src: 'assets/images/web/page_24.jpg' }
       ]
     }
   ];
@@ -490,16 +486,16 @@
   function updateFilterLabels() {
     const counts = {
       all: ARTWORKS.length,
-      characters: ARTWORKS.filter((a) => a.category === 'characters').length,
-      environments: ARTWORKS.filter((a) => a.category === 'environments').length,
-      tech: ARTWORKS.filter((a) => a.category === 'tech').length,
+      character: ARTWORKS.filter((a) => a.category === 'character').length,
+      prop: ARTWORKS.filter((a) => a.category === 'prop').length,
+      environment: ARTWORKS.filter((a) => a.category === 'environment').length,
       '2d': ARTWORKS.filter((a) => a.category === '2d').length
     };
     const baseLabels = {
       all: 'ALL',
-      characters: 'CHARACTERS & CREATURES',
-      environments: 'ENVIRONMENTS & PROPS',
-      tech: 'SHADERS & ANIMATION',
+      character: 'CHARACTERS',
+      prop: 'PROPS',
+      environment: 'ENVIRONMENTS',
       '2d': '2D ART & UI'
     };
     filterButtons.forEach((btn) => {
