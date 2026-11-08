@@ -667,9 +667,9 @@ section {
 .Projects-image {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9.5;
+  aspect-ratio: 16 / 10.5;
   overflow: hidden;
-  background: #0e1017;
+  background: radial-gradient(circle at 50% 45%, #232738 0%, #0d0f17 100%);
 }
 
 .Projects-image img {
@@ -678,6 +678,23 @@ section {
   object-fit: cover;
   object-position: center;
   transition: transform 0.55s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.Projects-image.model-contain-stage img {
+  object-fit: contain;
+  padding: 0.45rem;
+}
+
+.Projects-image.stage-chouri {
+  background: radial-gradient(circle at 50% 45%, #562433 0%, #36151f 100%);
+}
+
+.Projects-image.stage-dark {
+  background: radial-gradient(circle at 50% 45%, #2a2a2e 0%, #17171a 100%);
+}
+
+.Projects-image.stage-brown {
+  background: radial-gradient(circle at 50% 45%, #6b5853 0%, #483a36 100%);
 }
 
 .Projects-item:hover .Projects-image img {
@@ -932,30 +949,30 @@ section {
   box-shadow: 0 4px 14px rgba(236, 72, 153, 0.35);
 }
 
-/* Default: Extra-Large 2-Column Portfolio Slide Grid so every slide is HUGE and readable */
+/* Extra-Large Studio 3D Model Grid so every individual 3D model is HUGE and clear */
 .pure-gallery-grid {
   position: relative;
   z-index: 2;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(390px, 1fr));
-  gap: 1.5rem;
-  max-width: 1500px;
+  grid-template-columns: repeat(auto-fill, minmax(430px, 1fr));
+  gap: 1.8rem;
+  max-width: 1540px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
 .pure-gallery-grid.slide-large-mode {
-  grid-template-columns: repeat(auto-fill, minmax(560px, 1fr));
-  gap: 1.85rem;
+  grid-template-columns: repeat(auto-fill, minmax(620px, 1fr));
+  gap: 2.1rem;
 }
 
 .pure-gallery-item {
   position: relative;
   border-radius: var(--radius-md);
   overflow: hidden;
-  background: #0d0f16;
-  border: 2px solid rgba(255, 255, 255, 0.09);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.55);
+  background: #141722;
+  border: 2px solid rgba(255, 255, 255, 0.11);
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.58);
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -965,9 +982,21 @@ section {
 .pure-gallery-item .tile-img-frame {
   position: relative;
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 16 / 11;
   overflow: hidden;
-  background: #0b0d13;
+  background: radial-gradient(circle at 50% 45%, #232738 0%, #0d0f17 100%);
+}
+
+.pure-gallery-item .tile-img-frame.stage-chouri {
+  background: radial-gradient(circle at 50% 45%, #562433 0%, #36151f 100%);
+}
+
+.pure-gallery-item .tile-img-frame.stage-dark {
+  background: radial-gradient(circle at 50% 45%, #2c2c30 0%, #18181b 100%);
+}
+
+.pure-gallery-item .tile-img-frame.stage-brown {
+  background: radial-gradient(circle at 50% 45%, #6b5853 0%, #483a36 100%);
 }
 
 .pure-gallery-item img {
@@ -978,9 +1007,14 @@ section {
   transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 
+.pure-gallery-item .tile-img-frame.model-contain img {
+  object-fit: contain;
+  padding: 0.4rem;
+}
+
 .pure-gallery-grid.slide-large-mode .pure-gallery-item img {
   object-fit: contain;
-  background: #14161f;
+  padding: 0.5rem;
 }
 
 .pure-gallery-item:hover {
