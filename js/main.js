@@ -1,71 +1,76 @@
 /* ==========================================================================
-   AI METHICHAI — PORTFOLIO CONTROLLER & VERIFIED ARTWORK COLLECTION
-   All items verified page-by-page from Portfolio.pdf (Pages 2–24)
+   METHICHAI PRUEKSAKING (AI METHICHAI) — PORTFOLIO CONTROLLER
+   Verified from Portfolio Slides (Pages 2–24) & Co-op Resume
    ========================================================================== */
 
 (() => {
   'use strict';
 
   const ARTWORKS = [
-    // ---------------- CHARACTERS & CREATURES ----------------
+    // ---------------- CHARACTERS & BOSSES ----------------
     {
       id: 'chouri-characters',
       featured: true,
       category: 'characters',
-      badge: '3D CHARACTER',
-      year: 'WE ARE CHOURI',
-      spec: 'CHARACTER MODEL',
-      title: 'Guidi & Zeppe — Player Characters',
-      desc: 'Main playable duo designed and modeled for the 3D Unity adventure We Are Chouri. Includes 2D color palette explorations and full front, side, and back 3D turnarounds.',
+      badge: '3D CHARACTER • CO-OP',
+      year: 'WE ARE CHOURI (2026)',
+      spec: '2P CO-OP • MAYA',
+      title: 'Guidi & Zeppe — We Are Chouri (2-Player Co-op)',
+      desc: 'ออกแบบคอนเซปต์และปั้นโมเดลตัวละครหลักคู่หู Guidi & Zeppe สำหรับเกม We Are Chouri (2 Players / Co-op / Puzzle / Action-Adventure / Split-screen) พร้อมทำพื้นผิว Rigging และ Animation ในเกม',
       thumb: 'assets/images/crops/chouri_characters.jpg',
+      slideThumb: 'assets/images/web/page_02.jpg',
       fullSheet: 'assets/images/page_02.png',
-      tags: ['Character Modeling', 'Blender / Maya', 'Substance 3D Painter', 'Unity'],
+      tags: ['Autodesk Maya', 'Substance 3D Painter', 'Unity Engine', 'GitHub'],
       views: [
-        { label: '3D Turnaround', src: 'assets/images/crops/chouri_characters.jpg' },
-        { label: 'Concept & Sheet', src: 'assets/images/web/page_02.jpg' },
-        { label: 'Monsters & Lanterns', src: 'assets/images/web/page_03.jpg' },
-        { label: 'Fantasy Props (15)', src: 'assets/images/web/page_04.jpg' },
-        { label: 'In-Engine Unity', src: 'assets/images/web/page_05.jpg' }
+        { label: 'Slide 02: Character Sheet', src: 'assets/images/web/page_02.jpg' },
+        { label: '3D Turnaround Closeup', src: 'assets/images/crops/chouri_characters.jpg' },
+        { label: 'Slide 03: Monsters & UVs', src: 'assets/images/web/page_03.jpg' },
+        { label: 'Slide 04: 15 Fantasy Props', src: 'assets/images/web/page_04.jpg' },
+        { label: 'Slide 05: Co-op Split-Screen World', src: 'assets/images/web/page_05.jpg' }
       ]
     },
     {
       id: 'roblox-bosses',
-      featured: false,
+      featured: true,
       category: 'characters',
-      badge: 'BOSS & CREATURES',
-      year: 'ROBLOX GAME',
+      badge: 'BOSS & ENEMY MODELS',
+      year: 'NO MORE RAT (2025)',
       spec: '6 CREATURE MODELS',
-      title: 'No More Rat! — Boss & Enemy Lineup',
-      desc: 'Six original boss and enemy creature 3D models created for the Roblox hack-and-slash game [Updated] No More Rat!, featuring mutant brutes, a four-armed boss, venomous beast, mounted spear rider, and dark rat demon.',
+      title: 'No More Rat : Down The Drain — 6 Boss & Enemy Models',
+      desc: 'ออกแบบคอนเซปต์และปั้นโมเดลศัตรูและบอสหนูกลายพันธุ์ทั้ง 6 รูปแบบ รวมถึงทำ Rigging และเตรียม Animation สำหรับเกมแนว Hack & Slash / Action-Adventure บน Roblox',
       thumb: 'assets/images/web/page_07.jpg',
+      slideThumb: 'assets/images/web/page_07.jpg',
       fullSheet: 'assets/images/page_07.png',
-      tags: ['Creature Modeling', 'ZBrush', 'Blender', 'Roblox Studio'],
+      externalUrl: 'https://www.roblox.com/games/79475326799719/No-More-Rat',
+      externalLabel: 'Play No More Rat on Roblox',
+      tags: ['Autodesk Maya', 'Blender', 'Substance 3D Painter', 'Roblox Studio'],
       views: [
-        { label: '6 Boss Lineup', src: 'assets/images/web/page_07.jpg' },
-        { label: 'Four-Arm Rat', src: 'Project/Pic/3D_Art/Four_Arm_Rat.png' },
+        { label: 'Slide 07: 6 Boss Lineup', src: 'assets/images/web/page_07.jpg' },
+        { label: 'Four-Arm Rat Boss', src: 'Project/Pic/3D_Art/Four_Arm_Rat.png' },
         { label: 'Dark Rat Demon', src: 'Project/Pic/3D_Art/Rat_demon.png' },
         { label: 'Mutant Green Rat', src: 'Project/Pic/3D_Art/Green_Rat.png' },
-        { label: 'Game Overview', src: 'assets/images/web/page_06.jpg' }
+        { label: 'Slide 06: Game Overview', src: 'assets/images/web/page_06.jpg' }
       ]
     },
     {
       id: 'roblox-game',
       featured: false,
       category: 'characters',
-      badge: 'ROBLOX CHARACTER',
-      year: 'ROBLOX GAME',
-      spec: 'HERO & BOSS ART',
-      title: 'No More Rat! — Exterminator Hamster & Key Art',
-      desc: 'Playable trenchcoat hamster character model, combat key art, and in-game winter stage showcase for [Updated] No More Rat! by MidnightParadise on Roblox.',
+      badge: 'ROBLOX ACTION GAME',
+      year: 'NO MORE RAT (2025)',
+      spec: 'HERO & WEAPONS',
+      title: 'No More Rat : Down The Drain — Hero Model & Game Overview',
+      desc: 'ออกแบบคอนเซปต์โลกของเกม อาวุธ ตัวละครแฮมสเตอร์หลัก และฉากต่อสู้ในเกม No More Rat : Down The Drain (Roblox / Hack & Slash / Action-Adventure)',
       thumb: 'assets/images/crops/roblox_keyart.jpg',
+      slideThumb: 'assets/images/web/page_06.jpg',
       fullSheet: 'assets/images/page_06.png',
-      tags: ['3D Character', 'Roblox Studio', 'Key Art'],
-      externalUrl: 'https://www.roblox.com/users/2594844006/profile',
-      externalLabel: 'Roblox Profile (Dngo_Kiwrn)',
+      externalUrl: 'https://www.roblox.com/games/79475326799719/No-More-Rat',
+      externalLabel: 'Play No More Rat on Roblox',
+      tags: ['Autodesk Maya', 'Blender', 'Substance 3D Painter', 'Roblox Studio'],
       views: [
+        { label: 'Slide 06: Full Game Sheet', src: 'assets/images/web/page_06.jpg' },
         { label: 'Combat Key Art', src: 'assets/images/crops/roblox_keyart.jpg' },
-        { label: 'In-Game Stage', src: 'assets/images/crops/roblox_gameplay.jpg' },
-        { label: 'Full Game Sheet', src: 'assets/images/web/page_06.jpg' }
+        { label: 'In-Game Stage', src: 'assets/images/crops/roblox_gameplay.jpg' }
       ]
     },
     {
@@ -73,51 +78,54 @@
       featured: false,
       category: 'characters',
       badge: 'MONSTERS & UVs',
-      year: 'WE ARE CHOURI',
+      year: 'WE ARE CHOURI (2026)',
       spec: 'UV & TEXTURING',
-      title: 'We Are Chouri — Monsters & Tiki Lanterns',
-      desc: 'Plush-inspired monster enemies, horned shrine guardian with 1001 UDIM UV unwrap, and modular tiki lanterns showing wireframe topology, UV checker, and glowing emissive variants.',
+      title: 'We Are Chouri — Scene Objects, Monsters & Lantern UVs',
+      desc: 'โมเดลศัตรูและบอสในเกม We Are Chouri พร้อมการกาง UV (UDIM 1001) และชุดโคมไฟโทเท็มแสดงขั้นตอน Wireframe, UV Checker และ Texture',
       thumb: 'assets/images/crops/chouri_monsters.jpg',
+      slideThumb: 'assets/images/web/page_03.jpg',
       fullSheet: 'assets/images/page_03.png',
-      tags: ['Monster Modeling', 'UV Unwrapping', 'Substance 3D Painter'],
+      tags: ['Autodesk Maya', 'UV Unwrapping', 'Substance 3D Painter'],
       views: [
-        { label: 'Monster Models', src: 'assets/images/crops/chouri_monsters.jpg' },
-        { label: 'Full UV & Lantern Sheet', src: 'assets/images/web/page_03.jpg' }
+        { label: 'Slide 03: Full Monster & UV Sheet', src: 'assets/images/web/page_03.jpg' },
+        { label: 'Monsters Closeup', src: 'assets/images/crops/chouri_monsters.jpg' }
       ]
     },
     {
       id: 'zbrush-sculpts',
       featured: true,
       category: 'characters',
-      badge: 'DIGITAL SCULPT',
-      year: 'SCULPT STUDY',
+      badge: 'ZBRUSH SCULPTING',
+      year: '3D SCULPT STUDY',
       spec: 'ZBRUSH • HIGH POLY',
-      title: 'Stylized Figure & Warrior Bust Sculpts',
-      desc: 'High-poly ZBrush character and anatomy sculpting showcase featuring a stylized metallic stage figure flanked by expressive elf-eared warrior busts across four material studies.',
+      title: 'Stylized Character & Warrior Bust Sculpts',
+      desc: 'งานปั้น High-Poly Digital Sculpting ในโปรแกรม ZBrush แสดงรายละเอียดโครงสร้างใบหน้าและวัสดุพื้นผิว 4 รูปแบบ พร้อมหุ่นตัวละครเต็มตัวบนแท่นจัดแสดง',
       thumb: 'assets/images/web/page_17.jpg',
+      slideThumb: 'assets/images/web/page_17.jpg',
       fullSheet: 'assets/images/page_17.png',
       tags: ['ZBrush', 'Digital Sculpting', 'Character Anatomy', 'Materials'],
       views: [
-        { label: 'Sculpt Showcase', src: 'assets/images/web/page_17.jpg' }
+        { label: 'Slide 17: ZBrush Sculpt Showcase', src: 'assets/images/web/page_17.jpg' }
       ]
     },
     {
       id: 'jester-rig',
       featured: false,
       category: 'characters',
-      badge: 'CHARACTER RIG',
+      badge: 'CHARACTER RIG & UV',
       year: '3D RIGGING',
-      spec: 'SKELETAL RIG & UV',
-      title: 'Stylized Jester — Character Model, Rig & UV Maps',
-      desc: 'Stylized purple-and-gold jester character complete with full joint hierarchy, NURBS animation controllers, and cleanly packed multi-part texture maps.',
+      spec: 'MAYA RIGGING',
+      title: 'Stylized Jester — Character Model, Skeletal Rig & UV Maps',
+      desc: 'โมเดลตัวละคร Jester พร้อมระบบกระดูกและคอนโทรลเลอร์ (Skeletal Rigging) ใน Autodesk Maya และแผ่น Texture / UV Map แยกชิ้นส่วน',
       thumb: 'assets/images/crops/jester_rig.jpg',
+      slideThumb: 'assets/images/web/page_11.jpg',
       fullSheet: 'assets/images/page_11.png',
-      tags: ['Character Rigging', 'Autodesk Maya', 'UV Layout', 'Texturing'],
+      tags: ['Autodesk Maya', 'Character Rigging', 'UV Layout', 'Substance 3D Painter'],
       views: [
-        { label: 'Rig & UV Breakdown', src: 'assets/images/crops/jester_rig.jpg' },
+        { label: 'Slide 11: Isometric Room & Jester Rig', src: 'assets/images/web/page_11.jpg' },
+        { label: 'Jester Rig & UV Closeup', src: 'assets/images/crops/jester_rig.jpg' },
         { label: 'Front Viewport', src: 'Project/Pic/3D_Art/Joker_Front.png' },
-        { label: 'Side Viewport', src: 'Project/Pic/3D_Art/Joker_Side.png' },
-        { label: 'Full Sheet', src: 'assets/images/web/page_11.jpg' }
+        { label: 'Side Viewport', src: 'Project/Pic/3D_Art/Joker_Side.png' }
       ]
     },
 
@@ -126,56 +134,77 @@
       id: 'alley-lighting',
       featured: true,
       category: 'environments',
-      badge: 'ENVIRONMENT',
-      year: 'LIGHTING STUDY',
-      spec: 'SCENE & LIGHTING',
-      title: 'Japanese Sunset Alley & Interior Lighting',
-      desc: 'Atmospheric 3D environment lighting studies exploring golden-hour bounce light through a lantern-lined Japanese alleyway alongside a warm modern living room interior.',
+      badge: '3D ENVIRONMENT',
+      year: 'LIGHTING & SCENE',
+      spec: 'ENVIRONMENT ART',
+      title: 'Japanese Sunset Alley & Architectural Lighting Renders',
+      desc: 'ผลงานการสร้างฉาก 3D Environment และการจัดแสงบรรยากาศ (Lighting & Rendering) ทั้งตรอกร้านค้าญี่ปุ่นยามเย็น ห้องนั่งเล่นโมเดิร์นโทนอุ่น และการจัดองค์ประกอบฉาก',
       thumb: 'assets/images/crops/alley_sunset.jpg',
+      slideThumb: 'assets/images/web/page_10.jpg',
       fullSheet: 'assets/images/page_10.png',
-      tags: ['3D Environment', 'Lighting & Rendering', 'Blender / Maya'],
+      tags: ['3D Environment', 'Blender', 'Autodesk Maya', 'Lighting & Rendering'],
       views: [
+        { label: 'Slide 10: Full 4-Scene Sheet', src: 'assets/images/web/page_10.jpg' },
         { label: 'Japanese Sunset Alley', src: 'assets/images/crops/alley_sunset.jpg' },
-        { label: 'Modern Interior', src: 'assets/images/crops/modern_interior.jpg' },
+        { label: 'Modern Interior Render', src: 'assets/images/crops/modern_interior.jpg' },
         { label: 'Cel-Shaded Creature', src: 'assets/images/crops/cel_creature.jpg' },
-        { label: 'Sunset Fisheye Render', src: 'assets/images/crops/street_character.jpg' },
-        { label: 'Full 4-Scene Sheet', src: 'assets/images/web/page_10.jpg' }
+        { label: 'Sunset Street Render', src: 'assets/images/crops/street_character.jpg' }
+      ]
+    },
+    {
+      id: 'tiki-island',
+      featured: true,
+      category: 'environments',
+      badge: 'ISLAND ENVIRONMENT',
+      year: 'WINGBEAT (2026)',
+      spec: 'STYLIZED ISLAND',
+      title: 'Wingbeat — Stylized Island Environment Diorama',
+      desc: 'การออกแบบและปั้นโมเดลฉากเกาะสำหรับเกมแนว Simulation / Party Game (Wingbeat) โดดเด่นด้วยโขดหิน ท่าเรือไม้ เสาโทเท็มคริสตัล และหนวดยักษ์สีสันสดใส',
+      thumb: 'assets/images/web/page_13.jpg',
+      slideThumb: 'assets/images/web/page_13.jpg',
+      fullSheet: 'assets/images/page_13.png',
+      tags: ['Autodesk Maya', 'Blender', 'Substance 3D Painter', 'Unity Engine'],
+      views: [
+        { label: 'Slide 13: Stylized Island Diorama', src: 'assets/images/web/page_13.jpg' },
+        { label: 'Slide 14: Stylized Foliage Trees', src: 'assets/images/web/page_14.jpg' }
       ]
     },
     {
       id: 'isometric-studio',
-      featured: true,
+      featured: false,
       category: 'environments',
-      badge: 'ISOMETRIC ROOM',
-      year: '3D DIORAMA',
+      badge: 'ISOMETRIC DIORAMA',
+      year: '3D INTERIOR',
       spec: 'INTERIOR & PROPS',
       title: 'Isometric Artist Studio Diorama',
-      desc: 'Cozy nocturnal artist bedroom diorama packed with framed paintings, easels, drafting desk sketches, miniature figures, paint jars, and cool moonlight streaming through frosted windows.',
+      desc: 'ฉากห้องทำงานศิลปินแบบ Isometric 3D เก็บรายละเอียดเฟอร์นิเจอร์ โต๊ะวาดเขียน ขวดสี เฟรมภาพวาด และแสงจันทร์ส่องผ่านหน้าต่างยามค่ำคืน',
       thumb: 'Project/Pic/Intillia/Room_Team_Kokocrunch.jpg',
+      slideThumb: 'assets/images/web/page_11.jpg',
       fullSheet: 'assets/images/page_11.png',
-      tags: ['3D Environment', 'Isometric Diorama', 'Lighting', 'Props'],
+      tags: ['3D Environment', 'Autodesk Maya', 'Blender', 'Lighting'],
       views: [
         { label: 'Isometric Studio Render', src: 'Project/Pic/Intillia/Room_Team_Kokocrunch.jpg' },
-        { label: 'Studio & Jester Sheet', src: 'assets/images/web/page_11.jpg' }
+        { label: 'Slide 11: Full Sheet', src: 'assets/images/web/page_11.jpg' }
       ]
     },
     {
       id: 'chouri-world',
       featured: false,
       category: 'environments',
-      badge: 'UNITY WORLD',
-      year: 'WE ARE CHOURI',
-      spec: 'IN-ENGINE LEVEL',
-      title: 'We Are Chouri — In-Engine Unity Environments',
-      desc: 'Real-time Unity environment assembly showcasing waffle bridges, glowing tiki totems, monster shrines, and bioluminescent crystal caverns.',
+      badge: 'CO-OP GAME WORLD',
+      year: 'WE ARE CHOURI (2026)',
+      spec: 'UNITY ENGINE',
+      title: 'We Are Chouri — In-Engine Co-op Environments',
+      desc: 'บรรยากาศฉากในเกม We Are Chouri บน Unity Engine แสดงการจัดแสงสะพานวาฟเฟิล เสาโทเท็มเรืองแสง วิหารมอนสเตอร์ และถ้ำคริสตัล',
       thumb: 'assets/images/crops/chouri_shrine.jpg',
+      slideThumb: 'assets/images/web/page_05.jpg',
       fullSheet: 'assets/images/page_05.png',
-      tags: ['Unity Engine', 'Level Art', 'Environment Lighting'],
+      tags: ['Unity Engine', '3D Environment', 'Level Lighting', 'GitHub'],
       views: [
+        { label: 'Slide 05: Full 4-Shot Sheet', src: 'assets/images/web/page_05.jpg' },
         { label: 'Totem Shrine', src: 'assets/images/crops/chouri_shrine.jpg' },
         { label: 'Waffle Bridge', src: 'assets/images/crops/chouri_bridge.jpg' },
-        { label: 'Crystal Cavern', src: 'assets/images/crops/chouri_cavern.jpg' },
-        { label: 'Full 4-Shot Sheet', src: 'assets/images/web/page_05.jpg' }
+        { label: 'Crystal Cavern', src: 'assets/images/crops/chouri_cavern.jpg' }
       ]
     },
     {
@@ -185,66 +214,53 @@
       badge: 'SCENES & MODELS',
       year: '3D PROJECTS',
       spec: 'ENVIRONMENT & PROPS',
-      title: 'Neon Boss Hall, Pokémon Center & Banana House',
-      desc: 'Collection of stylized architectural models and lit boss arenas: three material passes of a Pokémon Center (clean, weathered, horror), wireframe Banana House, sculpted hand on ice pedestal, and dramatic Unity boss scenes.',
+      title: 'Render Scenes, Pokémon Center (3 Passes) & Banana House',
+      desc: 'รวมผลงานฉากเรนเดอร์และโมเดลสถาปัตยกรรม: Pokémon Center 3 รูปแบบพื้นผิว (Basic, Texture, Dark Horror), บ้านกล้วย stylized, มือบนแท่นน้ำแข็ง และฉากบอสใน Unity',
       thumb: 'Project/Pic/Unity/Rat_scene1.png',
+      slideThumb: 'assets/images/web/page_09.jpg',
       fullSheet: 'assets/images/page_09.png',
-      tags: ['3D Modeling', 'Texturing', 'Scene Lighting', 'Unity'],
+      tags: ['Autodesk Maya', 'Blender', 'Substance 3D Painter', 'Unity Engine'],
       views: [
+        { label: 'Slide 09: Full Project Sheet', src: 'assets/images/web/page_09.jpg' },
         { label: 'Neon Shrine Scene', src: 'Project/Pic/Unity/Rat_scene1.png' },
-        { label: 'Boss Arena Battle', src: 'Project/Pic/Unity/Rat_scene2.png' },
+        { label: 'Boss Arena Scene', src: 'Project/Pic/Unity/Rat_scene2.png' },
         { label: 'Pokémon Center (Dark)', src: 'Project/Pic/Intillia/Pokemon_Center_Dark.png' },
         { label: 'Banana House', src: 'Project/Pic/Intillia/Banana_House.png' },
-        { label: 'Ice Pedestal Hand', src: 'Project/Pic/3D_Art/Hand.png' },
-        { label: 'Full Project Sheet', src: 'assets/images/web/page_09.jpg' }
-      ]
-    },
-    {
-      id: 'tiki-island',
-      featured: false,
-      category: 'environments',
-      badge: 'LOW-POLY DIORAMA',
-      year: 'STYLIZED SCENE',
-      spec: 'LOW POLY',
-      title: 'Stylized Kraken & Tiki Island Diorama',
-      desc: 'Vibrant low-poly island diorama surrounded by giant purple tentacles, cyan tiki statues, wooden docks, barrels, and glowing crystals.',
-      thumb: 'assets/images/web/page_13.jpg',
-      fullSheet: 'assets/images/page_13.png',
-      tags: ['Low-Poly Art', 'Blender / Maya', 'Stylized Environment'],
-      views: [
-        { label: 'Island Diorama', src: 'assets/images/web/page_13.jpg' }
+        { label: 'Ice Pedestal Hand', src: 'Project/Pic/3D_Art/Hand.png' }
       ]
     },
     {
       id: 'weapon-models',
       featured: false,
       category: 'environments',
-      badge: 'HARD SURFACE',
-      year: '3D WEAPONS',
+      badge: '3D WEAPONS',
+      year: 'HARD SURFACE',
       spec: 'PBR TEXTURING',
-      title: 'M16 & AK-47 Assault Rifle Models',
-      desc: 'Hard-surface 3D firearm models of an M16A1 and AK-47 featuring worn metal edge wear, polymer furniture, and wood-grain stock textures.',
+      title: 'M16 & AK-47 Assault Rifle 3D Models',
+      desc: 'โมเดลอาวุธปืน M16 และ AK-47 แบบ Hard-Surface พร้อมทำพื้นผิวโลหะและลายไม้ (Modeling & Texturing) สำหรับใช้เป็น Game Asset',
       thumb: 'assets/images/web/page_12.jpg',
+      slideThumb: 'assets/images/web/page_12.jpg',
       fullSheet: 'assets/images/page_12.png',
-      tags: ['Hard-Surface Modeling', 'Substance 3D Painter', 'Game Weapons'],
+      tags: ['Hard-Surface Modeling', 'Autodesk Maya', 'Blender', 'Substance 3D Painter'],
       views: [
-        { label: 'M16 & AK-47 Render', src: 'assets/images/web/page_12.jpg' }
+        { label: 'Slide 12: M16 & AK-47 Models', src: 'assets/images/web/page_12.jpg' }
       ]
     },
     {
       id: 'chouri-props',
       featured: false,
       category: 'environments',
-      badge: 'GAME PROPS',
-      year: 'WE ARE CHOURI',
-      spec: '15 ASSET PACK',
-      title: 'Stylized Candy & Fantasy Props Collection',
-      desc: 'Fifteen game-ready stylized props created for We Are Chouri, including macarons, waffles, candy canes, frosted donuts, glowing candles, mushrooms, and surreal organic artifacts.',
+      badge: '15 GAME PROPS',
+      year: 'WE ARE CHOURI (2026)',
+      spec: 'PROP ASSET PACK',
+      title: 'We Are Chouri — 15 Stylized Candy & Fantasy Props',
+      desc: 'ชุดโมเดล 3D Props ประกอบฉากจำนวน 15 ชิ้นในเกม We Are Chouri เช่น มาการอง วาฟเฟิล แคนดี้เคน โดนัท เทียนเรืองแสง และเห็ดแฟนตาซี',
       thumb: 'assets/images/web/page_04.jpg',
+      slideThumb: 'assets/images/web/page_04.jpg',
       fullSheet: 'assets/images/page_04.png',
-      tags: ['Prop Modeling', 'Stylized Texturing', 'Game Assets'],
+      tags: ['3D Prop Modeling', 'Substance 3D Painter', 'Unity Engine'],
       views: [
-        { label: '15 Props Sheet', src: 'assets/images/web/page_04.jpg' }
+        { label: 'Slide 04: 15 Props Sheet', src: 'assets/images/web/page_04.jpg' }
       ]
     },
     {
@@ -252,73 +268,77 @@
       featured: false,
       category: 'environments',
       badge: 'FOLIAGE ASSETS',
-      year: 'STYLIZED PROPS',
+      year: 'WINGBEAT / PROPS',
       spec: '3 COLORWAYS',
-      title: 'Stylized Twisted Fantasy Trees',
-      desc: 'Sculptural fantasy tree assets with spiraled patterned trunks and layered canopy silhouettes in three vibrant color palettes.',
+      title: 'Stylized Twisted Fantasy Trees (3 Colorways)',
+      desc: 'โมเดลต้นไม้แฟนตาซีทรงบิดเกลียวพร้อมลวดลายพื้นผิว 3 โทนสี สำหรับตกแต่งฉากเกาะและโลกแฟนตาซีในเกม',
       thumb: 'assets/images/web/page_14.jpg',
+      slideThumb: 'assets/images/web/page_14.jpg',
       fullSheet: 'assets/images/page_14.png',
-      tags: ['Stylized Foliage', '3D Prop Art', 'Color Variants'],
+      tags: ['3D Environment Prop', 'Blender', 'Autodesk Maya'],
       views: [
-        { label: 'Tree Variants', src: 'assets/images/web/page_14.jpg' }
+        { label: 'Slide 14: Stylized Trees', src: 'assets/images/web/page_14.jpg' }
       ]
     },
     {
       id: 'carton-props',
       featured: false,
       category: 'environments',
-      badge: 'NPR / CEL PROP',
-      year: 'STYLIZED PROPS',
-      spec: 'TOON OUTLINE',
+      badge: 'STYLIZED TOON PROP',
+      year: 'NPR / CEL SHADING',
+      spec: '3 COLORWAYS',
       title: 'Hand-Drawn Cel-Shaded Carton Props',
-      desc: 'Pop-art 3D carton props combining bold ink outlines, floating graphic accents, and vibrant gradient fills across cyan, sunset, and violet variations.',
+      desc: 'โมเดลกล่องนมสไตล์ Pop-Art / Cel-Shaded ผสมผสานเส้นขอบการ์ตูน 2D เข้ากับรูปทรง 3D ใน 3 โทนสีสดใส',
       thumb: 'assets/images/web/page_15.jpg',
+      slideThumb: 'assets/images/web/page_15.jpg',
       fullSheet: 'assets/images/page_15.png',
-      tags: ['NPR / Toon Shading', '2D/3D Hybrid', 'Blender'],
+      tags: ['Stylized 3D', 'Toon Outline', 'Blender'],
       views: [
-        { label: '3 Colorways', src: 'assets/images/web/page_15.jpg' }
+        { label: 'Slide 15: Carton Prop Variants', src: 'assets/images/web/page_15.jpg' }
       ]
     },
 
-    // ---------------- ANIMATION, SHADERS & TECH ART ----------------
-    {
-      id: 'anim-python',
-      featured: true,
-      category: 'tech',
-      badge: 'PYTHON + ANIMATION',
-      year: 'TECH ANIMATION',
-      spec: 'PYTHON SCRIPTING',
-      title: 'Four-Arm Character Animation (Python Motion Trail)',
-      desc: 'Character animation reel utilizing custom Python scripting to automate Sandevistan-style motion trail stamping and procedural color shifts.',
-      thumb: 'assets/images/crops/anim_python.jpg',
-      videoId: 'wsLVAP0mqXw',
-      externalUrl: 'https://www.youtube.com/watch?v=wsLVAP0mqXw',
-      externalLabel: 'Watch on YouTube',
-      fullSheet: 'assets/images/page_08.png',
-      tags: ['3D Animation', 'Python Scripting', 'Autodesk Maya', 'Tech Art'],
-      views: [
-        { label: 'Play Animation Video', videoId: 'wsLVAP0mqXw', thumb: 'assets/images/crops/anim_python.jpg' },
-        { label: 'Animation Reel Sheet', src: 'assets/images/web/page_08.jpg' }
-      ]
-    },
+    // ---------------- SHADERS & ANIMATION ----------------
     {
       id: 'anim-chouri',
       featured: true,
       category: 'tech',
-      badge: 'UNITY CUTSCENE',
-      year: 'WE ARE CHOURI',
-      spec: 'CINEMATIC',
-      title: 'We Are Chouri — Forest Awakening Cutscene',
-      desc: 'In-engine 3D cutscene animation created in Unity for We Are Chouri, staging character acting, camera framing, and atmospheric forest lighting.',
+      badge: '3D CUTSCENE',
+      year: 'WE ARE CHOURI (2026)',
+      spec: 'UNITY CUTSCENE',
+      title: 'We Are Chouri — Opening Forest Cutscene Animation',
+      desc: 'ผลงานการทำ 3D Animation และจัดมุมกล้องฉาก Cutscene เปิดเรื่องของเกม We Are Chouri ใน Unity Engine',
       thumb: 'assets/images/crops/anim_chouri.jpg',
+      slideThumb: 'assets/images/web/page_08.jpg',
       videoId: '4QMDKKF5QoQ',
       externalUrl: 'https://youtu.be/4QMDKKF5QoQ',
       externalLabel: 'Watch on YouTube',
       fullSheet: 'assets/images/page_08.png',
-      tags: ['Unity Timeline', '3D Cutscene', 'Camera Staging'],
+      tags: ['3D Animation', 'Unity Engine', 'Autodesk Maya', 'Cutscene'],
       views: [
         { label: 'Play Cutscene Video', videoId: '4QMDKKF5QoQ', thumb: 'assets/images/crops/anim_chouri.jpg' },
-        { label: 'Animation Reel Sheet', src: 'assets/images/web/page_08.jpg' }
+        { label: 'Slide 08: Animation Showcase', src: 'assets/images/web/page_08.jpg' }
+      ]
+    },
+    {
+      id: 'anim-four-arm',
+      featured: false,
+      category: 'tech',
+      badge: 'CHARACTER ANIMATION',
+      year: '3D ANIMATION REEL',
+      spec: 'MOTION TRAIL FX',
+      title: 'Four-Arm Character Animation — Motion Trail Effect',
+      desc: 'ผลงานอนิเมชันตัวละคร 4 แขน พร้อมเอฟเฟกต์ภาพติดตาไล่โทนสี (Sandevistan Motion Trail) และการเคลื่อนไหวแบบดุดันใน Autodesk Maya',
+      thumb: 'assets/images/crops/anim_python.jpg',
+      slideThumb: 'assets/images/web/page_08.jpg',
+      videoId: 'wsLVAP0mqXw',
+      externalUrl: 'https://www.youtube.com/watch?v=wsLVAP0mqXw',
+      externalLabel: 'Watch on YouTube',
+      fullSheet: 'assets/images/page_08.png',
+      tags: ['3D Animation', 'Autodesk Maya', 'Character Rigging', 'Motion Trail FX'],
+      views: [
+        { label: 'Play Character Animation', videoId: 'wsLVAP0mqXw', thumb: 'assets/images/crops/anim_python.jpg' },
+        { label: 'Slide 08: Animation Showcase', src: 'assets/images/web/page_08.jpg' }
       ]
     },
     {
@@ -326,54 +346,74 @@
       featured: false,
       category: 'tech',
       badge: 'SHADERS & MATERIALS',
-      year: 'TECH ART',
+      year: 'LOOK-DEV STUDY',
       spec: 'EMISSIVE • GLASS',
-      title: 'Procedural Holographic, Contour & Glass Shaders',
-      desc: 'Shader and material look-dev experiments testing soft emissive glow, topographic contour wireframe lines, Fresnel X-ray translucency, and refractive glass.',
+      title: 'Holographic, Contour Wireframe & Refractive Glass Shaders',
+      desc: 'การทดลองสร้าง Shader และ Material รูปแบบพิเศษ ทั้งแสงเรืองรอง Emissive, เส้นโครงร่าง Contour, แสงโปร่งใส Fresnel และการหักเหแสงของลูกแก้ว',
       thumb: 'assets/images/crops/shader_ducks.jpg',
+      slideThumb: 'assets/images/web/page_16.jpg',
       fullSheet: 'assets/images/page_16.png',
-      tags: ['Shader Look-Dev', 'Fresnel / Refraction', 'Blender / Unity'],
+      tags: ['Shader Look-Dev', 'Blender', 'Unity Engine', 'Materials'],
       views: [
-        { label: 'Shader Strip', src: 'assets/images/crops/shader_ducks.jpg' },
-        { label: 'Full Sheet', src: 'assets/images/web/page_16.jpg' }
+        { label: 'Slide 16: Full Shader Sheet', src: 'assets/images/web/page_16.jpg' },
+        { label: 'Shader Strip Closeup', src: 'assets/images/crops/shader_ducks.jpg' }
       ]
     },
 
-    // ---------------- 2D ART, GAMES & UI ----------------
+    // ---------------- 2D ART & GAME UI ----------------
+    {
+      id: 'mobile-games',
+      featured: false,
+      category: '2d',
+      badge: '2D GAMES (2023–2024)',
+      year: 'UNITY 2D GAMES',
+      spec: 'ENDLESS RUNNER & CARD',
+      title: 'Juukie!! The Mouse (2024) & Dominion’s War: The Card Game (2023)',
+      desc: 'ผลงานการออกแบบและพัฒนาเกม 2D บนมือถือ: Juukie!! The Mouse: Adventures (2D Endless Runner) และ Dominion’s War: The Card Game (2D Strategy Card Game)',
+      thumb: 'assets/images/crops/dominion_cardgame.jpg',
+      slideThumb: 'assets/images/web/page_19.jpg',
+      fullSheet: 'assets/images/page_19.png',
+      tags: ['Pixel Studio', 'Adobe Photoshop', 'Adobe Illustrator', 'Unity Engine'],
+      views: [
+        { label: 'Slide 19: Mobile Games Showcase', src: 'assets/images/web/page_19.jpg' },
+        { label: 'Slide 20: Seamless Tiles & Characters', src: 'assets/images/web/page_20.jpg' },
+        { label: 'Juukie Gameplay Screen', src: 'Project/Pic/Unity/Juukie.png' }
+      ]
+    },
     {
       id: 'horror-ui',
       featured: false,
       category: '2d',
       badge: 'PC GAME UX/UI',
-      year: '2D HORROR SHOT',
-      spec: 'HUD & MENUS',
-      title: 'TiTLE’s Nightmare — 2D Horror PC Game UX/UI',
-      desc: 'Complete UX/UI visual design for a 2D first-person horror shooter: app icon, eerie hallway title screen, revolver combat HUD, and audio/system configuration menus.',
+      year: 'TiTLE’S NIGHTMARE',
+      spec: 'HUD & MENU UI',
+      title: 'TiTLE’s Nightmare : 2D Horror Shot — UX/UI Design',
+      desc: 'การออกแบบ UX/UI สำหรับเกมยิงสยองขวัญ 2D บน PC ครอบคลุมไอคอนเกม หน้าเมนูหลัก หน้าจอ HUD ปืนลูกโม่ และหน้าตั้งค่าระบบเสียง',
       thumb: 'assets/images/crops/horror_hud.jpg',
+      slideThumb: 'assets/images/web/page_18.jpg',
       fullSheet: 'assets/images/page_18.png',
-      tags: ['Game UX/UI', 'HUD Design', 'Figma', 'Photoshop'],
+      tags: ['UX/UI Design', 'Adobe Photoshop', 'Adobe Illustrator', 'Figma'],
       views: [
-        { label: 'Combat HUD', src: 'assets/images/crops/horror_hud.jpg' },
-        { label: 'Title Screen UI', src: 'assets/images/crops/horror_menu.jpg' },
-        { label: 'Full UX/UI Sheet', src: 'assets/images/web/page_18.jpg' }
+        { label: 'Slide 18: Full UX/UI Sheet', src: 'assets/images/web/page_18.jpg' },
+        { label: 'Revolver Combat HUD', src: 'assets/images/crops/horror_hud.jpg' },
+        { label: 'Title Screen Menu', src: 'assets/images/crops/horror_menu.jpg' }
       ]
     },
     {
-      id: 'mobile-games',
+      id: '2d-tiles-characters',
       featured: false,
       category: '2d',
-      badge: '2D GAMES & TILES',
-      year: 'MOBILE & UNITY 2D',
-      spec: 'SPRITES • TILEMAP',
-      title: 'Juukie!!, Dominion’s War & Seamless 2D Tilesets',
-      desc: 'Designed and developed 2D mobile games (Juukie!! The Mouse : Adventures and Dominion’s War : The Card Game) alongside original 2D character sprites and seamless Unity cave Tile Palettes.',
-      thumb: 'assets/images/crops/dominion_cardgame.jpg',
-      fullSheet: 'assets/images/page_19.png',
-      tags: ['2D Game Art', 'Unity Tilemap', 'Mobile Game Design'],
+      badge: '2D TILESET & SPRITES',
+      year: 'UNITY 2D ASSETS',
+      spec: 'TILE PALETTE',
+      title: '2D Seamless Cave Tilesets & Character Designs',
+      desc: 'การออกแบบตัวละคร 2D ทั้ง 6 คาแรกเตอร์ และการสร้าง Seamless Tile Palette ฉากถ้ำสำหรับประกอบฉากใน Unity 2D',
+      thumb: 'assets/images/crops/2d_characters_sheet.jpg',
+      slideThumb: 'assets/images/web/page_20.jpg',
+      fullSheet: 'assets/images/page_20.png',
+      tags: ['Unity 2D Tilemap', 'Character Sprites', 'Adobe Photoshop'],
       views: [
-        { label: '2D Mobile Games', src: 'assets/images/web/page_19.jpg' },
-        { label: 'Characters & Tileset', src: 'assets/images/web/page_20.jpg' },
-        { label: 'Juukie Gameplay', src: 'Project/Pic/Unity/Juukie.png' }
+        { label: 'Slide 20: Full Sheet', src: 'assets/images/web/page_20.jpg' }
       ]
     },
     {
@@ -383,32 +423,34 @@
       badge: '2D ILLUSTRATION',
       year: 'NOODLE ART',
       spec: 'LINE & COLOR',
-      title: 'Panoramic Noodle Art Illustration',
-      desc: 'Intricate widescreen doodle illustration contrasting vibrant psychedelic color rendering on the left with dense hand-inked linework on the right.',
+      title: '2D Arts — Panoramic Noodle Art Illustration',
+      desc: 'งานวาดภาพประกอบแนว Doodle / Noodle Art ขนาดพาโนรามา เปรียบเทียบฝั่งลงสีสันสดใสและฝั่งเส้น Line Art รายละเอียดสูง',
       thumb: 'assets/images/crops/noodle_art.jpg',
+      slideThumb: 'assets/images/web/page_21.jpg',
       fullSheet: 'assets/images/page_21.png',
-      tags: ['Digital Illustration', 'Procreate', 'Line Art'],
+      tags: ['Digital Illustration', 'Procreate', 'Adobe Photoshop'],
       views: [
-        { label: 'Panoramic Artwork', src: 'assets/images/crops/noodle_art.jpg' },
-        { label: 'Full Sheet', src: 'assets/images/web/page_21.jpg' }
+        { label: 'Slide 21: Noodle Art Sheet', src: 'assets/images/web/page_21.jpg' },
+        { label: 'Panoramic Artwork Closeup', src: 'assets/images/crops/noodle_art.jpg' }
       ]
     },
     {
       id: '2d-portraits-collection',
       featured: false,
       category: '2d',
-      badge: 'PORTRAITS & POSTERS',
+      badge: '2D PORTRAITS & VECTOR',
       year: '2D DIGITAL ART',
-      spec: 'VECTOR & PAINTING',
-      title: 'Digital Portraits & Graphic Character Illustrations',
-      desc: 'Selected 2D portrait paintings, high-contrast pop character posters, and Adobe Illustrator crosshatch/vector portrait studies.',
+      spec: 'ILLUSTRATOR & PAINTING',
+      title: '2D Digital Portraits & Adobe Illustrator Vector Artworks',
+      desc: 'ชุดผลงานภาพวาดดิจิทัลพอร์ตเทรต โปสเตอร์คาแรกเตอร์สีสันจัดจ้าน และงานดราฟต์เวกเตอร์ใน Adobe Illustrator',
       thumb: 'assets/images/web/page_24.jpg',
+      slideThumb: 'assets/images/web/page_24.jpg',
       fullSheet: 'assets/images/page_24.png',
-      tags: ['Adobe Illustrator', 'Photoshop', 'Procreate', 'Portraits'],
+      tags: ['Adobe Illustrator', 'Adobe Photoshop', 'Procreate'],
       views: [
-        { label: 'Graphic Character Posters', src: 'assets/images/web/page_24.jpg' },
-        { label: 'Digital Portrait Series', src: 'assets/images/web/page_23.jpg' },
-        { label: 'Vector & Crosshatch Portraits', src: 'assets/images/crops/vector_portraits.jpg' }
+        { label: 'Slide 24: Character Posters', src: 'assets/images/web/page_24.jpg' },
+        { label: 'Slide 23: Digital Portraits', src: 'assets/images/web/page_23.jpg' },
+        { label: 'Slide 22: Adobe Illustrator Portraits', src: 'assets/images/web/page_22.jpg' }
       ]
     }
   ];
@@ -426,11 +468,10 @@
         const isVideo = Boolean(item.videoId);
         const actionIcon = isVideo
           ? `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 4 20 12 6 20 6 4"></polygon></svg>`
-          : `<svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>`;
-        const ctaText = isVideo ? 'Watch Animation Breakdown' : 'Inspect Renders & Sheet';
+          : `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>`;
+        const ctaText = isVideo ? 'คลิกเพื่อดูวิดีโอและสไลด์' : 'คลิกเพื่อดูสไลด์และภาพขยายใหญ่';
 
         const tagsHtml = item.tags
-          .slice(0, 3)
           .map((tag, idx) => `<span class="tag ${idx === 0 ? 'tag-category' : 'tag-tool'}">${tag}</span>`)
           .join('');
 
@@ -441,7 +482,7 @@
               <div class="artwork-type-badge">${item.badge}</div>
               <div class="Projects-overlay">
                 <div class="artwork-play-btn">${actionIcon}</div>
-                <span class="view-details">${isVideo ? 'Watch Reel' : 'View Breakdown'}</span>
+                <span class="view-details">${isVideo ? 'Watch Animation' : 'Inspect Large Slide'}</span>
               </div>
             </div>
             <div class="Projects-info">
@@ -463,11 +504,15 @@
   }
 
   // =========================================================================
-  // 2. RENDER ARTSTATION-STYLE PURE VISUAL GALLERY (#gallery-grid)
+  // 2. RENDER LARGE SLIDE & ARTSTATION GALLERY (#gallery-grid)
   // =========================================================================
   const galleryGrid = document.getElementById('gallery-grid');
   const filterButtons = Array.from(document.querySelectorAll('.gallery-filter-btn'));
+  const modeSlidesBtn = document.getElementById('mode-slides-btn');
+  const modeRendersBtn = document.getElementById('mode-renders-btn');
+
   let activeGalleryFilter = 'all';
+  let galleryDisplayMode = 'slides'; // 'slides' (extra-large full slides) or 'renders'
 
   function updateFilterLabels() {
     const counts = {
@@ -479,10 +524,10 @@
     };
     const baseLabels = {
       all: 'ALL',
-      characters: 'CHARACTERS & CREATURES',
+      characters: 'CHARACTERS & BOSSES',
       environments: 'ENVIRONMENTS & PROPS',
       tech: 'SHADERS & ANIMATION',
-      '2d': '2D ART & UI'
+      '2d': '2D ART & GAME UI'
     };
     filterButtons.forEach((btn) => {
       const key = btn.getAttribute('data-filter');
@@ -499,22 +544,30 @@
 
   function renderGallery() {
     if (!galleryGrid) return;
+    galleryGrid.classList.toggle('slide-large-mode', galleryDisplayMode === 'slides');
+
     const list = getFilteredGalleryItems();
     galleryGrid.innerHTML = list
       .map((item) => {
+        const displayImg = galleryDisplayMode === 'slides' ? (item.slideThumb || item.thumb) : item.thumb;
         const indicator = item.videoId
-          ? '&#9654; VIDEO'
+          ? '&#9654; VIDEO + SLIDE'
           : item.views && item.views.length > 1
-            ? `${item.views.length} VIEWS`
-            : '';
+            ? `${item.views.length} SLIDES / VIEWS`
+            : 'FULL HD SLIDE';
 
         return `
           <div class="pure-gallery-item" data-open-id="${item.id}" tabindex="0" role="button" aria-label="${item.title}">
-            <img src="${item.thumb}" alt="${item.title}" loading="lazy">
-            ${indicator ? `<span class="as-tile-indicator">${indicator}</span>` : ''}
-            <div class="as-tile-caption">
-              <span class="as-tile-cat">${item.badge}</span>
-              <div class="as-tile-title">${item.title}</div>
+            <div class="tile-img-frame">
+              <img src="${displayImg}" alt="${item.title}" loading="lazy">
+              <span class="as-tile-indicator">${indicator}</span>
+            </div>
+            <div class="as-tile-footer">
+              <div>
+                <span class="as-tile-cat">${item.badge} &bull; ${item.year}</span>
+                <div class="as-tile-title">${item.title}</div>
+              </div>
+              <span class="as-tile-zoom-pill">ขยายเต็มจอ &#10530;</span>
             </div>
           </div>
         `;
@@ -531,8 +584,23 @@
     });
   });
 
+  if (modeSlidesBtn && modeRendersBtn) {
+    modeSlidesBtn.addEventListener('click', () => {
+      galleryDisplayMode = 'slides';
+      modeSlidesBtn.classList.add('active');
+      modeRendersBtn.classList.remove('active');
+      renderGallery();
+    });
+    modeRendersBtn.addEventListener('click', () => {
+      galleryDisplayMode = 'renders';
+      modeRendersBtn.classList.add('active');
+      modeSlidesBtn.classList.remove('active');
+      renderGallery();
+    });
+  }
+
   // =========================================================================
-  // 3. ARTSTATION SPLIT LIGHTBOX MODAL + MULTI-SHEET SWITCHER
+  // 3. ARTSTATION EXTRA-LARGE SPLIT LIGHTBOX MODAL
   // =========================================================================
   const modal = document.getElementById('artwork-modal');
   const modalClose = document.getElementById('modal-close');
@@ -550,7 +618,7 @@
   let currentItemIndex = 0;
 
   function renderStageView(item, viewIndex) {
-    const views = item.views && item.views.length > 0 ? item.views : [{ label: 'Render', src: item.thumb }];
+    const views = item.views && item.views.length > 0 ? item.views : [{ label: 'Slide', src: item.slideThumb || item.thumb }];
     const activeView = views[viewIndex] || views[0];
 
     if (activeView.videoId) {
@@ -617,12 +685,12 @@
     const actionButtons = [];
     if (item.externalUrl) {
       actionButtons.push(
-        `<a href="${item.externalUrl}" target="_blank" rel="noopener noreferrer" class="as-action-link">${item.externalLabel || 'Open External Link'} &#8599;</a>`
+        `<a href="${item.externalUrl}" target="_blank" rel="noopener noreferrer" class="as-action-link">${item.externalLabel || 'Open Link'} &#8599;</a>`
       );
     }
     if (item.fullSheet) {
       actionButtons.push(
-        `<a href="${item.fullSheet}" target="_blank" rel="noopener noreferrer" class="as-action-link ${item.externalUrl ? 'secondary' : ''}">Open Original 3K Sheet &#8599;</a>`
+        `<a href="${item.fullSheet}" target="_blank" rel="noopener noreferrer" class="as-action-link ${item.externalUrl ? 'secondary' : ''}">เปิดภาพสไลด์ 3K เต็มจอ &#8599;</a>`
       );
     }
     modalActions.innerHTML = actionButtons.join('');
@@ -647,7 +715,6 @@
     populateModal();
   }
 
-  // Event delegation for all clickable cards/buttons with [data-open-id]
   document.addEventListener('click', (e) => {
     const trigger = e.target.closest('[data-open-id]');
     if (!trigger) return;
@@ -683,10 +750,13 @@
   });
 
   // =========================================================================
-  // 4. HERO SHOWCASE SLIDESHOW & MOBILE NAVIGATION
+  // 4. HERO SHOWCASE SLIDESHOW (5 SLIDES + PREV/NEXT ARROWS)
   // =========================================================================
   const heroImgs = Array.from(document.querySelectorAll('#hero-slides .hero-bg-media'));
   const heroDots = Array.from(document.querySelectorAll('#hero-dots .hero-dot'));
+  const heroSlideLabel = document.getElementById('hero-slide-label');
+  const heroPrevBtn = document.getElementById('hero-prev');
+  const heroNextBtn = document.getElementById('hero-next');
   let heroIdx = 0;
   let heroTimer = null;
 
@@ -695,6 +765,9 @@
     heroIdx = (index + heroImgs.length) % heroImgs.length;
     heroImgs.forEach((img, i) => img.classList.toggle('active', i === heroIdx));
     heroDots.forEach((dot, i) => dot.classList.toggle('active', i === heroIdx));
+    if (heroSlideLabel && heroImgs[heroIdx]) {
+      heroSlideLabel.textContent = heroImgs[heroIdx].getAttribute('data-caption') || '';
+    }
   }
 
   function startHeroTimer() {
@@ -708,6 +781,20 @@
       startHeroTimer();
     });
   });
+
+  if (heroPrevBtn) {
+    heroPrevBtn.addEventListener('click', () => {
+      setHeroSlide(heroIdx - 1);
+      startHeroTimer();
+    });
+  }
+
+  if (heroNextBtn) {
+    heroNextBtn.addEventListener('click', () => {
+      setHeroSlide(heroIdx + 1);
+      startHeroTimer();
+    });
+  }
 
   // Mobile Menu Toggle & Scrollspy
   const menuToggle = document.getElementById('menu-toggle');
