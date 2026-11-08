@@ -13,6 +13,15 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- Artistic Page Transition Curtain & Scroll Progress Ribbon -->
+    <div class="page-transition-curtain" id="pageTransitionCurtain" aria-hidden="true">
+      <div class="curtain-inner">
+        <span class="curtain-logo">METHICHAI<span>.</span>3D</span>
+        <span class="curtain-sub">3D ARTIST &amp; GAME ASSET PORTFOLIO</span>
+      </div>
+    </div>
+    <div class="scroll-progress-bar" id="scrollProgressBar" aria-hidden="true"></div>
+
     <!-- Top Navigation Bar -->
     <nav class="navtabbar" id="navbar">
       <a href="#home" class="nav-brand">METHICHAI<span class="brand-accent-dot">.</span>3D</a>
@@ -24,9 +33,9 @@
       <ul class="nav-menu" id="navMenu">
         <li><a href="#home" class="nav-link active-link">Home</a></li>
         <li><a href="#artwork3d" class="nav-link">Featured 3D</a></li>
-        <li><a href="#gallery" class="nav-link">3D Model Vault (36)</a></li>
-        <li><a href="#gameproject" class="nav-link">Game Projects (5)</a></li>
-        <li><a href="#about" class="nav-link">About &amp; Resume</a></li>
+        <li><a href="#gallery" class="nav-link">3D Model Vault (40)</a></li>
+        <li><a href="#gameproject" class="nav-link">Game Projects (6)</a></li>
+        <li><a href="#about" class="nav-link">About &amp; Experience</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
         <li>
           <a
@@ -81,7 +90,7 @@
       <button class="hero-nav-arrow hero-nav-prev" id="heroPrevBtn" aria-label="Previous Slide">❮</button>
       <button class="hero-nav-arrow hero-nav-next" id="heroNextBtn" aria-label="Next Slide">❯</button>
 
-      <div class="hero-center-content">
+      <div class="hero-center-content reveal-on-scroll">
         <div class="hero-badge-row">
           <span class="hero-role-pill">3D ARTIST &amp; 3D ENVIRONMENT ARTIST</span>
           <span class="hero-coop-pill">CHARACTERS • CREATURES • ENVIRONMENTS • GAME ASSETS</span>
@@ -95,7 +104,7 @@
         </p>
         <div class="hero-center-bottom-actions">
           <a href="#gallery" class="btn-primary">
-            <span>Explore All 36 Individual 3D Models</span>
+            <span>Explore All 40 Individual 3D Models</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4">
               <rect x="3" y="3" width="7" height="7"></rect>
               <rect x="14" y="3" width="7" height="7"></rect>
@@ -103,7 +112,7 @@
               <rect x="3" y="14" width="7" height="7"></rect>
             </svg>
           </a>
-          <a href="#gameproject" class="btn-vivid">View 5 Game Projects</a>
+          <a href="#gameproject" class="btn-vivid">View 6 Game Projects</a>
           <a href="#about" class="btn-secondary">About &amp; Experience</a>
         </div>
 
@@ -129,16 +138,16 @@
       <div class="ambient-glow glow-cyan"></div>
       <div class="ambient-glow glow-violet"></div>
 
-      <div class="section-header">
+      <div class="section-header reveal-on-scroll">
         <span class="section-eyebrow eyebrow-cyan">3D CHARACTERS • BOSS CREATURES • ENVIRONMENTS • WEAPONS</span>
         <h2 class="section-title">Featured 3D Models &amp; Scenes</h2>
         <div class="title-underline"></div>
         <p class="section-subtitle">
-          Highlighted individual 3D character models, boss sculpts, hard-surface weapons, and stylized game environments. Click any card to inspect high-resolution renders and full breakdown sheets.
+          Highlighted individual 3D character models, boss sculpts, hard-surface weapons, and stylized game environments displayed at large scale. Click any card to inspect high-resolution renders and full breakdown sheets.
         </p>
         <div class="section-header-cta">
           <a href="#gallery" class="artwork-gallery-cta-btn">
-            <span>Jump to Full 36-Model Vault Below</span>
+            <span>Jump to Full 40-Model Vault Below</span>
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
               <line x1="12" y1="5" x2="12" y2="19"></line>
               <polyline points="19 12 12 19 5 12"></polyline>
@@ -149,7 +158,7 @@
 
       <div class="Projects-grid">
         <!-- 1. Guidi 3D Character Model -->
-        <article class="Projects-item" data-modal-id="model-guidi">
+        <article class="Projects-item reveal-on-scroll" data-modal-id="model-guidi">
           <div class="Projects-image model-contain-stage stage-chouri">
             <span class="artwork-type-badge">3D CHARACTER MODEL</span>
             <img src="assets/images/models/model_guidi.jpg" alt="Guidi — Playable 3D Character Model" loading="lazy" />
@@ -184,7 +193,7 @@
         </article>
 
         <!-- 2. Zeppe 3D Character Model -->
-        <article class="Projects-item" data-modal-id="model-zeppe">
+        <article class="Projects-item reveal-on-scroll" data-modal-id="model-zeppe">
           <div class="Projects-image model-contain-stage stage-chouri">
             <span class="artwork-type-badge">3D CHARACTER MODEL</span>
             <img src="assets/images/models/model_zeppe.jpg" alt="Zeppe — Playable 3D Character Model" loading="lazy" />
@@ -219,7 +228,7 @@
         </article>
 
         <!-- 3. Four-Armed Rat Boss Model -->
-        <article class="Projects-item" data-modal-id="boss-four-arm-rat">
+        <article class="Projects-item reveal-on-scroll" data-modal-id="boss-four-arm-rat">
           <div class="Projects-image model-contain-stage stage-dark">
             <span class="artwork-type-badge">3D BOSS CREATURE</span>
             <img src="assets/images/models/boss_four_arm_rat.jpg" alt="Four-Armed Mutant Rat Boss 3D Sculpt" loading="lazy" />
@@ -242,7 +251,7 @@
             </div>
             <h3 class="Projects-title">Four-Armed Mutant Rat Boss</h3>
             <p class="Projects-description">
-              Heavy cuatro-armed mutant boss sculpted and textured for No More Rat : Down The Drain on Roblox. Built with exaggerated silhouette proportions, glowing belly sigil, and full combat rig.
+              Heavy four-armed mutant boss sculpted and textured for No More Rat : Down The Drain on Roblox. Built with exaggerated silhouette proportions, glowing belly sigil, and full combat rig.
             </p>
             <div class="Projects-tags">
               <span class="tag tag-category">Boss Creature</span>
@@ -255,7 +264,7 @@
         </article>
 
         <!-- 4. Dark Rat Demon Boss Model -->
-        <article class="Projects-item" data-modal-id="boss-dark-rat-demon">
+        <article class="Projects-item reveal-on-scroll" data-modal-id="boss-dark-rat-demon">
           <div class="Projects-image model-contain-stage stage-dark">
             <span class="artwork-type-badge">3D BOSS SCULPT</span>
             <img src="assets/images/models/boss_dark_rat_demon.jpg" alt="Dark Rat Demon Boss 3D Sculpt" loading="lazy" />
@@ -290,7 +299,7 @@
         </article>
 
         <!-- 5. Spiky Beast Rat Creature -->
-        <article class="Projects-item" data-modal-id="boss-spiky-beast-rat">
+        <article class="Projects-item reveal-on-scroll" data-modal-id="boss-spiky-beast-rat">
           <div class="Projects-image model-contain-stage stage-dark">
             <span class="artwork-type-badge">3D CREATURE MODEL</span>
             <img src="assets/images/models/boss_spiky_beast_rat.jpg" alt="Spiky Beast Rat Quadruped Creature Model" loading="lazy" />
@@ -325,7 +334,7 @@
         </article>
 
         <!-- 6. Kraken & Tiki Island Diorama -->
-        <article class="Projects-item" data-modal-id="env-kraken-island">
+        <article class="Projects-item reveal-on-scroll" data-modal-id="env-kraken-island">
           <div class="Projects-image model-contain-stage stage-brown">
             <span class="artwork-type-badge">3D ISLAND DIORAMA</span>
             <img src="assets/images/models/env_kraken_island.jpg" alt="Kraken & Tiki Island 3D Diorama" loading="lazy" />
@@ -360,7 +369,7 @@
         </article>
 
         <!-- 7. Sunset Alley Environment -->
-        <article class="Projects-item" data-modal-id="env-sunset-alley">
+        <article class="Projects-item reveal-on-scroll" data-modal-id="env-sunset-alley">
           <div class="Projects-image">
             <span class="artwork-type-badge">3D LIGHTING &amp; SCENE</span>
             <img src="assets/images/crops/alley_sunset.jpg" alt="Sunset Alleyway & Modern Interior 3D Scenes" loading="lazy" />
@@ -395,7 +404,7 @@
         </article>
 
         <!-- 8. Isometric Artist Studio Room -->
-        <article class="Projects-item" data-modal-id="env-isometric-studio">
+        <article class="Projects-item reveal-on-scroll" data-modal-id="env-isometric-studio">
           <div class="Projects-image model-contain-stage stage-dark">
             <span class="artwork-type-badge">3D ISOMETRIC ROOM</span>
             <img src="assets/images/models/env_isometric_studio.jpg" alt="Isometric Artist Studio Room" loading="lazy" />
@@ -429,7 +438,7 @@
         </article>
 
         <!-- 9. Hard-Surface Assault Rifles (M16A1 & AK-47) -->
-        <article class="Projects-item" data-modal-id="weapon-m16a1-rifle">
+        <article class="Projects-item reveal-on-scroll" data-modal-id="weapon-m16a1-rifle">
           <div class="Projects-image model-contain-stage stage-brown">
             <span class="artwork-type-badge">3D WEAPON ASSET</span>
             <img src="assets/images/models/weapon_m16a1_rifle.jpg" alt="M16A1 & AK-47 Hard-Surface 3D Weapon Models" loading="lazy" />
@@ -463,7 +472,7 @@
         </article>
 
         <!-- 10. Jester Character Model & Skeletal Rig -->
-        <article class="Projects-item" data-modal-id="rig-jester">
+        <article class="Projects-item reveal-on-scroll" data-modal-id="rig-jester">
           <div class="Projects-image model-contain-stage stage-dark">
             <span class="artwork-type-badge">3D RIGGING &amp; UV</span>
             <img src="assets/images/models/rig_jester_front.jpg" alt="Jester 3D Character Model & Skeletal Rig" loading="lazy" />
@@ -497,7 +506,7 @@
         </article>
 
         <!-- 11. We Are Chouri 3D Cutscene Animation -->
-        <article class="Projects-item" data-modal-id="anim-chouri-cutscene">
+        <article class="Projects-item reveal-on-scroll" data-modal-id="anim-chouri-cutscene">
           <div class="Projects-image">
             <span class="artwork-type-badge">▶ 3D CUTSCENE VIDEO</span>
             <img src="assets/images/crops/anim_chouri.jpg" alt="We Are Chouri 3D Cutscene & Character Animation" loading="lazy" />
@@ -528,7 +537,7 @@
         </article>
 
         <!-- 12. Fresnel, Hologram & Glass Shaders -->
-        <article class="Projects-item" data-modal-id="shader-fresnel-ducks">
+        <article class="Projects-item reveal-on-scroll" data-modal-id="shader-fresnel-ducks">
           <div class="Projects-image model-contain-stage stage-brown">
             <span class="artwork-type-badge">REAL-TIME SHADERS</span>
             <img src="assets/images/models/shader_fresnel_ducks.jpg" alt="Fresnel, Hologram & Glass Refraction Shaders" loading="lazy" />
@@ -563,32 +572,32 @@
       </div>
     </section>
 
-    <!-- Individual 3D Model Vault & Artwork Gallery (All 36 Individual Assets!) -->
+    <!-- Individual 3D Model Vault & Artwork Gallery (All 40 Individual Assets!) -->
     <section id="gallery" class="gallery-showcase-section">
       <div class="ambient-glow glow-pink"></div>
 
-      <div class="section-header">
-        <span class="section-eyebrow eyebrow-violet">36 INDIVIDUAL 3D MODELS, SCULPTS, ENVIRONMENTS &amp; ARTWORKS</span>
+      <div class="section-header reveal-on-scroll">
+        <span class="section-eyebrow eyebrow-violet">40 INDIVIDUAL 3D MODELS, SCULPTS, ENVIRONMENTS &amp; ARTWORKS</span>
         <h2 class="section-title">3D Model Vault &amp; Asset Gallery</h2>
         <div class="title-underline"></div>
         <p class="section-subtitle">
-          Every 3D character, boss monster, creature bust, weapon, building, prop, and environment extracted individually at large scale. Filter by category or switch to 2-Column Extra-Large Studio View.
+          Every 3D character, boss monster, creature bust, weapon, building, prop, and environment extracted individually at large scale. Filter by category or switch between Extra-Large 2-Column Studio View and 3-Column Grid.
         </p>
       </div>
 
       <!-- Filter & View Mode Bar -->
-      <div class="gallery-controls-bar">
+      <div class="gallery-controls-bar reveal-on-scroll">
         <div class="gallery-filter-container" id="galleryFilters">
-          <button class="gallery-filter-btn active" data-filter="all">All 3D Models &amp; Art (36)</button>
+          <button class="gallery-filter-btn active" data-filter="all">All 3D Models &amp; Art (40)</button>
           <button class="gallery-filter-btn" data-filter="characters">3D Characters &amp; Bosses (15)</button>
           <button class="gallery-filter-btn" data-filter="environments">3D Environments &amp; Buildings (9)</button>
-          <button class="gallery-filter-btn" data-filter="weapons">3D Weapons &amp; Props (7)</button>
+          <button class="gallery-filter-btn" data-filter="weapons">3D Weapons &amp; Props (10)</button>
           <button class="gallery-filter-btn" data-filter="shaders">Shaders &amp; 3D Animation (3)</button>
-          <button class="gallery-filter-btn" data-filter="art2d">2D Game Art &amp; UI (2)</button>
+          <button class="gallery-filter-btn" data-filter="art2d">2D Game Art &amp; UI (3)</button>
         </div>
 
         <div class="gallery-mode-switch" id="gallerySizeSwitch">
-          <button class="mode-switch-btn active" data-size="large" title="Large 2-Column Studio View">
+          <button class="mode-switch-btn active" data-size="large" title="Extra-Large 2-Column Studio View">
             ⊞ Extra-Large 2-Column View
           </button>
           <button class="mode-switch-btn" data-size="grid" title="3-Column Studio Grid">
@@ -601,21 +610,21 @@
       <div class="pure-gallery-grid slide-large-mode" id="pureGalleryGrid"></div>
     </section>
 
-    <!-- Game Projects Section (All 5 Games from Resume in English) -->
+    <!-- Game Projects Section (All 6 Games including Wingbeat itch.io & OXIE DEATH Game Jam) -->
     <section id="gameproject" class="gameproject-section">
       <div class="ambient-glow glow-cyan"></div>
 
-      <div class="section-header">
-        <span class="section-eyebrow eyebrow-amber">5 GAME DEVELOPMENT PROJECTS (2023 – 2026)</span>
+      <div class="section-header reveal-on-scroll">
+        <span class="section-eyebrow eyebrow-amber">6 GAME DEVELOPMENT &amp; GAME JAM PROJECTS (2023 – 2026)</span>
         <h2 class="section-title">Game Projects Breakdown</h2>
         <div class="title-underline"></div>
         <p class="section-subtitle">
-          Complete breakdown of my roles, 3D/2D asset production pipelines, and gameplay contributions across 5 game projects developed between 2023 and 2026.
+          Complete breakdown of my roles, 3D/2D asset production pipelines, and gameplay contributions across 6 game projects developed between 2023 and 2026.
         </p>
       </div>
 
       <!-- GAME 1: WE ARE CHOURI (2026) -->
-      <div class="game-showcase-wrapper">
+      <div class="game-showcase-wrapper reveal-on-scroll">
         <div class="game-banner-card-link" data-modal-id="game-we-are-chouri">
           <div class="game-hero-banner-card" style="background-image: url('assets/images/crops/chouri_shrine.jpg')">
             <div class="game-hero-banner-overlay"></div>
@@ -698,8 +707,8 @@
 
       <div class="game-showcase-divider"></div>
 
-      <!-- GAME 2: WINGBEAT (2026) -->
-      <div class="game-showcase-wrapper">
+      <!-- GAME 2: WINGBEAT (2026) — WITH ITCH.IO LINK -->
+      <div class="game-showcase-wrapper reveal-on-scroll">
         <div class="game-banner-card-link" data-modal-id="game-wingbeat">
           <div class="game-hero-banner-card" style="background-image: url('assets/images/models/env_kraken_island.jpg')">
             <div class="game-hero-banner-overlay"></div>
@@ -712,7 +721,7 @@
               </div>
               <h3 class="game-banner-title">WINGBEAT</h3>
               <span class="game-explore-badge">
-                Inspect Island Diorama, Fantasy Trees &amp; Stylized Props
+                Inspect Island Diorama, Fantasy Trees &amp; Play on itch.io
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <line x1="5" y1="12" x2="19" y2="12"></line>
                   <polyline points="12 5 19 12 12 19"></polyline>
@@ -728,7 +737,7 @@
               <span class="role-tag tag-cyan">ROLE: 3D ENVIRONMENT &amp; SCENE PROP ARTIST</span>
             </div>
             <p class="game-story-paragraph">
-              <strong>Wingbeat (2026)</strong> is a colorful <strong>3D Simulation / Party Game</strong> set across whimsical floating islands packed with bold silhouettes and playful hazards.
+              <strong>Wingbeat (2026)</strong> is a colorful <strong>3D Simulation / Party Game</strong> set across whimsical floating islands packed with bold silhouettes and playful hazards, available to play on <strong>itch.io</strong>.
             </p>
             <ul class="game-bullet-list">
               <li>
@@ -754,6 +763,19 @@
                   <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
               </button>
+              <a
+                href="https://newskung.itch.io/wingbeat"
+                target="_blank"
+                rel="noopener"
+                class="game-case-study-btn btn-outline-dark"
+              >
+                <span>🎮 Play on itch.io</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                  <polyline points="15 3 21 3 21 9"></polyline>
+                  <line x1="10" y1="14" x2="21" y2="3"></line>
+                </svg>
+              </a>
             </div>
           </div>
 
@@ -772,8 +794,90 @@
 
       <div class="game-showcase-divider"></div>
 
-      <!-- GAME 3: NO MORE RAT : DOWN THE DRAIN (2025) -->
-      <div class="game-showcase-wrapper">
+      <!-- GAME 3: OXIE DEATH / OXIERUN (2026 — 48-HOUR GAME JAM PROJECT) -->
+      <div class="game-showcase-wrapper reveal-on-scroll">
+        <div class="game-banner-card-link" data-modal-id="game-oxie-death">
+          <div class="game-hero-banner-card" style="background-image: url('assets/images/crops/oxie_death_banner.jpg')">
+            <div class="game-hero-banner-overlay"></div>
+            <div class="game-hero-banner-content">
+              <div class="game-genre-badges">
+                <span class="genre-pill pill-pink">48-HOUR GAME JAM</span>
+                <span class="genre-pill pill-cyan">SPACE EXPLORATION</span>
+                <span class="genre-pill pill-violet">SURVIVAL EXTRACTION</span>
+                <span class="genre-pill pill-emerald">2.5D / 3D</span>
+                <span class="genre-pill pill-year">2026</span>
+              </div>
+              <h3 class="game-banner-title">OXIE DEATH (OXIERUN)</h3>
+              <span class="game-explore-badge">
+                Inspect Game Jam Key Art, Oxygen Survival Loop &amp; Mechanics
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="game-showcase-grid">
+          <div class="game-story-col">
+            <div class="game-role-header">
+              <span class="role-tag tag-pink">ROLE: 2D / 3D GAME ARTIST • 48-HOUR GAME JAM (TEAM "DEADLINE IS CALLING")</span>
+            </div>
+            <p class="game-story-paragraph">
+              <strong>OXIE DEATH (OxieRun)</strong> is a high-stakes <strong>Sci-Fi Survival &amp; Planetary Extraction Game</strong> created in a <strong>48-Hour Game Jam</strong> under the theme <em>Space Exploration</em>. Players step into the boots of an astronaut stationed on a hostile alien world where <strong>Oxygen is your most precious currency</strong>—every breath counts, and one hit from an alien monstrosity means instant death.
+            </p>
+            <ul class="game-bullet-list">
+              <li>
+                <strong>Core Extraction Gameplay Loop:</strong> Accept planetary extraction contracts at the Base Station's <strong>Quest Table</strong>, cycle through the Airlock Door, pulse the <strong>Resource Scanner (`[F]`)</strong> to ping rare minerals (Diamond, Topaz, Amethyst) and alien bio-samples on the mini-map, and return to the <strong>Drop-to-Sell Quest Table (`[Q]`)</strong> to earn Credits for <strong>Shop Terminal</strong> upgrades (movement speed, O2 tank capacity, and radar range).
+              </li>
+              <li>
+                <strong>Oxygen &amp; Hypoxia Life-Support System:</strong> Continuous oxygen depletion outside the habitat (accelerated while sprinting), featuring visor frost and dizzying tunnel-vision warnings at critically low O2, plus portable <strong>O2 Canisters (`[E]`)</strong> for emergency field refills.
+              </li>
+              <li>
+                <strong>Dynamic 1-Hand &amp; 2-Hand Item Visualization:</strong> Small ores, gems, and specimens are carried single-handedly in the right hand, while heavy cargo crates and Gold Chests require a realistic two-handed carrying posture.
+              </li>
+              <li>
+                <strong>Adaptive Alien Monster AI:</strong> Guarded artifacts attract lethal monsters featuring Wander patrol states, Sound &amp; Vision range detection, 1.25x chase speed, and a 1.5x enraged speed buff when players steal alien eggs.
+              </li>
+            </ul>
+            <div class="game-tools-bar">
+              <span class="tools-label">Tools Used:</span>
+              <span class="tool-chip">Unity Engine</span>
+              <span class="tool-chip">Blender</span>
+              <span class="tool-chip">Autodesk Maya</span>
+              <span class="tool-chip">Adobe Photoshop</span>
+              <span class="tool-chip">Procreate</span>
+              <span class="tool-chip">GitHub</span>
+            </div>
+            <div class="game-action-row">
+              <button class="game-case-study-btn btn-pink" data-modal-id="game-oxie-death">
+                <span>View OXIE DEATH Key Art &amp; GDD Breakdown</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="game-media-stack-col">
+            <div class="game-media-card" data-modal-id="game-oxie-death">
+              <img src="assets/images/crops/oxie_death_keyart.jpg" alt="OXIE DEATH (OxieRun) Full Key Art Illustration" loading="lazy" />
+              <span class="media-card-caption">🔍 Click to Zoom: OXIE DEATH Full Astronaut Key Art</span>
+            </div>
+            <div class="game-media-card" data-modal-id="game-oxie-death">
+              <img src="assets/images/crops/oxie_death_banner.jpg" alt="OXIE DEATH Widescreen Title Banner" loading="lazy" />
+              <span class="media-card-caption">🔍 Click to Zoom: OXIE DEATH Title &amp; Character Banner</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-showcase-divider"></div>
+
+      <!-- GAME 4: NO MORE RAT : DOWN THE DRAIN (2025) -->
+      <div class="game-showcase-wrapper reveal-on-scroll">
         <div class="game-banner-card-link" data-modal-id="game-no-more-rat">
           <div class="game-hero-banner-card" style="background-image: url('assets/images/crops/roblox_keyart.jpg')">
             <div class="game-hero-banner-overlay"></div>
@@ -859,8 +963,8 @@
 
       <div class="game-showcase-divider"></div>
 
-      <!-- GAME 4: JUUKIE!! THE MOUSE: ADVENTURES (2024) -->
-      <div class="game-showcase-wrapper">
+      <!-- GAME 5: JUUKIE!! THE MOUSE: ADVENTURES (2024) -->
+      <div class="game-showcase-wrapper reveal-on-scroll">
         <div class="game-banner-card-link" data-modal-id="game-juukie">
           <div class="game-hero-banner-card" style="background-image: url('assets/images/web/page_19.jpg')">
             <div class="game-hero-banner-overlay"></div>
@@ -889,11 +993,11 @@
               <span class="role-tag tag-emerald">ROLE: 2D CHARACTER &amp; UI ARTIST / UNITY GAMEPLAY PROGRAMMER</span>
             </div>
             <p class="game-story-paragraph">
-              <strong>Juukie!! The Mouse: Adventures (2024)</strong> is a fast-paced <strong>2D Endless Runner</strong> set in a lively pixel-art kitchen where players guide a hungry mouse past traps and obstacles.
+              <strong>Juukie!! The Mouse: Adventures (2024)</strong> is a fast-paced <strong>2D Endless Runner</strong> set in a lively pixel-art world where players guide a daring mouse pilot past hazards and obstacles.
             </p>
             <ul class="game-bullet-list">
               <li>
-                <strong>Character, Enemy Sprites &amp; UX/UI Wireframes:</strong> Designed the protagonist mouse animations, enemy hazards, kitchen background tiles, and complete HUD/menu interfaces.
+                <strong>Character, Enemy Sprites &amp; UX/UI Wireframes:</strong> Designed the protagonist mouse animations, enemy hazards, background tiles, and complete HUD/menu interfaces.
               </li>
               <li>
                 <strong>Endless Loop &amp; Obstacle Programming:</strong> Programmed and implemented the endless level-looping mechanics, procedural obstacle spawning, score tracking, and main menu workflows in Unity Engine.
@@ -936,8 +1040,8 @@
 
       <div class="game-showcase-divider"></div>
 
-      <!-- GAME 5: DOMINION'S WAR: THE CARD GAME (2023) & TITLE'S NIGHTMARE UI -->
-      <div class="game-showcase-wrapper">
+      <!-- GAME 6: DOMINION'S WAR: THE CARD GAME (2023) & TITLE'S NIGHTMARE UI -->
+      <div class="game-showcase-wrapper reveal-on-scroll">
         <div class="game-banner-card-link" data-modal-id="game-dominion">
           <div class="game-hero-banner-card" style="background-image: url('assets/images/crops/dominion_cardgame.jpg')">
             <div class="game-hero-banner-overlay"></div>
@@ -966,7 +1070,7 @@
               <span class="role-tag tag-pink">ROLE: WORLD-BUILDER, CARD &amp; MONSTER ARTIST / SYSTEMS DEVELOPER</span>
             </div>
             <p class="game-story-paragraph">
-              <strong>Dominion’s War: The Card Game (2023)</strong> is a tactical <strong>2D Strategy Card Game</strong> featuring original fantasy factions, elemental dragon and monster cards, and turn-based deck combat—paired with my UX/UI interface design for <strong>TiTLE's Nightmare : 2D Horror Shot</strong>.
+              <strong>Dominion’s War: The Card Game (2023)</strong> is a tactical <strong>2D Strategy Card Game</strong> featuring original fantasy factions, elemental monster cards, and turn-based deck combat—paired with my UX/UI interface design for <strong>TiTLE's Nightmare : 2D Horror Shot</strong>.
             </p>
             <ul class="game-bullet-list">
               <li>
@@ -1008,17 +1112,17 @@
       </div>
     </section>
 
-    <!-- About Me, Resume, Teaching Assistant & Idea Camp Section (100% English) -->
+    <!-- About Me, Education, Technical Skills & Teaching Experience (100% English) -->
     <section id="about" class="content-creator-section">
       <div class="ambient-glow glow-violet"></div>
 
-      <div class="section-header">
+      <div class="section-header reveal-on-scroll">
         <span class="section-eyebrow eyebrow-cyan">PROFILE • TECHNICAL SKILLS • TEACHING &amp; MENTORSHIP</span>
         <h2 class="section-title">About Me &amp; Experience</h2>
         <div class="title-underline"></div>
       </div>
 
-      <div class="about-card-container">
+      <div class="about-card-container reveal-on-scroll">
         <div class="about-header-flex">
           <!-- Left Sidebar: Profile Photo + Education + 12 Software Icons -->
           <div class="about-photo-col">
@@ -1081,7 +1185,7 @@
               I am a <strong>3D Artist &amp; Game Development Specialist</strong> from the Media Technology (Game Development) program at <strong>King Mongkut's University of Technology Thonburi (KMUTT — SoA+D)</strong>. I specialize in designing, modeling, sculpting, texturing, and rigging 3D characters, boss creatures, weapons, props, and atmospheric environments for real-time game engines.
             </p>
             <p>
-              Across multiple team productions in <strong>Unity Engine</strong> and <strong>Roblox Studio</strong>, I have taken 3D assets through the entire production pipeline—from initial silhouette concepting and clean subdivision topology in <strong>Autodesk Maya, Blender, and ZBrush</strong> to PBR material authoring in <strong>Adobe Substance 3D Painter</strong> and final in-engine lighting, shaders, and cutscene animation.
+              Across multiple team productions and game jams in <strong>Unity Engine</strong> and <strong>Roblox Studio</strong>, I have taken 3D assets through the entire production pipeline—from initial silhouette concepting and clean subdivision topology in <strong>Autodesk Maya, Blender, and ZBrush</strong> to PBR material authoring in <strong>Adobe Substance 3D Painter</strong> and final in-engine lighting, shaders, and cutscene animation.
             </p>
 
             <!-- 3 Core Specialization Pillars -->
@@ -1136,9 +1240,6 @@
             <div class="activities-resume-box">
               <div class="activities-header-row">
                 <h4>TEACHING ASSISTANT &amp; WORKSHOP MENTORSHIP (2024 – 2026)</h4>
-                <button class="view-slide-mini-btn" data-modal-id="activities-mentorship">
-                  🔍 View Activity Photos
-                </button>
               </div>
               <div class="activities-timeline">
                 <div class="activity-row">
@@ -1186,7 +1287,7 @@
 
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
-      <div class="section-header">
+      <div class="section-header reveal-on-scroll">
         <span class="section-eyebrow eyebrow-amber">LET'S CONNECT &amp; COLLABORATE</span>
         <h2 class="section-title">Get In Touch</h2>
         <div class="title-underline"></div>
@@ -1195,7 +1296,7 @@
         </p>
       </div>
 
-      <div class="contact-container">
+      <div class="contact-container reveal-on-scroll">
         <div class="contact-grid">
           <div class="contact-card">
             <div class="contact-icon icon-cyan">
@@ -1206,7 +1307,7 @@
             </div>
             <h3>Email</h3>
             <p class="contact-detail">
-              <a href="mailto:methichai.p@gmail.com">methichai.p@gmail.com</a>
+              <a href="mailto:methichai5896@gmail.com">methichai5896@gmail.com</a>
             </p>
           </div>
 
@@ -1218,7 +1319,7 @@
             </div>
             <h3>Phone</h3>
             <p class="contact-detail">
-              <a href="tel:0955069964">095-506-9964</a>
+              <a href="tel:+66922675401">(+66) 092-267-5401</a>
             </p>
           </div>
 
@@ -1230,12 +1331,13 @@
                 <circle cx="4" cy="4" r="2"></circle>
               </svg>
             </div>
-            <h3>Social &amp; Links</h3>
+            <h3>Social &amp; Game Links</h3>
             <div class="social-links">
-              <a href="https://www.instagram.com/ai_methichai/" target="_blank" rel="noopener" class="social-btn">Instagram</a>
-              <a href="https://www.facebook.com/methichai.prueksaking.2025/" target="_blank" rel="noopener" class="social-btn">Facebook</a>
+              <a href="https://www.instagram.com/kaijeavv._" target="_blank" rel="noopener" class="social-btn">Instagram</a>
+              <a href="https://www.facebook.com/kizx.kung" target="_blank" rel="noopener" class="social-btn">Facebook</a>
               <a href="https://github.com/aiyoyooo" target="_blank" rel="noopener" class="social-btn">GitHub</a>
-              <a href="https://www.roblox.com/games/79475326799719/No-More-Rat" target="_blank" rel="noopener" class="social-btn">Roblox Game</a>
+              <a href="https://newskung.itch.io/wingbeat" target="_blank" rel="noopener" class="social-btn">Wingbeat (itch.io)</a>
+              <a href="https://www.roblox.com/games/79475326799719/No-More-Rat" target="_blank" rel="noopener" class="social-btn">No More Rat (Roblox)</a>
             </div>
           </div>
         </div>
@@ -1247,7 +1349,7 @@
       <div class="footer-content">
         <p>&copy; 2026 METHICHAI PRUEKSAKING (AI METHICHAI) — 3D Artist &amp; Environment Artist Portfolio</p>
         <p class="footer-location">
-          Bangkhuntien, Bangkok • King Mongkut's University of Technology Thonburi (KMUTT — SoA+D)
+          Bang Khun Thian, Bangkok • King Mongkut's University of Technology Thonburi (KMUTT — SoA+D)
         </p>
       </div>
     </footer>
