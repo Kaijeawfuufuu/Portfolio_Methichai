@@ -1,164 +1,518 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>AI Methichai — 3D Artist Portfolio</title>
-  <meta name="description" content="Portfolio of Methichai Prueksaking (AI Methichai), 3D artist and Game Development student at KMUTT. Characters, monsters, props, environments, animation, game UI and 2D art.">
+  <title>AI Methichai — 3D Artist &amp; Game Development Portfolio</title>
+
+  <!-- Meta Tags for SEO & Link Previews -->
+  <meta name="title" content="AI Methichai — 3D Artist & Game Development Portfolio">
+  <meta name="description" content="3D Artist & Game Development Portfolio of Methichai Prueksaking (AI Methichai). Character & Creature Modeling, Stylized Environments, Shaders, Animation & Games.">
   <meta name="author" content="Methichai Prueksaking">
 
+  <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="AI Methichai — 3D Artist Portfolio">
-  <meta property="og:description" content="Driven by imagination, shaped by art.">
-  <meta property="og:image" content="assets/images/page_02.png">
+  <meta property="og:description" content="Driven by imagination, shaped by art. 3D Modeling, Sculpting, Environment Art, Animation & Game Projects.">
+  <meta property="og:image" content="assets/images/crops/alley_sunset.jpg">
 
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%233f14a0'/><text x='32' y='43' font-family='Arial' font-weight='900' font-size='28' fill='white' text-anchor='middle'>AI</text></svg>">
-
+  <!-- Google Fonts: Montserrat & Open Sans (Reference Typography) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="assets/images/profile.png" type="image/png">
 </head>
+
 <body>
 
-  <!-- Header -->
-  <header class="site-header" id="site-header">
-    <div class="container header-inner">
-      <a href="#top" class="brand">AI METHICHAI</a>
-      <nav class="nav" id="nav">
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contact</a>
-        <a href="assets/Portfolio.pdf" class="nav-cta" download>Download PDF</a>
-      </nav>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Open menu" aria-expanded="false">
-        <span></span><span></span>
-      </button>
+  <!-- =========================================================
+       NAVIGATION BAR (Clean Light Glass Bar - Portfolio_nutt Style)
+       ========================================================= -->
+  <nav class="navtabbar" id="navbar">
+    <a href="#home" class="nav-brand">AI METHICHAI</a>
+
+    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <ul class="nav-menu" id="nav-menu">
+      <li><a href="#home" class="nav-link active-link">HOME</a></li>
+      <li><a href="#artwork3d" class="nav-link">3D ARTWORK</a></li>
+      <li><a href="#gallery" class="nav-link">ARTWORK GALLERY</a></li>
+      <li><a href="#gameproject" class="nav-link">GAME PROJECTS</a></li>
+      <li><a href="#about" class="nav-link">ABOUT</a></li>
+      <li><a href="#contact" class="nav-link">CONTACT</a></li>
+      <li>
+        <a href="assets/Portfolio.pdf" target="_blank" rel="noopener noreferrer" class="nav-pdf-btn">
+          PDF PORTFOLIO ↗
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- =========================================================
+       HERO SECTION (Cinematic Widescreen Showcase Banner)
+       ========================================================= -->
+  <section id="home" class="hero hero-cinematic">
+    <div class="hero-bg-container" id="hero-slides">
+      <img src="assets/images/crops/alley_sunset.jpg" alt="Japanese Sunset Alley 3D Environment Render" class="hero-bg-media active">
+      <img src="Project/Pic/Unity/Rat_scene1.png" alt="Neon Shrine 3D Boss Scene Render" class="hero-bg-media">
+      <img src="assets/images/crops/chouri_shrine.jpg" alt="We Are Chouri Unity 3D World" class="hero-bg-media">
+      <div class="hero-bg-overlay"></div>
     </div>
-  </header>
 
-  <main id="top">
+    <div class="hero-center-content">
+      <span class="hero-role-pill">3D ARTIST &bull; MODELER &bull; GAME DEVELOPER</span>
+      <h1 class="hero-main-name">AI METHICHAI</h1>
+      <p class="hero-tagline">“Driven by imagination, shaped by art”</p>
 
-    <!-- Hero (mirrors the PDF cover) -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-row">
-          <span>Portfolio</span>
-          <span>Collection</span>
-        </div>
+      <div class="hero-center-bottom-actions">
+        <a href="#artwork3d" class="btn-primary hero-action-btn">VIEW MY PORTFOLIO</a>
+        <a href="#gallery" class="btn-secondary hero-action-btn">ARTWORK GALLERY</a>
+        <a href="#about" class="btn-secondary hero-action-btn">ABOUT ME</a>
+      </div>
 
-        <div class="hero-center">
-          <h1 class="hero-name">AI METHICHAI</h1>
-          <p class="hero-tagline">Driven by imagination, shaped by art</p>
-        </div>
+      <div class="hero-slide-dots" id="hero-dots" aria-label="Hero showcase slides">
+        <button class="hero-dot active" data-slide="0" aria-label="Slide 1"></button>
+        <button class="hero-dot" data-slide="1" aria-label="Slide 2"></button>
+        <button class="hero-dot" data-slide="2" aria-label="Slide 3"></button>
+      </div>
+    </div>
 
-        <div class="hero-row">
-          <span>Internship</span>
-          <span>3D-Artist</span>
-        </div>
+    <a href="#artwork3d" class="hero-scroll-indicator" aria-label="Scroll to portfolio">
+      <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </a>
+  </section>
 
-        <div class="hero-actions">
-          <a href="#work" class="btn btn-primary">View work</a>
-          <a href="#contact" class="btn btn-ghost">Get in touch</a>
+  <!-- =========================================================
+       FEATURED 3D ARTWORK & ANIMATION BREAKDOWNS
+       ========================================================= -->
+  <section id="artwork3d" class="Projects-section artwork3d-section">
+    <div class="section-header">
+      <h2 class="section-title">3D ARTWORK &amp; ANIMATION</h2>
+      <div class="title-underline"></div>
+      <p class="section-subtitle">Character &amp; Creature Modeling, Environment Lighting, Rigging, Sculpting &amp; Technical Animation</p>
+      <div class="section-header-cta">
+        <a href="#gallery" class="artwork-gallery-cta-btn">
+          ALL ARTWORK GALLERY <span class="cta-arrow">&rarr;</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="Projects-grid" id="featured-grid">
+      <!-- Populated cleanly from verified Portfolio.pdf data in js/main.js -->
+    </div>
+  </section>
+
+  <!-- =========================================================
+       ARTSTATION-STYLE VISUAL ARTWORK GALLERY (ALL WORKS)
+       ========================================================= -->
+  <section id="gallery" class="gallery-showcase-section">
+    <div class="section-header">
+      <span class="gallery-eyebrow">ARTSTATION VIEW &bull; COMPLETE COLLECTION</span>
+      <h2 class="section-title">ARTWORK GALLERY</h2>
+      <div class="title-underline"></div>
+      <p class="section-subtitle">Click any artwork to inspect high-resolution renders &amp; original breakdown sheets</p>
+    </div>
+
+    <!-- Category Filter Pills -->
+    <div class="gallery-filter-container" id="gallery-filters" role="tablist" aria-label="Filter artworks by category">
+      <button class="gallery-filter-btn active" data-filter="all">ALL</button>
+      <button class="gallery-filter-btn" data-filter="characters">CHARACTERS &amp; CREATURES</button>
+      <button class="gallery-filter-btn" data-filter="environments">ENVIRONMENTS &amp; PROPS</button>
+      <button class="gallery-filter-btn" data-filter="tech">SHADERS &amp; ANIMATION</button>
+      <button class="gallery-filter-btn" data-filter="2d">2D ART &amp; UI</button>
+    </div>
+
+    <!-- Pure Visual ArtStation Tile Grid -->
+    <div class="pure-gallery-grid" id="gallery-grid">
+      <!-- Populated from verified Portfolio.pdf data in js/main.js -->
+    </div>
+  </section>
+
+  <!-- =========================================================
+       GAME PROJECTS SECTION (Exact Portfolio_nutt / Heathsmith Layout)
+       ========================================================= -->
+  <section id="gameproject" class="Projects-section gameproject-section">
+    <div class="section-header">
+      <h2 class="section-title">GAME PROJECTS</h2>
+      <div class="title-underline"></div>
+      <p class="section-subtitle">3D &amp; 2D Game Production, Asset Creation, Cutscenes &amp; UX/UI Design</p>
+    </div>
+
+    <!-- ================= GAME SHOWCASE 01: WE ARE CHOURI ================= -->
+    <div class="game-showcase-wrapper">
+      <div class="game-banner-card-link" data-open-id="chouri-characters" role="button" tabindex="0" aria-label="Inspect We Are Chouri Breakdown">
+        <div class="game-hero-banner-card" style="background-image: url('assets/images/crops/chouri_shrine.jpg');">
+          <div class="game-hero-banner-overlay"></div>
+          <div class="game-hero-banner-content">
+            <span class="game-banner-role">3D CHARACTER, MONSTER &amp; PROP MODELER &bull; UNITY</span>
+            <h3 class="game-banner-title">WE ARE CHOURI</h3>
+            <span class="game-explore-badge">INSPECT 3D ASSETS &amp; CUTSCENE &rarr;</span>
+          </div>
         </div>
       </div>
-    </section>
 
-    <!-- Work -->
-    <section class="section" id="work">
-      <div class="container">
-        <div class="section-head">
-          <h2 class="section-title">Selected Work</h2>
-          <div class="filters" id="filters" role="tablist">
-            <button class="filter active" data-filter="all">All</button>
-            <button class="filter" data-filter="3d">3D</button>
-            <button class="filter" data-filter="animation">Animation</button>
-            <button class="filter" data-filter="games">Games &amp; UI</button>
-            <button class="filter" data-filter="2d">2D Art</button>
+      <div class="game-showcase-grid">
+        <div class="game-story-box">
+          <p class="game-story-paragraph">
+            <strong>WE ARE CHOURI</strong> is a stylized 3D fantasy adventure built in Unity. Serving as Position Modeler, I designed and modeled the dual playable protagonists <strong>Guidi &amp; Zeppe</strong> from 2D color concept explorations through clean 3D character topology and hand-crafted textures.
+          </p>
+          <p class="game-story-paragraph">
+            Beyond the main cast, I modeled enemy monsters, horned shrine guardians, UV-unwrapped glowing tiki lanterns, and a collection of 15 stylized dessert and fantasy props used to dress the game's surreal caverns and bridges.
+          </p>
+          <p class="game-story-paragraph">
+            I also directed and animated the in-engine Unity opening cutscene (<em>Chouri Wake Up in Forest</em>), bringing the characters and world lighting together in motion.
+          </p>
+          <div class="game-action-row">
+            <button type="button" class="game-case-study-btn" data-open-id="anim-chouri">
+              Watch Cutscene <span class="btn-arrow">&#9654;</span>
+            </button>
+            <button type="button" class="game-case-study-btn btn-outline-dark" data-open-id="chouri-characters">
+              View All 4 Asset Sheets <span class="btn-arrow">&rarr;</span>
+            </button>
           </div>
         </div>
 
-        <div id="work-groups">
-          <!-- Rendered by js/main.js -->
+        <div class="game-media-stack-col">
+          <div class="game-media-card" data-open-id="chouri-world" role="button" tabindex="0">
+            <img src="assets/images/crops/chouri_bridge.jpg" alt="We Are Chouri Unity Level Environment" loading="lazy">
+          </div>
+          <div class="game-media-card" data-open-id="chouri-characters" role="button" tabindex="0">
+            <img src="assets/images/crops/chouri_characters.jpg" alt="Guidi and Zeppe 3D Character Turnarounds" loading="lazy">
+          </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- About -->
-    <section class="section section-alt" id="about">
-      <div class="container about">
-        <div class="about-photo">
-          <img src="assets/images/profile.png" alt="Methichai Prueksaking" loading="lazy">
+    <div class="game-showcase-divider"></div>
+
+    <!-- ================= GAME SHOWCASE 02: NO MORE RAT! ================= -->
+    <div class="game-showcase-wrapper">
+      <div class="game-banner-card-link" data-open-id="roblox-bosses" role="button" tabindex="0" aria-label="Inspect No More Rat Boss Models">
+        <div class="game-hero-banner-card" style="background-image: url('Project/Pic/Unity/Rat_scene1.png');">
+          <div class="game-hero-banner-overlay"></div>
+          <div class="game-hero-banner-content">
+            <span class="game-banner-role">3D BOSS &amp; ENEMY CREATURE MODELER &bull; ROBLOX STUDIO</span>
+            <h3 class="game-banner-title">[UPDATED] NO MORE RAT!</h3>
+            <span class="game-explore-badge">INSPECT BOSS &amp; ENEMY MODELS &rarr;</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-showcase-grid">
+        <div class="game-story-box">
+          <p class="game-story-paragraph">
+            <strong>NO MORE RAT! : DOWN THE DRAIN</strong> (by MidnightParadise) is a hack-and-slash action game on Roblox where players step into the role of an exterminator hamster battling waves of mutant rats across household and underground stages.
+          </p>
+          <p class="game-story-paragraph">
+            As 3D Boss &amp; Enemy Modeler, I created the stylized trenchcoat hamster character alongside a roster of six distinct boss and creature models—ranging from a four-armed mutant rat brute and venomous beast to a spear-wielding mounted rider and dark rat demon.
+          </p>
+          <div class="game-action-row">
+            <button type="button" class="game-case-study-btn" data-open-id="roblox-bosses">
+              Inspect 3D Creature Lineup <span class="btn-arrow">&rarr;</span>
+            </button>
+            <a href="https://www.roblox.com/users/2594844006/profile" target="_blank" rel="noopener noreferrer" class="game-case-study-btn btn-outline-dark">
+              Roblox Profile (Dngo_Kiwrn) <span class="btn-arrow">&#8599;</span>
+            </a>
+          </div>
         </div>
 
-        <div class="about-body">
-          <h2 class="section-title">About</h2>
-          <p class="about-lead">
-            I'm Methichai Prueksaking (AI), a 3D artist studying Game Development at KMUTT.
-            I model and texture characters, monsters, props and environments, bring them into
-            Unity and Roblox, and also work on animation, game UI and 2D illustration.
-            I'm currently looking for a <strong>3D artist internship</strong>.
+        <div class="game-media-stack-col">
+          <div class="game-media-card" data-open-id="roblox-game" role="button" tabindex="0">
+            <img src="assets/images/crops/roblox_keyart.jpg" alt="No More Rat Key Art and Gameplay" loading="lazy">
+          </div>
+          <div class="game-media-card" data-open-id="roblox-bosses" role="button" tabindex="0">
+            <img src="assets/images/web/page_07.jpg" alt="Six 3D Boss and Enemy Rat Models" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="game-showcase-divider"></div>
+
+    <!-- ================= GAME SHOWCASE 03: 2D PC & MOBILE GAMES ================= -->
+    <div class="game-showcase-wrapper">
+      <div class="game-banner-card-link" data-open-id="horror-ui" role="button" tabindex="0" aria-label="Inspect 2D Games and UX/UI">
+        <div class="game-hero-banner-card" style="background-image: url('assets/images/crops/horror_hud.jpg');">
+          <div class="game-hero-banner-overlay"></div>
+          <div class="game-hero-banner-content">
+            <span class="game-banner-role">GAME DESIGN &bull; UX/UI &bull; 2D SPRITES &amp; TILESETS</span>
+            <h3 class="game-banner-title">2D PC &amp; MOBILE GAMES</h3>
+            <span class="game-explore-badge">VIEW UI, MOBILE GAMES &amp; TILESETS &rarr;</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="game-showcase-grid">
+        <div class="game-story-box">
+          <p class="game-story-paragraph">
+            <strong>TiTLE’s Nightmare : 2D Horror Shot</strong> (PC) — Designed the complete horror UX/UI package, including the game icon, atmospheric hallway title screen, first-person revolver HUD, stamina/health bars, and custom settings menus.
+          </p>
+          <p class="game-story-paragraph">
+            <strong>Juukie!! The Mouse : Adventures</strong> &amp; <strong>Dominion’s War : The Card Game</strong> (Mobile) — Designed and developed two 2D mobile games featuring arcade flight survival and tactical lane-based card combat, paired with custom character sprites and seamless Unity 2D cave Tile Palettes.
+          </p>
+          <div class="game-action-row">
+            <button type="button" class="game-case-study-btn" data-open-id="horror-ui">
+              Inspect PC Horror UX/UI <span class="btn-arrow">&rarr;</span>
+            </button>
+            <button type="button" class="game-case-study-btn btn-outline-dark" data-open-id="mobile-games">
+              Mobile Games &amp; Tilesets <span class="btn-arrow">&rarr;</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="game-media-stack-col">
+          <div class="game-media-card" data-open-id="horror-ui" role="button" tabindex="0">
+            <img src="assets/images/crops/horror_menu.jpg" alt="TiTLE's Nightmare Main Menu UI" loading="lazy">
+          </div>
+          <div class="game-media-card" data-open-id="mobile-games" role="button" tabindex="0">
+            <img src="assets/images/crops/dominion_cardgame.jpg" alt="Dominion's War 2D Mobile Card Game" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       ABOUT ME & SKILLS SECTION (Exact Portfolio_nutt Card Layout)
+       ========================================================= -->
+  <section id="about" class="about-section content-creator-section">
+    <div class="section-header">
+      <h2 class="section-title">ABOUT ME</h2>
+      <div class="title-underline"></div>
+    </div>
+
+    <div class="about-card-container">
+      <div class="about-header-flex">
+        <!-- Left Column: Portrait, Education & Software Badges -->
+        <div class="about-photo-col">
+          <img src="assets/images/profile.png" alt="Methichai Prueksaking (AI Methichai)" class="about-me-photo">
+
+          <div class="about-education-card">
+            <h4 class="education-card-title">EDUCATION</h4>
+            <p class="education-degree">B.Sc. in Media Technology (Game Development)</p>
+            <p class="education-school">School of Architecture &amp; Design (SoA+D), KMUTT</p>
+            <p class="education-expected">3D Artist Internship Candidate</p>
+          </div>
+
+          <div class="skills-under-photo">
+            <h4 class="skills-sidebar-title">SOFTWARE &amp; TOOLS</h4>
+            <div class="skills-sidebar-grid">
+              <div class="skill-mini-card" title="Blender">
+                <div class="skill-mini-frame sw-bl">Bl</div>
+              </div>
+              <div class="skill-mini-card" title="Autodesk Maya">
+                <div class="skill-mini-frame sw-ma">Ma</div>
+              </div>
+              <div class="skill-mini-card" title="ZBrush">
+                <div class="skill-mini-frame sw-zb">ZB</div>
+              </div>
+              <div class="skill-mini-card" title="Substance 3D Painter">
+                <div class="skill-mini-frame sw-pt">Pt</div>
+              </div>
+
+              <div class="skill-mini-card" title="Unity Engine">
+                <div class="skill-mini-frame sw-un">Un</div>
+              </div>
+              <div class="skill-mini-card" title="Roblox Studio">
+                <div class="skill-mini-frame sw-rb">Rb</div>
+              </div>
+              <div class="skill-mini-card" title="Python Scripting">
+                <div class="skill-mini-frame sw-py">Py</div>
+              </div>
+              <div class="skill-mini-card" title="Adobe Photoshop">
+                <div class="skill-mini-frame sw-ps">Ps</div>
+              </div>
+
+              <div class="skill-mini-card" title="Adobe Illustrator">
+                <div class="skill-mini-frame sw-ai">Ai</div>
+              </div>
+              <div class="skill-mini-card" title="Figma">
+                <div class="skill-mini-frame sw-fg">Fg</div>
+              </div>
+              <div class="skill-mini-card" title="Procreate">
+                <div class="skill-mini-frame sw-pr">Pr</div>
+              </div>
+              <div class="skill-mini-card" title="Adobe After Effects">
+                <div class="skill-mini-frame sw-ae">Ae</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Bio & Specialties -->
+        <div class="about-bio-text">
+          <h3>Hi, I’m <strong>Methichai Prueksaking (AI Methichai)!</strong></h3>
+          <p>
+            I am a 3D Artist and Game Development student at King Mongkut’s University of Technology Thonburi (KMUTT), School of Architecture and Design. Guided by the motto <em>“Driven by imagination, shaped by art,”</em> I specialize in turning concepts into expressive 3D characters, boss creatures, stylized props, and atmospheric game environments.
+          </p>
+          <p>
+            Across team and solo game productions in Unity and Roblox Studio, my workflow covers high-to-low poly modeling, ZBrush sculpting, clean UV unwrapping, hand-painted &amp; PBR texturing in Substance 3D Painter, skeletal rigging, shader studies, and Python automation for animation pipelines.
           </p>
 
-          <div class="about-grid">
-            <div class="about-block">
-              <h3>Education</h3>
-              <p>King Mongkut's University of Technology Thonburi (KMUTT)</p>
-              <p class="muted">School of Architecture and Design<br>Media Arts and Media Technology — Game Development</p>
+          <div class="skills-minimal-grid">
+            <div class="skill-minimal-card">
+              <h4 class="skill-minimal-title">3D Modeling &amp; Sculpting</h4>
+              <p class="skill-minimal-desc">Stylized characters, boss creatures, hard-surface weapons, props, UV unwrapping, and PBR/hand-painted textures.</p>
+              <div class="skill-tags-minimal">
+                <span>Blender</span>
+                <span>Maya</span>
+                <span>ZBrush</span>
+                <span>Substance Painter</span>
+              </div>
             </div>
 
-            <div class="about-block">
-              <h3>Tools</h3>
-              <dl class="tools">
-                <dt>3D</dt><dd>Blender, Maya, ZBrush, Substance 3D Painter</dd>
-                <dt>Engine</dt><dd>Unity, Roblox Studio</dd>
-                <dt>2D / UI</dt><dd>Photoshop, Illustrator, Figma, Procreate, After Effects</dd>
-                <dt>Script</dt><dd>Python</dd>
-              </dl>
+            <div class="skill-minimal-card">
+              <h4 class="skill-minimal-title">Environments &amp; Tech Art</h4>
+              <p class="skill-minimal-desc">In-engine scene assembly, lighting mood, cel/holographic/refractive shaders, rigging, and Python animation scripting.</p>
+              <div class="skill-tags-minimal">
+                <span>Unity</span>
+                <span>Roblox Studio</span>
+                <span>Shaders</span>
+                <span>Python</span>
+              </div>
             </div>
+
+            <div class="skill-minimal-card">
+              <h4 class="skill-minimal-title">2D Art &amp; Game UX/UI</h4>
+              <p class="skill-minimal-desc">Character concept sheets, seamless 2D tilesets, game HUD/menu interfaces, and digital portrait illustration.</p>
+              <div class="skill-tags-minimal">
+                <span>Photoshop</span>
+                <span>Illustrator</span>
+                <span>Procreate</span>
+                <span>Figma</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-cta-row">
+            <a href="assets/Portfolio.pdf" target="_blank" rel="noopener noreferrer" class="btn-primary">
+              DOWNLOAD FULL PORTFOLIO PDF (25 PAGES) &#8599;
+            </a>
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section contact" id="contact">
-      <div class="container">
-        <h2 class="contact-title">CONTACT</h2>
-        <ul class="contact-list">
-          <li><span>Email</span><a href="mailto:methichai5896@gmail.com">methichai5896@gmail.com</a></li>
-          <li><span>Phone</span><a href="tel:+66922675401">(+66) 092 267 5401</a></li>
-          <li><span>Instagram</span><a href="https://www.instagram.com/kaijeavv._/" target="_blank" rel="noopener">kaijeavv._</a></li>
-          <li><span>Facebook</span><a href="https://www.facebook.com/kizx.kung" target="_blank" rel="noopener">Al Methichai</a></li>
-        </ul>
-        <a href="assets/Portfolio.pdf" class="btn btn-primary" download>Download portfolio (PDF)</a>
-      </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>&copy; 2026 Methichai Prueksaking</span>
-      <a href="#top">Back to top &uarr;</a>
     </div>
+  </section>
+
+  <!-- =========================================================
+       CONTACT SECTION (Clean Dark Footer Bar - Portfolio_nutt Style)
+       ========================================================= -->
+  <footer id="contact" class="contact-container">
+    <h3 class="section-title">CONTACT</h3>
+    <div class="title-underline"></div>
+    <p class="section-subtitle">Open for 3D Artist &amp; Game Art Internship Opportunities</p>
+
+    <div class="contact-button-container">
+      <a href="mailto:methichai5896@gmail.com" class="contact-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.546z"/>
+        </svg>
+        <div class="contact-text">
+          <strong>Email</strong>
+          <span>methichai5896@gmail.com</span>
+        </div>
+      </a>
+
+      <a href="tel:+66922675401" class="contact-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/>
+        </svg>
+        <div class="contact-text">
+          <strong>Phone</strong>
+          <span>(+66) 092-267-5401</span>
+        </div>
+      </a>
+
+      <a href="https://www.instagram.com/kaijeavv._/" target="_blank" rel="noopener noreferrer" class="contact-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.916 3.916 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.445.01 10.173 0 8 0zm0 1.442c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.282.24.705.275 1.486.039.843.047 1.096.047 3.232s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485-.145.373-.318.64-.598.92-.28.28-.546.453-.92.598-.282.11-.705.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.283-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.232s.008-2.389.046-3.232c.036-.78.166-1.204.276-1.486.145-.373.318-.64.6-.92a2.48 2.48 0 0 1 .92-.598c.282-.11.705-.24 1.485-.276.843-.038 1.096-.047 3.232-.047zM8 4.908a3.092 3.092 0 1 0 0 6.184 3.092 3.092 0 0 0 0-6.184zm0 5.184a2.092 2.092 0 1 1 0-4.184 2.092 2.092 0 0 1 0 4.184zm3.894-4.816a.916.916 0 1 0-1.296-1.296.916.916 0 0 0 1.296 1.296z"/>
+        </svg>
+        <div class="contact-text">
+          <strong>Instagram</strong>
+          <span>@kaijeavv._</span>
+        </div>
+      </a>
+
+      <a href="https://www.facebook.com/kizx.kung" target="_blank" rel="noopener noreferrer" class="contact-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0 0 3.595 0 8.049c0 4.141 3.063 7.58 7.031 7.962V9.75H4.945V8.05h2.086V6.607c0-2.064 1.22-3.2 3.12-3.2.887 0 1.838.164 1.838.164v1.488h-.875c-1.015 0-1.34.61-1.34 1.285v1.52h2.219l-.353 1.699h-1.866v6.253C12.937 15.63 16 12.19 16 8.049z"/>
+        </svg>
+        <div class="contact-text">
+          <strong>Facebook</strong>
+          <span>Al Methichai</span>
+        </div>
+      </a>
+
+      <a href="assets/Portfolio.pdf" target="_blank" rel="noopener noreferrer" class="contact-button">
+        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h5.5v2z"/>
+        </svg>
+        <div class="contact-text">
+          <strong>Portfolio PDF</strong>
+          <span>Download Full Deck</span>
+        </div>
+      </a>
+    </div>
+
+    <p class="footer-copyright">&copy; 2026 Methichai Prueksaking (AI Methichai). All rights reserved.</p>
   </footer>
 
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Image viewer">
-    <button class="lb-close" id="lb-close" aria-label="Close">&times;</button>
-    <button class="lb-nav lb-prev" id="lb-prev" aria-label="Previous">&#8249;</button>
-    <figure class="lb-figure">
-      <img id="lb-img" src="" alt="">
-      <figcaption>
-        <strong id="lb-title"></strong>
-        <span id="lb-desc"></span>
-      </figcaption>
-    </figure>
-    <button class="lb-nav lb-next" id="lb-next" aria-label="Next">&#8250;</button>
+  <!-- =========================================================
+       ARTSTATION-STYLE SPLIT BREAKDOWN LIGHTBOX MODAL
+       ========================================================= -->
+  <div class="as-modal-overlay" id="artwork-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-title">
+    <div class="as-modal-shell">
+      <button class="as-modal-close" id="modal-close" aria-label="Close artwork viewer">&times;</button>
+
+      <!-- Left Stage: Media Viewer + Multi-Sheet Switcher -->
+      <div class="as-modal-stage">
+        <button class="as-stage-nav as-stage-prev" id="modal-prev" aria-label="Previous artwork">&#10094;</button>
+        <div class="as-stage-media" id="modal-media">
+          <!-- Injected dynamically: high-res image or YouTube embed -->
+        </div>
+        <button class="as-stage-nav as-stage-next" id="modal-next" aria-label="Next artwork">&#10095;</button>
+
+        <!-- Breakdown Thumbnails Strip -->
+        <div class="as-stage-thumbs" id="modal-thumbs"></div>
+      </div>
+
+      <!-- Right Sidebar: ArtStation Artist & Project Metadata -->
+      <aside class="as-modal-sidebar">
+        <div class="as-artist-row">
+          <img src="assets/images/profile.png" alt="AI Methichai" class="as-artist-avatar">
+          <div>
+            <div class="as-artist-name">AI Methichai</div>
+            <div class="as-artist-role">3D Artist &bull; KMUTT SoA+D</div>
+          </div>
+        </div>
+
+        <span class="as-category-pill" id="modal-category">3D ARTWORK</span>
+        <h2 class="as-modal-title" id="modal-title">Artwork Title</h2>
+        <p class="as-modal-desc" id="modal-desc">Artwork description.</p>
+
+        <div class="as-software-block">
+          <h4 class="as-sidebar-heading">SOFTWARE &amp; PIPELINE</h4>
+          <div class="as-software-tags" id="modal-tags"></div>
+        </div>
+
+        <div class="as-modal-actions" id="modal-actions"></div>
+      </aside>
+    </div>
   </div>
 
   <script src="js/main.js"></script>
 </body>
+
 </html>
