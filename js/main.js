@@ -1,261 +1,250 @@
 /* ==========================================================================
-   METHICHAI PRUEKSAKING — 3D ARTIST & ENVIRONMENT ARTIST PORTFOLIO
-   Minimalist ArtStation-Inspired Portfolio Controller
+   AI METHICHAI — 3D ARTIST & ENVIRONMENT ARTIST PORTFOLIO
+   ArtStation Pro + Adobe Portfolio + Curated Art Gallery Controller
    ========================================================================== */
 
 (() => {
   'use strict';
 
   // ==========================================================================
-  // 1. ARTWORKS & 3D ASSETS DATABASE (40 Comprehensive Items)
+  // 1. CURATED 40 ARTWORKS & 3D MODELS DATABASE
   // ==========================================================================
   const GALLERY_ITEMS = [
-    // ---------------- CHARACTERS (15 Items) ----------------
+    // ---------------- CHARACTERS & BOSSES (15 Items) ----------------
     {
       id: 'model-guidi',
       category: 'characters',
       title: 'Guidi — Playable 3D Character',
-      spec: 'Character Model • We Are Chouri',
+      spec: '3D Character • We Are Chouri',
       thumb: 'assets/images/models/model_guidi.jpg',
       stageClass: 'stage-contain stage-chouri',
-      desc: 'Playable dual-protagonist for the split-screen adventure We Are Chouri. Modeled low-poly game geometry, custom stylized textures, and rigged for real-time player locomotion.',
+      desc: 'Playable co-op hero modeled and textured for the split-screen puzzle adventure We Are Chouri.',
       highlights: [
-        'Complete turnaround topology with optimized edge loops for joint deformation',
-        'Hand-crafted stylized PBR diffuse, roughness, and normal maps in Substance 3D Painter',
-        'Integrated into Unity Engine with real-time dynamic lighting and controller inputs'
+        'Clean character topology for smooth joint deformation',
+        'Stylized PBR textures painted in Substance 3D Painter',
+        'Rigged and integrated into Unity Engine'
       ],
-      software: ['Autodesk Maya', 'Substance 3D Painter', 'Unity Engine'],
+      software: ['Autodesk Maya', 'Substance 3D Painter', 'Unity'],
       views: [
-        { label: 'Full 3D Model', src: 'assets/images/models/model_guidi.jpg' },
-        { label: 'Character Sheet & Poses', src: 'assets/images/web/page_02.jpg' },
-        { label: 'Character Lineup', src: 'assets/images/crops/chouri_characters.jpg' }
+        { label: '3D Model', src: 'assets/images/models/model_guidi.jpg' },
+        { label: 'Character Sheet', src: 'assets/images/web/page_02.jpg' },
+        { label: 'Turnaround Lineup', src: 'assets/images/crops/chouri_characters.jpg' }
       ]
     },
     {
       id: 'model-zeppe',
       category: 'characters',
       title: 'Zeppe — Playable 3D Character',
-      spec: 'Character Model • We Are Chouri',
+      spec: '3D Character • We Are Chouri',
       thumb: 'assets/images/models/model_zeppe.jpg',
       stageClass: 'stage-contain stage-chouri',
-      desc: 'Second playable co-op protagonist featuring expressive facial shapes, custom stylized hair geometry, and matching fantasy adventure costume.',
+      desc: 'Co-op protagonist featuring stylized proportions, expressive silhouette, and hand-crafted PBR materials.',
       highlights: [
-        'Clean edge-loop topology specifically built for expressive split-screen gameplay',
-        'Coordinated color palette and material hierarchy built in Substance 3D Painter',
-        'Complete bone weighting, idle animations, and walk cycles'
+        'Full turnaround modeling from 2D concept exploration',
+        'Coordinated material palette in Substance 3D Painter',
+        'In-engine split-screen locomotion setup'
       ],
-      software: ['Autodesk Maya', 'Substance 3D Painter', 'Unity Engine'],
+      software: ['Autodesk Maya', 'Substance 3D Painter', 'Unity'],
       views: [
-        { label: 'Full 3D Model', src: 'assets/images/models/model_zeppe.jpg' },
-        { label: 'Character Sheet & Poses', src: 'assets/images/web/page_02.jpg' },
-        { label: 'Split-Screen Gameplay', src: 'assets/images/crops/chouri_bridge.jpg' }
+        { label: '3D Model', src: 'assets/images/models/model_zeppe.jpg' },
+        { label: 'Character Sheet', src: 'assets/images/web/page_02.jpg' },
+        { label: 'In-Engine Scene', src: 'assets/images/crops/chouri_bridge.jpg' }
       ]
     },
     {
       id: 'boss-four-arm-rat',
       category: 'characters',
       title: 'Four-Armed Mutant Rat Boss',
-      spec: 'Boss Character • No More Rat',
+      spec: 'Boss Creature • No More Rat',
       thumb: 'assets/images/models/boss_four_arm_rat.jpg',
       stageClass: 'stage-contain stage-dark',
-      desc: 'Formidable four-armed subterranean brute monster modeled for No More Rat : Down The Drain. Features asymmetric mutant muscles, sharp claws, and battle scars.',
+      desc: 'Four-armed subterranean boss creature modeled and rigged for No More Rat : Down The Drain on Roblox.',
       highlights: [
-        'Multi-limbed skeletal hierarchy with custom multi-arm IK/FK rig',
-        'High-resolution digital sculpt baked into efficient low-poly game mesh',
-        'Custom heavy attack, roar, and quadruped sprint animation cycles'
+        'Multi-limb skeletal rig and custom combat animations',
+        'High-to-low poly normal map baking',
+        'Live boss encounter in Roblox Studio'
       ],
       software: ['Blender', 'Substance 3D Painter', 'Roblox Studio'],
-      links: [{ label: 'Play Game on Roblox', url: 'https://www.roblox.com/games/79475326799719/No-More-Rat' }],
+      links: [{ label: 'Play on Roblox ↗', url: 'https://www.roblox.com/games/79475326799719/No-More-Rat' }],
       views: [
-        { label: 'Boss Model Turnaround', src: 'assets/images/models/boss_four_arm_rat.jpg' },
-        { label: 'Run Cycle Animation', videoId: 'wsLVAP0mqXw' },
-        { label: 'Creature Roster Sheet', src: 'assets/images/web/page_07.jpg' }
+        { label: 'Boss Model', src: 'assets/images/models/boss_four_arm_rat.jpg' },
+        { label: 'Run Cycle Video', videoId: 'wsLVAP0mqXw', thumb: 'assets/images/crops/anim_boss_run.jpg' },
+        { label: 'Creature Sheet', src: 'assets/images/web/page_07.jpg' }
       ]
     },
     {
       id: 'boss-dark-rat-demon',
       category: 'characters',
-      title: 'Dark Rat Demon Boss Sculpt',
-      spec: 'High-Poly Sculpt • Creature Design',
+      title: 'Dark Rat Demon Boss',
+      spec: 'Boss Creature • No More Rat',
       thumb: 'assets/images/models/boss_dark_rat_demon.jpg',
       stageClass: 'stage-contain stage-dark',
-      desc: 'Menacing demonic boss concept featuring elongated horns, obsidian skin textures, and glowing crimson demonic eyes.',
+      desc: 'Horned demonic rat boss featuring obsidian skin materials, sharp claws, and glowing crimson eyes.',
       highlights: [
-        'High-density digital clay sculpt with intricate muscle fiber detailing',
-        'Advanced normal and ambient occlusion map extraction',
-        'Dark fantasy aesthetic tuned for underground boss encounters'
+        'Sculpted organic muscle anatomy and horn silhouettes',
+        'Emissive and roughness texture maps for dark dungeon lighting'
       ],
-      software: ['Pixologic ZBrush', 'Blender', 'Substance 3D Painter'],
+      software: ['ZBrush', 'Blender', 'Substance 3D Painter'],
       views: [
-        { label: 'Demon Boss Sculpt', src: 'assets/images/models/boss_dark_rat_demon.jpg' },
-        { label: 'Creature Lineup', src: 'assets/images/web/page_07.jpg' }
+        { label: 'Demon Boss Model', src: 'assets/images/models/boss_dark_rat_demon.jpg' },
+        { label: 'Creature Sheet', src: 'assets/images/web/page_07.jpg' }
       ]
     },
     {
       id: 'boss-spiky-beast-rat',
       category: 'characters',
       title: 'Spiky Beast Rat Monster',
-      spec: 'Creature Model • No More Rat',
+      spec: 'Quadruped Boss • No More Rat',
       thumb: 'assets/images/models/boss_spiky_beast_rat.jpg',
       stageClass: 'stage-contain stage-dark',
-      desc: 'Quadruped rodent beast covered in defensive bone spikes, toxic pustules, and heavy muscular legs designed for charging attacks.',
+      desc: 'Quadruped beast boss armored with dorsal bone spikes and heavy muscular limbs for charging attacks.',
       highlights: [
-        'Dynamic quadruped anatomy sculpted with aggressive aggressive posture',
-        'Hardened chitinous shell materials with hand-painted wear and grime',
-        'Optimized game topology ready for real-time engine physics'
+        'Aggressive quadruped silhouette and spike armor detailing',
+        'Game-ready low-poly topology for real-time combat'
       ],
       software: ['Blender', 'Substance 3D Painter', 'Roblox Studio'],
       views: [
         { label: 'Spiky Beast Model', src: 'assets/images/models/boss_spiky_beast_rat.jpg' },
-        { label: 'Sewer Dungeons Sheet', src: 'assets/images/web/page_07.jpg' }
+        { label: 'Creature Sheet', src: 'assets/images/web/page_07.jpg' }
       ]
     },
     {
       id: 'boss-mutant-green-rat',
       category: 'characters',
       title: 'Toxic Mutant Rat Monster',
-      spec: 'Creature Model • Stylized Horror',
+      spec: 'Creature Model • No More Rat',
       thumb: 'assets/images/models/boss_mutant_green_rat.jpg',
       stageClass: 'stage-contain stage-dark',
-      desc: 'Toxic bio-mutated sewer creature with mutated green fur patches, asymmetric claws, and radioactive sludge details.',
+      desc: 'Bio-mutated sewer creature with toxic green skin detailing and asymmetric claws.',
       highlights: [
-        'Detailed organic deformities sculpted with expressive silhouette',
-        'Custom emissive sludge maps highlighting toxic sewer mutations',
-        'Lightweight polycount for smooth mobile and desktop performance'
+        'Hand-painted toxic mutation gradients and surface wear',
+        'Optimized rig and mesh for multi-enemy waves'
       ],
       software: ['Blender', 'Substance 3D Painter', 'Roblox Studio'],
       views: [
         { label: 'Toxic Mutant Model', src: 'assets/images/models/boss_mutant_green_rat.jpg' },
-        { label: 'Creature Roster', src: 'assets/images/web/page_07.jpg' }
+        { label: 'Creature Sheet', src: 'assets/images/web/page_07.jpg' }
       ]
     },
     {
       id: 'enemy-spear-rider-rat',
       category: 'characters',
-      title: 'Spear Rider Patrol Rat',
-      spec: 'Enemy Minion • Weapon Combat',
+      title: 'Spear Rider Rat Enemy',
+      spec: 'Enemy Creature • No More Rat',
       thumb: 'assets/images/models/enemy_spear_rider_rat.jpg',
       stageClass: 'stage-contain stage-dark',
-      desc: 'Mobile spear-wielding patrol minion mounted on a scavenger harness, designed for quick thrust and flank encounters.',
+      desc: 'Mounted spear-wielding enemy creature designed for fast-paced dungeon encounters.',
       highlights: [
-        'Equipped with primitive bone spear and modular leather armor harness',
-        'Clean low-poly topology with shared texture atlases',
-        'Rapid thrust, patrol, and flinch animations'
+        'Character and weapon prop modeled as a cohesive combat unit',
+        'Clean UVs and stylized armor textures'
       ],
       software: ['Blender', 'Substance 3D Painter'],
       views: [
         { label: 'Spear Rider Model', src: 'assets/images/models/enemy_spear_rider_rat.jpg' },
-        { label: 'Sewer Encounter Sheet', src: 'assets/images/web/page_07.jpg' }
+        { label: 'Creature Sheet', src: 'assets/images/web/page_07.jpg' }
       ]
     },
     {
       id: 'enemy-kimono-rat',
       category: 'characters',
-      title: 'Kimono Rodent Minion',
-      spec: 'Enemy Minion • Stylized Armor',
+      title: 'Kimono Rat Minion',
+      spec: 'Enemy Creature • No More Rat',
       thumb: 'assets/images/models/enemy_kimono_rat.jpg',
       stageClass: 'stage-contain stage-dark',
-      desc: 'Thematic oriental-inspired minion wearing traditional patterned fabric robes and wooden bamboo shin armor.',
+      desc: 'Stylized rodent enemy dressed in patterned kimono robes and traditional waraji sandals.',
       highlights: [
-        'Fabric fold modeling and fabric material textures created in Substance',
-        'Distinct silhouette for clear visual readability in dark sewer tunnels',
-        'Optimized game-ready skeleton'
+        'Garment fold modeling and fabric pattern texturing',
+        'Distinctive silhouette for instant gameplay readability'
       ],
       software: ['Blender', 'Substance 3D Painter'],
       views: [
-        { label: 'Kimono Rodent Model', src: 'assets/images/models/enemy_kimono_rat.jpg' },
-        { label: 'Full Sheet', src: 'assets/images/web/page_07.jpg' }
+        { label: 'Kimono Rat Model', src: 'assets/images/models/enemy_kimono_rat.jpg' },
+        { label: 'Creature Sheet', src: 'assets/images/web/page_07.jpg' }
       ]
     },
     {
       id: 'hero-trenchcoat-hamster',
       category: 'characters',
-      title: 'Detective Hamster Hero',
-      spec: 'Hero Model • No More Rat',
+      title: 'Trenchcoat Hamster Hero',
+      spec: 'Player Character • No More Rat',
       thumb: 'assets/images/models/hero_trenchcoat_hamster.jpg',
       stageClass: 'stage-contain stage-dark',
-      desc: 'Protagonist hamster character dressed in a rugged detective trenchcoat, utility belt, and backpack lantern.',
+      desc: 'Playable exterminator hamster hero wearing a stylized detective trenchcoat.',
       highlights: [
-        'Expressive face and ears rigged for emotive character reactions',
-        'Stylized leather and weathered cloth PBR textures',
-        'Third-person game-ready character setup'
+        'Hero character silhouette tailored for third-person action camera',
+        'Clean topology and stylized cloth shading'
       ],
       software: ['Blender', 'Substance 3D Painter', 'Roblox Studio'],
       views: [
-        { label: 'Detective Hero Model', src: 'assets/images/models/hero_trenchcoat_hamster.jpg' },
-        { label: 'Roblox Dungeon Key Art', src: 'assets/images/crops/roblox_keyart.jpg' }
+        { label: 'Hamster Hero Model', src: 'assets/images/models/hero_trenchcoat_hamster.jpg' },
+        { label: 'Roblox Showcase', src: 'assets/images/web/page_06.jpg' }
       ]
     },
     {
       id: 'model-plush-bear',
       category: 'characters',
-      title: 'Cursed Plush Bear Monster',
-      spec: 'Creature Model • We Are Chouri',
+      title: 'Stitched Plush Bear Monster',
+      spec: 'Creature & UV • We Are Chouri',
       thumb: 'assets/images/models/model_plush_bear.jpg',
       stageClass: 'stage-contain stage-chouri',
-      desc: 'Cursed oversized plush toy enemy with coarse stitched burlap cloth, exposed cotton stuffing, and an unnerving toothy grin.',
+      desc: 'Haunted stitched plush bear creature complete with clean 0–1 UV unwrap and fabric weave textures.',
       highlights: [
-        'Macro-scale fabric weave normal maps giving realistic plush tactile texture',
-        'Subsurface scattering shader profile tuned in Unity',
-        'Whimsical yet unsettling enemy animations'
+        'Complete UV layout and stitched fabric surface detailing',
+        'Featured in We Are Chouri fantasy stages'
       ],
-      software: ['Autodesk Maya', 'Substance 3D Painter', 'Unity Engine'],
+      software: ['Autodesk Maya', 'Substance 3D Painter', 'Unity'],
       views: [
         { label: 'Plush Bear Model', src: 'assets/images/models/model_plush_bear.jpg' },
-        { label: 'Monsters & UV Unwraps', src: 'assets/images/web/page_03.jpg' }
+        { label: 'UV & Monster Sheet', src: 'assets/images/web/page_03.jpg' }
       ]
     },
     {
       id: 'model-shrine-demon',
       category: 'characters',
-      title: 'Shrine Stone Demon',
-      spec: 'Creature Model • We Are Chouri',
+      title: 'Horned Shrine Guardian',
+      spec: 'Creature & UV • We Are Chouri',
       thumb: 'assets/images/models/model_shrine_demon.jpg',
       stageClass: 'stage-contain stage-chouri',
-      desc: 'Ancient temple guardian sculpted with mossy weathered stone, carved ceremonial markings, and glowing demonic eyes.',
+      desc: 'Horned stone shrine guardian with carved surface markings and emissive eyes.',
       highlights: [
-        'Procedural moss, stone fractures, and weathering layers in Substance Painter',
-        'Emissive eyes with dynamic bloom effect in Unity',
-        'Heavy golem locomotion and ground-smash animations'
+        'Unwrapped UV islands optimized for texel density',
+        'Weathered stone and moss PBR materials'
       ],
-      software: ['Autodesk Maya', 'Substance 3D Painter', 'Unity Engine'],
+      software: ['Autodesk Maya', 'Substance 3D Painter', 'Unity'],
       views: [
-        { label: 'Shrine Demon Model', src: 'assets/images/models/model_shrine_demon.jpg' },
-        { label: 'Monsters & UV Unwraps', src: 'assets/images/web/page_03.jpg' }
+        { label: 'Shrine Guardian Model', src: 'assets/images/models/model_shrine_demon.jpg' },
+        { label: 'UV & Monster Sheet', src: 'assets/images/web/page_03.jpg' }
       ]
     },
     {
       id: 'rig-jester',
       category: 'characters',
-      title: 'Jester Rig & Topology Breakdown',
-      spec: 'Rigging & UV Layout • Character Tech',
+      title: 'Jester Character Rig & UV Layout',
+      spec: 'Rigging & Topology • Maya',
       thumb: 'assets/images/models/rig_jester_front.jpg',
       stageClass: 'stage-contain stage-dark',
-      desc: 'Production-ready humanoid skeleton rig, clean facial/body blend shapes, and 0-1 UV coordinate layout unwrapped for maximum texture resolution.',
+      desc: 'Full humanoid skeletal joint hierarchy, skin weighting, and clean UV layout for a stylized jester character.',
       highlights: [
-        'Complete bipedal skeleton with IK/FK switching arms and reverse foot locks',
-        'Clean uniform quad topology ensuring deformation without polygon stretching',
-        'Zero-overlap UV unwraps with consistent pixel density across all islands'
+        'Bipedal joint hierarchy with IK/FK controls in Autodesk Maya',
+        'Clean non-overlapping UV map layout'
       ],
-      software: ['Autodesk Maya', 'Maya Rigging Toolset'],
+      software: ['Autodesk Maya', 'Rigging', 'UV Mapping'],
       views: [
-        { label: 'Front Rig Showcase', src: 'assets/images/models/rig_jester_front.jpg' },
-        { label: 'Skeleton & UV Unwraps', src: 'assets/images/crops/jester_rig.jpg' },
-        { label: 'Full Rig Sheet', src: 'assets/images/web/page_11.jpg' }
+        { label: 'Jester Front & Side', src: 'assets/images/models/rig_jester_front.jpg' },
+        { label: 'Skeleton & UV Map', src: 'assets/images/crops/jester_rig.jpg' },
+        { label: 'Full Sheet', src: 'assets/images/web/page_11.jpg' }
       ]
     },
     {
       id: 'sculpt-cyclops-fang',
       category: 'characters',
-      title: 'One-Eyed Cyclops Horror Bust',
-      spec: 'Digital Sculpt • Creature Concept',
+      title: 'One-Eyed Fang Creature Bust',
+      spec: 'Digital Sculpt • ZBrush',
       thumb: 'assets/images/models/sculpt_cyclops_fang.jpg',
       stageClass: 'stage-contain stage-dark',
-      desc: 'Asymmetrical horror creature bust featuring a single central eye, jagged tusks protruding from lower jaw, and organic skin pore detail.',
+      desc: 'High-polygon creature bust study focusing on facial anatomy, fangs, and skin folds.',
       highlights: [
-        'High-resolution multi-million polygon digital sculpt in Pixologic ZBrush',
-        'Organic fleshy skin folds, wrinkle passes, and surface micro-pores',
-        'Matcap studio render showcasing muscular tension'
+        'Sculpted in ZBrush with primary, secondary, and tertiary forms'
       ],
       software: ['Pixologic ZBrush'],
       views: [
@@ -265,218 +254,198 @@
     {
       id: 'sculpt-flesh-alien',
       category: 'characters',
-      title: 'Biomechanical Flesh Alien Bust',
-      spec: 'Digital Sculpt • Sci-Fi Horror',
+      title: 'Organic Alien Head Sculpt',
+      spec: 'Digital Sculpt • ZBrush',
       thumb: 'assets/images/models/sculpt_flesh_alien.jpg',
       stageClass: 'stage-contain stage-dark',
-      desc: 'Conceptual creature study combining biomechanical exoskeleton plating with organic sinew and alien muscle structures.',
+      desc: 'Conceptual creature head sculpt exploring sinewy muscle fibers and organic cranial forms.',
       highlights: [
-        'Hard-surface shell plating transitioning into fibrous organic tissue',
-        'Dynamesh sculpting and ZRemesher topology re-projection',
-        'High-contrast studio lighting render highlighting surface forms'
+        'High-resolution digital clay sculpting and matcap presentation'
       ],
       software: ['Pixologic ZBrush'],
       views: [
-        { label: 'Alien Bust Sculpt', src: 'assets/images/models/sculpt_flesh_alien.jpg' }
+        { label: 'Alien Head Sculpt', src: 'assets/images/models/sculpt_flesh_alien.jpg' }
       ]
     },
     {
       id: 'sculpt-metallic-figure',
       category: 'characters',
-      title: 'Anatomical Humanoid Studies',
-      spec: 'Anatomy Sculpting • Form & Posture',
+      title: 'Character Busts & Anatomy Sculpts',
+      spec: 'Digital Sculpting • ZBrush',
       thumb: 'assets/images/models/sculpt_metallic_figure.jpg',
       stageClass: 'stage-contain stage-brown',
-      desc: 'Academic study of human muscular anatomy, skeletal landmarks, and dynamic standing poise rendered in metallic chrome shader.',
+      desc: 'Series of digital sculptures exploring full-body posture, stylized elf warrior busts, and head anatomy.',
       highlights: [
-        'Accurate muscular volume placement from deltoids down to gastrocnemius',
-        'Surface curvature highlights under chrome reflection',
-        'Accompanied by facial expressions and warrior busts'
+        'Full-body gesture and surface reflection studies in ZBrush',
+        'Multiple color and shader variations'
       ],
-      software: ['Pixologic ZBrush', 'KeyShot'],
+      software: ['Pixologic ZBrush'],
       views: [
-        { label: 'Metallic Anatomy Study', src: 'assets/images/models/sculpt_metallic_figure.jpg' },
+        { label: 'Metallic Figure Study', src: 'assets/images/models/sculpt_metallic_figure.jpg' },
         { label: 'Elf Warrior Busts', src: 'assets/images/models/sculpt_elf_warrior_busts.jpg' },
         { label: 'Spiky Hair Head Sculpt', src: 'assets/images/models/sculpt_spiky_hair_head.jpg' },
         { label: 'Full Sculpt Sheet', src: 'assets/images/web/page_17.jpg' }
       ]
     },
 
-    // ---------------- ENVIRONMENTS (9 Items) ----------------
+    // ---------------- ENVIRONMENTS & DIORAMAS (9 Items) ----------------
     {
       id: 'env-kraken-island',
       category: 'environments',
       title: 'Kraken & Tiki Island 3D Diorama',
-      spec: 'Environment Diorama • Wingbeat (2026)',
+      spec: '3D Diorama • Wingbeat (2026)',
       thumb: 'assets/images/models/env_kraken_island.jpg',
       stageClass: 'stage-contain stage-brown',
-      desc: 'Vibrant low-poly stylized tropical island surrounded by giant magenta Kraken tentacles, carved turquoise Tiki totems, wooden docks, and glowing crystals for Wingbeat.',
+      desc: 'Stylized low-poly island diorama featuring giant Kraken tentacles, Tiki totems, wooden docks, and glowing crystals for Wingbeat.',
       highlights: [
-        'Cohesive stylized color theory and whimsical silhouette language',
-        'Modular wooden planks, crystal formations, and tropical flora',
-        'Real-time water shader with shoreline foam blending'
+        'Complete stylized environment composition and lighting',
+        'Playable in the 2026 party game Wingbeat on itch.io'
       ],
-      software: ['Autodesk Maya', 'Substance 3D Painter', 'Unity Engine'],
-      links: [{ label: 'Play Wingbeat on itch.io', url: 'https://newskung.itch.io/wingbeat' }],
+      software: ['Autodesk Maya', 'Substance 3D Painter', 'Unity'],
+      links: [{ label: 'Play Wingbeat on itch.io ↗', url: 'https://newskung.itch.io/wingbeat' }],
       views: [
-        { label: 'Full Island Diorama', src: 'assets/images/models/env_kraken_island.jpg' },
-        { label: 'Island Overview Sheet', src: 'assets/images/web/page_13.jpg' }
+        { label: 'Island Diorama', src: 'assets/images/models/env_kraken_island.jpg' },
+        { label: 'Full Sheet', src: 'assets/images/web/page_13.jpg' }
       ]
     },
     {
       id: 'env-sunset-alley',
       category: 'environments',
-      title: 'Sunset Alleyway & Architecture',
-      spec: 'Architectural Environment • 3D Scene',
+      title: 'Sunset Alleyway & Architectural Lighting',
+      spec: 'Environment & Lighting • 3D Scene',
       thumb: 'assets/images/crops/alley_sunset.jpg',
       stageClass: '',
-      desc: 'Atmospheric urban Japanese alleyway bathed in warm golden hour sunset light, featuring overhead utility cables, air conditioner units, and asphalt puddles.',
+      desc: 'Atmospheric Japanese alleyway and modern interior lighting studies focusing on golden-hour mood, reflections, and composition.',
       highlights: [
-        'High-density modular architectural assets: air units, signs, and power poles',
-        'Atmospheric volumetric lighting and sunset skybox color grading',
-        'Realistic roughness variation reflecting sunset warmth on wet ground'
+        'Modular urban buildings, utility poles, signage, and wet asphalt shaders',
+        'Accompanied by modern living room interior lighting render'
       ],
-      software: ['Autodesk Maya', 'Substance 3D Painter', 'Unreal Engine 5'],
+      software: ['Blender', 'Autodesk Maya', 'Substance 3D Painter'],
       views: [
-        { label: 'Sunset Alleyway Render', src: 'assets/images/crops/alley_sunset.jpg' },
-        { label: 'Modern Interior Living Room', src: 'assets/images/crops/modern_interior.jpg' },
-        { label: 'Street Character', src: 'assets/images/crops/street_character.jpg' },
-        { label: 'Architectural Sheet', src: 'assets/images/web/page_10.jpg' }
+        { label: 'Sunset Alleyway', src: 'assets/images/crops/alley_sunset.jpg' },
+        { label: 'Modern Interior Scene', src: 'assets/images/crops/modern_interior.jpg' },
+        { label: 'Full Renders Sheet', src: 'assets/images/web/page_10.jpg' }
       ]
     },
     {
       id: 'env-isometric-studio',
       category: 'environments',
       title: 'Isometric Artist Studio Diorama',
-      spec: '3D Room Diorama • Lighting & Props',
+      spec: 'Isometric Room • 3D Environment',
       thumb: 'assets/images/models/env_isometric_studio.jpg',
       stageClass: 'stage-contain stage-dark',
-      desc: 'Detailed miniature artist studio room diorama complete with dual monitors, drawing tablet, art supplies, sofa, and interior lighting.',
+      desc: 'Detailed isometric artist bedroom and workstation filled with custom furniture, dual monitors, art frames, and warm interior lighting.',
       highlights: [
-        'Over 35 unique low-poly props meticulously modeled and placed',
-        'Dual-tone warm interior lamp lighting contrasting with cool window light',
-        'Compact diorama cutaway framing'
+        'Over 30 custom interior props arranged in an isometric cutaway',
+        'Warm desk lamp vs. cool ambient lighting contrast'
       ],
-      software: ['Autodesk Maya', 'Substance 3D Painter', 'V-Ray'],
+      software: ['Autodesk Maya', 'Blender', 'Substance 3D Painter'],
       views: [
-        { label: 'Isometric Studio Diorama', src: 'assets/images/models/env_isometric_studio.jpg' },
-        { label: 'Full Interior Sheet', src: 'assets/images/web/page_11.jpg' }
+        { label: 'Isometric Room Render', src: 'assets/images/models/env_isometric_studio.jpg' },
+        { label: 'Full Sheet', src: 'assets/images/web/page_11.jpg' }
       ]
     },
     {
       id: 'env-chouri-shrine',
       category: 'environments',
-      title: 'Torii Gate & Shrine Ruins',
-      spec: 'Level Environment • We Are Chouri',
+      title: 'Torii Shrine & Mountain Ruins',
+      spec: 'In-Engine Level • We Are Chouri',
       thumb: 'assets/images/crops/chouri_shrine.jpg',
       stageClass: '',
-      desc: 'Sacred mountain shrine area featuring carved Torii gates, stone lanterns, sacred rope banners, and overgrown mossy rock formations.',
+      desc: 'In-engine Unity environment featuring red Torii gates, glowing tiki lanterns, and atmospheric mountain ruins.',
       highlights: [
-        'Modular Japanese shrine architecture kit designed for grid snapping',
-        'Layered rock textures with moss vertex painting',
-        'Dramatic misty mountain lighting creating depth in split-screen'
+        'Assembled in Unity with volumetric fog and real-time lighting'
       ],
-      software: ['Autodesk Maya', 'Substance 3D Painter', 'Unity Engine'],
+      software: ['Unity', 'Autodesk Maya', 'Substance 3D Painter'],
       views: [
-        { label: 'Torii Gate Shrine Area', src: 'assets/images/crops/chouri_shrine.jpg' },
-        { label: 'World Environments Sheet', src: 'assets/images/web/page_05.jpg' }
+        { label: 'Torii Shrine Scene', src: 'assets/images/crops/chouri_shrine.jpg' },
+        { label: 'Full In-Engine Sheet', src: 'assets/images/web/page_05.jpg' }
       ]
     },
     {
       id: 'env-chouri-bridge',
       category: 'environments',
-      title: 'Hanging Rope Bridge & Cavern',
-      spec: 'Level Environment • We Are Chouri',
+      title: 'Co-op Split-Screen Bridge & Cavern',
+      spec: 'In-Engine Level • We Are Chouri',
       thumb: 'assets/images/crops/chouri_bridge.jpg',
       stageClass: '',
-      desc: 'Suspended wooden rope bridge crossing a foggy chasm, connecting mountain shrines to mysterious cavern tunnels.',
+      desc: 'Split-screen co-op level environment showcasing suspended wooden bridges and glowing underground caverns.',
       highlights: [
-        'Dynamic rope sagging and weathered wooden plank variation',
-        'Cavern interior with glowing crystal light sources and stalactites',
-        'Interactive physics bridges reacting to player weight'
+        'Designed for 2-player cooperative puzzle traversal in Unity'
       ],
-      software: ['Autodesk Maya', 'Substance 3D Painter', 'Unity Engine'],
+      software: ['Unity', 'Autodesk Maya', 'Substance 3D Painter'],
       views: [
-        { label: 'Hanging Rope Bridge', src: 'assets/images/crops/chouri_bridge.jpg' },
-        { label: 'Cavern Tunnels', src: 'assets/images/crops/chouri_cavern.jpg' },
-        { label: 'Environments Sheet', src: 'assets/images/web/page_05.jpg' }
+        { label: 'Suspension Bridge', src: 'assets/images/crops/chouri_bridge.jpg' },
+        { label: 'Underground Cavern', src: 'assets/images/crops/chouri_cavern.jpg' },
+        { label: 'Full In-Engine Sheet', src: 'assets/images/web/page_05.jpg' }
       ]
     },
     {
       id: 'env-fantasy-trees',
       category: 'environments',
       title: 'Stylized Twisted Fantasy Trees',
-      spec: 'Foliage & Props • Wingbeat (2026)',
+      spec: 'Environment Foliage • Wingbeat',
       thumb: 'assets/images/models/env_fantasy_trees.jpg',
       stageClass: 'stage-contain stage-brown',
-      desc: 'Whimsical organic twisted tree trunks with layered cloud-like foliage crowns and surface bark grooves.',
+      desc: 'Twisted organic tree trunks with stylized cloud-like foliage canopies in three color variations.',
       highlights: [
-        'Curved trunk silhouette modeling emphasizing fantasy storybook charm',
-        'Foliage normals adjusted to create soft spherical lighting volumes',
-        'Modular placement across island plateaus in Wingbeat'
+        'Created for the floating islands of Wingbeat (2026)'
       ],
-      software: ['Autodesk Maya', 'Substance 3D Painter', 'Unity Engine'],
-      links: [{ label: 'Play Wingbeat on itch.io', url: 'https://newskung.itch.io/wingbeat' }],
+      software: ['Autodesk Maya', 'Substance 3D Painter', 'Unity'],
       views: [
-        { label: 'Fantasy Trees Showcase', src: 'assets/images/models/env_fantasy_trees.jpg' },
-        { label: 'Foliage Assets Sheet', src: 'assets/images/web/page_14.jpg' }
+        { label: 'Fantasy Trees Trio', src: 'assets/images/models/env_fantasy_trees.jpg' },
+        { label: 'Full Sheet', src: 'assets/images/web/page_14.jpg' }
       ]
     },
     {
       id: 'env-banana-house',
       category: 'environments',
-      title: 'Whimsical Banana House Prop',
-      spec: 'Stylized Architecture • Low Poly',
+      title: 'Stylized Banana House & Wireframe',
+      spec: 'Stylized Building • 3D Model',
       thumb: 'assets/images/models/env_banana_house.jpg',
       stageClass: 'stage-contain stage-dark',
-      desc: 'Playful cartoon cottage shaped like a ripe banana, featuring wooden front door, shingle roof, chimney, and round windows.',
+      desc: 'Whimsical banana-shaped cottage shown in both shaded render and clean quad wireframe views.',
       highlights: [
-        'Vibrant hand-painted diffuse style with warm yellow gradients',
-        'Low polygon budget optimized for casual mobile games',
-        'Storybook cartoon silhouette'
+        'Clean low-poly architectural topology and stylized shading'
       ],
-      software: ['Autodesk Maya', 'Substance 3D Painter'],
+      software: ['Autodesk Maya', 'Blender', 'Substance 3D Painter'],
       views: [
-        { label: 'Banana House Model', src: 'assets/images/models/env_banana_house.jpg' },
-        { label: 'Stylized Buildings Sheet', src: 'assets/images/web/page_09.jpg' }
+        { label: 'Banana House & Wireframe', src: 'assets/images/models/env_banana_house.jpg' },
+        { label: 'Buildings Sheet', src: 'assets/images/web/page_09.jpg' }
       ]
     },
     {
       id: 'env-pokecenter-clean',
       category: 'environments',
-      title: 'Stylized Clean Pokécenter Building',
-      spec: 'Building Model • Game Prop',
+      title: 'Pokécenter Exterior — Clean PBR Pass',
+      spec: 'Architectural Model • Texturing',
       thumb: 'assets/images/models/env_pokecenter_clean.jpg',
       stageClass: 'stage-contain stage-dark',
-      desc: 'Crisp stylized medical center building featuring iconic curved red roof, circular glass entrance, and clean modern finishes.',
+      desc: 'Iconic curved roof building modeled in 3D and textured with a clean daytime architectural material pass.',
       highlights: [
-        'Curved hard-surface paneling modeled with smooth bevels',
-        'Clean high-gloss architectural materials and glowing logo',
-        'Contrasting companion piece to the abandoned horror version'
+        'Hard-surface architectural modeling and clean UV layout'
       ],
       software: ['Autodesk Maya', 'Substance 3D Painter'],
       views: [
-        { label: 'Clean Pokécenter Model', src: 'assets/images/models/env_pokecenter_clean.jpg' },
-        { label: 'Building Comparison Sheet', src: 'assets/images/web/page_09.jpg' }
+        { label: 'Clean Pokécenter', src: 'assets/images/models/env_pokecenter_clean.jpg' },
+        { label: 'Buildings Sheet', src: 'assets/images/web/page_09.jpg' }
       ]
     },
     {
       id: 'env-pokecenter-horror',
       category: 'environments',
-      title: 'Abandoned Dark Pokécenter',
-      spec: 'Horror Environment • Texture Study',
+      title: 'Pokécenter Exterior — Abandoned Horror Pass',
+      spec: 'Texture Storytelling • PBR Grime',
       thumb: 'assets/images/models/env_pokecenter_horror.jpg',
       stageClass: 'stage-contain stage-dark',
-      desc: 'Post-apocalyptic decay variation of the Pokécenter featuring shattered windows, rusted roof panels, blood spatters, and grime.',
+      desc: 'Weathered horror re-texture of the Pokécenter featuring rusted metal, broken glass, and heavy grime.',
       highlights: [
-        'Advanced grunge, rust, peel, and leak procedural masks in Substance',
-        'Demonstrates environmental storytelling through material decay',
-        'Eerie dark lighting showcase'
+        'Demonstrates mood transformation purely through PBR texture layers'
       ],
       software: ['Autodesk Maya', 'Substance 3D Painter'],
       views: [
-        { label: 'Horror Pokécenter Model', src: 'assets/images/models/env_pokecenter_horror.jpg' },
-        { label: 'Building Comparison Sheet', src: 'assets/images/web/page_09.jpg' }
+        { label: 'Horror Pokécenter', src: 'assets/images/models/env_pokecenter_horror.jpg' },
+        { label: 'Buildings Sheet', src: 'assets/images/web/page_09.jpg' }
       ]
     },
 
@@ -484,443 +453,401 @@
     {
       id: 'weapon-m16a1-rifle',
       category: 'weapons',
-      title: 'M16A1 Military Assault Rifle',
-      spec: 'Hard-Surface Weapon • PBR Texturing',
+      title: 'M16A1 Assault Rifle',
+      spec: 'Hard-Surface Weapon • 3D Model',
       thumb: 'assets/images/models/weapon_m16a1_rifle.jpg',
       stageClass: 'stage-contain stage-brown',
-      desc: 'Accurately modeled military firearm with carry handle, magazine release, birdcage flash hider, and matte black steel surface texturing.',
+      desc: 'Detailed hard-surface 3D model of the M16A1 rifle with accurate receiver, carry handle, barrel, and stock proportions.',
       highlights: [
-        'Precise hard-surface sub-d modeling with clean mechanical bevels',
-        'Subtle metal edge wear, micro-scratches, and polymer stock finishes',
-        'Separate moving parts (bolt, trigger, magazine) prepped for weapon animation'
+        'Clean hard-surface edge flow and realistic metallic/polymer materials'
       ],
       software: ['Autodesk Maya', 'Substance 3D Painter'],
       views: [
-        { label: 'M16A1 Rifle Model', src: 'assets/images/models/weapon_m16a1_rifle.jpg' },
-        { label: 'AK-47 Rifle Companion', src: 'assets/images/models/weapon_ak47_rifle.jpg' },
-        { label: 'Firearms Sheet', src: 'assets/images/web/page_12.jpg' }
+        { label: 'M16A1 Rifle', src: 'assets/images/models/weapon_m16a1_rifle.jpg' },
+        { label: 'Weapons Sheet', src: 'assets/images/web/page_12.jpg' }
       ]
     },
     {
       id: 'weapon-ak47-rifle',
       category: 'weapons',
-      title: 'AK-47 Assault Rifle with Wood Stock',
-      spec: 'Hard-Surface Weapon • PBR Texturing',
+      title: 'AK-47 Assault Rifle',
+      spec: 'Hard-Surface Weapon • 3D Model',
       thumb: 'assets/images/models/weapon_ak47_rifle.jpg',
       stageClass: 'stage-contain stage-brown',
-      desc: 'Legendary gas-operated rifle featuring stamped steel receiver, curved banana magazine, and polished wood-grain stock and handguard.',
+      desc: 'Hard-surface 3D model of the AK-47 featuring stamped steel receiver, curved magazine, and wooden stock.',
       highlights: [
-        'Polished varnished wood material with realistic grain and varnish scuffs',
-        'Gunmetal stamped receiver with rivet and weld-line detailing',
-        'Optimized polygon flow suited for first-person shooter viewports'
+        'Detailed wood grain and worn gunmetal PBR textures'
       ],
       software: ['Autodesk Maya', 'Substance 3D Painter'],
       views: [
-        { label: 'AK-47 Rifle Model', src: 'assets/images/models/weapon_ak47_rifle.jpg' },
-        { label: 'M16A1 Rifle Model', src: 'assets/images/models/weapon_m16a1_rifle.jpg' },
-        { label: 'Firearms Sheet', src: 'assets/images/web/page_12.jpg' }
+        { label: 'AK-47 Rifle', src: 'assets/images/models/weapon_ak47_rifle.jpg' },
+        { label: 'Weapons Sheet', src: 'assets/images/web/page_12.jpg' }
       ]
     },
     {
       id: 'weapon-monster-bone-axe',
       category: 'weapons',
       title: 'Monster Bone Battleaxe',
-      spec: 'Fantasy Weapon • Creature Bone',
+      spec: 'Fantasy Weapon • No More Rat',
       thumb: 'assets/images/models/weapon_monster_bone_axe.jpg',
       stageClass: 'stage-contain stage-dark',
-      desc: 'Primitive heavy battleaxe crafted from the mandible and horn of an ancient beast, lashed to a timber handle with raw leather.',
+      desc: 'Brutal melee axe crafted from monster bone and horn bound to a wooden shaft.',
       highlights: [
-        'Organic bone porosity and fossilized calcification sculpted in ZBrush',
-        'Weathered wood grain and tight leather cord wrappings',
-        'Aggressive combat silhouette'
+        'Organic bone sculpting combined with stylized game textures'
       ],
-      software: ['Pixologic ZBrush', 'Substance 3D Painter'],
+      software: ['Blender', 'ZBrush', 'Substance 3D Painter'],
       views: [
-        { label: 'Bone Axe Model', src: 'assets/images/models/weapon_monster_bone_axe.jpg' }
+        { label: 'Bone Battleaxe', src: 'assets/images/models/weapon_monster_bone_axe.jpg' }
       ]
     },
     {
       id: 'weapon-spine-bone-blade',
       category: 'weapons',
-      title: 'Vertebrae Spine Bone Blade',
-      spec: 'Fantasy Weapon • Organic Blade',
+      title: 'Vertebrae Spine Blade',
+      spec: 'Fantasy Weapon • 3D Prop',
       thumb: 'assets/images/models/weapon_spine_bone_blade.jpg',
       stageClass: 'stage-contain stage-dark',
-      desc: 'Curved ceremonial blade carved from sharp interlocking vertebrae segments with an ergonomic bone hilt.',
+      desc: 'Serrated fantasy blade sculpted from interlocking skeletal vertebrae.',
       highlights: [
-        'Intricate anatomical spinal joint sculpting',
-        'Hard ivory edge sheen transitioning into marrow crevices',
-        'Fantasy weapon design'
+        'Distinctive silhouette and organic bone surface details'
       ],
-      software: ['Pixologic ZBrush', 'Substance 3D Painter'],
+      software: ['Blender', 'ZBrush', 'Substance 3D Painter'],
       views: [
-        { label: 'Spine Blade Model', src: 'assets/images/models/weapon_spine_bone_blade.jpg' }
+        { label: 'Spine Bone Blade', src: 'assets/images/models/weapon_spine_bone_blade.jpg' }
       ]
     },
     {
       id: 'model-tiki-lanterns',
       category: 'weapons',
-      title: 'Carved Tiki Totems & Lanterns',
-      spec: 'Stylized Props • Wingbeat & Chouri',
+      title: 'Tiki Lanterns — Wireframe, UV & Texture',
+      spec: 'Prop Pipeline • We Are Chouri',
       thumb: 'assets/images/models/model_tiki_lanterns.jpg',
       stageClass: 'stage-contain stage-chouri',
-      desc: 'Carved wooden totems, stone lanterns, and hanging candle holders with glowing interior emissive lights.',
+      desc: 'Full production breakdown of the stylized lantern prop from wireframe and UV checker map to final emissive game textures.',
       highlights: [
-        'Chiseled wood carving details with hand-painted highlight edges',
-        'Point-light emissive setup for night-time level ambience',
-        'Modular set used across level layouts'
+        'Complete wireframe → UV checker → PBR texture pipeline showcase'
       ],
-      software: ['Autodesk Maya', 'Substance 3D Painter', 'Unity Engine'],
+      software: ['Autodesk Maya', 'Substance 3D Painter', 'Unity'],
       views: [
-        { label: 'Tiki Lanterns Showcase', src: 'assets/images/models/model_tiki_lanterns.jpg' },
-        { label: 'Props Sheet', src: 'assets/images/web/page_03.jpg' }
+        { label: 'Lantern Pipeline', src: 'assets/images/models/model_tiki_lanterns.jpg' },
+        { label: 'Full Sheet', src: 'assets/images/web/page_03.jpg' }
       ]
     },
     {
       id: 'prop-cel-cartons',
       category: 'weapons',
-      title: 'Cel-Shaded Beverage Cartons & Cans',
-      spec: 'Stylized NPR Props • Food & Drink',
+      title: 'Hand-Painted Carton Props',
+      spec: 'Stylized Props • 3 Colorways',
       thumb: 'assets/images/models/prop_cel_cartons.jpg',
       stageClass: 'stage-contain stage-brown',
-      desc: 'Whimsical milk cartons, fruit juice boxes, and aluminum soda cans modeled with hand-illustrated packaging artwork.',
+      desc: 'Illustrated cartoon milk and juice carton props presented in three vibrant colorways with bold ink outlines.',
       highlights: [
-        'Custom packaging vector labels with typography and character mascots',
-        'Cel-shaded ink outline effect using inverted hull mesh pass',
-        'Lightweight prop collection ideal for urban environment dressing'
+        'Custom graphic packaging design and cel-shaded look development'
       ],
-      software: ['Autodesk Maya', 'Adobe Illustrator', 'Substance 3D Painter'],
+      software: ['Autodesk Maya', 'Illustrator', 'Substance 3D Painter'],
       views: [
-        { label: 'Beverage Cartons Showcase', src: 'assets/images/models/prop_cel_cartons.jpg' },
-        { label: 'Props Sheet', src: 'assets/images/web/page_15.jpg' }
+        { label: 'Carton Colorways', src: 'assets/images/models/prop_cel_cartons.jpg' },
+        { label: 'Full Sheet', src: 'assets/images/web/page_15.jpg' }
       ]
     },
     {
       id: 'sculpt-hand-ice',
       category: 'weapons',
-      title: 'Frozen Monster Claw Diorama',
-      spec: 'Digital Sculpt • Ice & Claws',
+      title: 'Hand on Crystalline Pedestal',
+      spec: '3D Sculpt & Render • Prop Study',
       thumb: 'assets/images/models/sculpt_hand_ice.jpg',
       stageClass: 'stage-contain stage-dark',
-      desc: 'Sculpted demonic beast hand encased in glacial ice crystals, featuring sharp curved talons and frozen skin details.',
+      desc: 'Sculpted hand emerging from a rocky crystalline pedestal with dramatic rim lighting.',
       highlights: [
-        'Hard-edge crystalline facets sculpted alongside organic tendon tension',
-        'Translucent ice shader with interior light refraction',
-        'Miniature diorama presentation'
+        'Organic hand anatomy combined with faceted crystal forms'
       ],
-      software: ['Pixologic ZBrush', 'Substance 3D Painter'],
+      software: ['ZBrush', 'Blender'],
       views: [
-        { label: 'Frozen Claw Sculpt', src: 'assets/images/models/sculpt_hand_ice.jpg' }
+        { label: 'Hand Pedestal Render', src: 'assets/images/models/sculpt_hand_ice.jpg' },
+        { label: 'Full Sheet', src: 'assets/images/web/page_09.jpg' }
       ]
     },
     {
       id: 'prop-donut-sweets',
       category: 'weapons',
-      title: 'Stylized Glazed Donuts & Sweets',
-      spec: 'Food & Candy Props • We Are Chouri',
+      title: 'Stylized Bakery & Sweet Props',
+      spec: 'Game Props • We Are Chouri',
       thumb: 'assets/images/models/prop_donut.jpg',
       stageClass: 'stage-contain stage-chouri',
-      desc: 'Mouth-watering collection of pastries: glazed strawberry donuts, chocolate icing twists, candy spheres, and fresh berries.',
+      desc: 'Assortment of stylized dessert props including glazed donuts, macarons, waffles, and strawberries.',
       highlights: [
-        'Glossy sugar glaze roughness maps with subsurface scattering',
-        'Colorful palette designed for playful puzzle reward items',
-        'Part of the 15-prop Fantasy Sweets collection'
+        'Part of the 15-piece Candyland prop kit for We Are Chouri'
       ],
-      software: ['Autodesk Maya', 'Substance 3D Painter', 'Unity Engine'],
+      software: ['Blender', 'Autodesk Maya', 'Substance 3D Painter'],
       views: [
-        { label: 'Glazed Donut Model', src: 'assets/images/models/prop_donut.jpg' },
-        { label: 'Fresh Strawberry Model', src: 'assets/images/models/prop_strawberry.jpg' },
-        { label: '15 Fantasy Props Sheet', src: 'assets/images/web/page_04.jpg' }
+        { label: 'Glazed Donut', src: 'assets/images/models/prop_donut.jpg' },
+        { label: 'Strawberry Prop', src: 'assets/images/models/prop_strawberry.jpg' },
+        { label: 'Bakery Row', src: 'assets/images/models/props_bakery_sweets.jpg' },
+        { label: 'All 15 Props Sheet', src: 'assets/images/web/page_04.jpg' }
       ]
     },
     {
       id: 'prop-candle-mushroom',
       category: 'weapons',
-      title: 'Bioluminescent Mushrooms & Candles',
-      spec: 'Fantasy Props • Environment Dressing',
+      title: 'Fantasy Candle, Mushroom & Candy Props',
+      spec: 'Game Props • We Are Chouri',
       thumb: 'assets/images/models/prop_candle.jpg',
       stageClass: 'stage-contain stage-chouri',
-      desc: 'Whimsical glowing fungal growths, melting wax candles, and candy-colored mystical orbs.',
+      desc: 'Whimsical melting candle, spotted mushroom, and candy sphere props created for fantasy level dressing.',
       highlights: [
-        'Translucent wax and fungal caps with interior glow shaders',
-        'Varied sizes for scatter spawning across forest terrains',
-        'Hand-painted gradient texturing'
+        'Soft stylized gradients and clean low-poly silhouettes'
       ],
-      software: ['Autodesk Maya', 'Substance 3D Painter', 'Unity Engine'],
+      software: ['Blender', 'Autodesk Maya', 'Substance 3D Painter'],
       views: [
-        { label: 'Candle Prop Model', src: 'assets/images/models/prop_candle.jpg' },
-        { label: 'Mushroom Prop Model', src: 'assets/images/models/prop_mushroom.jpg' },
-        { label: '15 Fantasy Props Sheet', src: 'assets/images/web/page_04.jpg' }
+        { label: 'Fantasy Candle', src: 'assets/images/models/prop_candle.jpg' },
+        { label: 'Mushroom Prop', src: 'assets/images/models/prop_mushroom.jpg' },
+        { label: 'Candy Sphere', src: 'assets/images/models/prop_candy_sphere.jpg' },
+        { label: 'All 15 Props Sheet', src: 'assets/images/web/page_04.jpg' }
       ]
     },
     {
       id: 'prop-relic-beast',
       category: 'weapons',
-      title: 'Ancient Monster Relic Artifact',
-      spec: 'Relic Prop • Lore & Narrative',
+      title: 'Ancient Relic & Sweet Set',
+      spec: 'Game Props • We Are Chouri',
       thumb: 'assets/images/models/prop_relic_beast.jpg',
       stageClass: 'stage-contain stage-chouri',
-      desc: 'Mysterious gold-inlaid ceremonial beast figurine discovered in ancient dungeon ruins, radiating arcane power.',
+      desc: 'Collectible relic figurine and stylized environmental props designed for puzzle stages.',
       highlights: [
-        'Polished antique gold inlays with patina corrosion',
-        'Mythological creature silhouette',
-        'Quest objective item in We Are Chouri'
+        'Optimized game-ready UVs and hand-painted details'
       ],
-      software: ['Autodesk Maya', 'Substance 3D Painter', 'Unity Engine'],
+      software: ['Blender', 'Autodesk Maya', 'Substance 3D Painter'],
       views: [
-        { label: 'Relic Figurine Model', src: 'assets/images/models/prop_relic_beast.jpg' },
-        { label: 'Ancient Relics Roster', src: 'assets/images/models/props_ancient_relics.jpg' },
-        { label: '15 Fantasy Props Sheet', src: 'assets/images/web/page_04.jpg' }
+        { label: 'Relic Prop', src: 'assets/images/models/prop_relic_beast.jpg' },
+        { label: 'Prop Collection', src: 'assets/images/models/props_ancient_relics.jpg' },
+        { label: 'All 15 Props Sheet', src: 'assets/images/web/page_04.jpg' }
       ]
     },
 
-    // ---------------- SHADERS & MOTION (3 Items) ----------------
+    // ---------------- ANIMATION & SHADERS (3 Items) ----------------
     {
       id: 'anim-chouri-cutscene',
       category: 'shaders',
-      title: 'We Are Chouri 3D Cinematic Cutscene',
-      spec: 'Cutscene Animation • Narrative Cinema',
+      title: 'We Are Chouri — 3D Cutscene Animation',
+      spec: '3D Cutscene • Unity Timeline',
       thumb: 'assets/images/crops/anim_chouri.jpg',
       stageClass: '',
       videoId: '4QMDKKF5QoQ',
-      desc: 'Full 3D cinematic opening cutscene for We Are Chouri, featuring camera staging, comedic character acting, facial lip sync, and environment lighting.',
+      desc: 'In-engine Unity opening cutscene (“Chouri — Wake Up in the Forest”), featuring camera staging, character acting, and lighting.',
       highlights: [
-        'Keyframed character acting with dynamic camera angles',
-        'Seamless integration into Unity real-time cutscene timeline',
-        'Live video showcase playable directly in modal viewer'
+        'Directed and animated in Unity Engine',
+        'Playable YouTube video directly in the stage viewer'
       ],
-      software: ['Autodesk Maya', 'Unity Timeline', 'Premiere Pro'],
-      links: [{ label: 'Watch on YouTube', url: 'https://youtu.be/4QMDKKF5QoQ' }],
+      software: ['Unity Engine', 'Autodesk Maya', 'Cinemachine'],
+      links: [{ label: 'Watch on YouTube ↗', url: 'https://youtu.be/4QMDKKF5QoQ' }],
       views: [
-        { label: 'Full 3D Cinematic Video', videoId: '4QMDKKF5QoQ' },
-        { label: 'Cutscene Keyframe Stills', src: 'assets/images/crops/anim_chouri.jpg' },
-        { label: 'Cutscene Sheet', src: 'assets/images/web/page_08.jpg' }
+        { label: 'Play Cutscene Video', videoId: '4QMDKKF5QoQ', thumb: 'assets/images/crops/anim_chouri.jpg' },
+        { label: 'Cutscene Stills', src: 'assets/images/crops/anim_chouri.jpg' },
+        { label: 'Animation Sheet', src: 'assets/images/web/page_08.jpg' }
       ]
     },
     {
       id: 'anim-creature-motion',
       category: 'shaders',
-      title: 'Four-Armed Creature Run Cycle',
-      spec: 'Creature Animation • Locomotion Cycle',
+      title: 'Four-Armed Creature Run Cycle Animation',
+      spec: '3D Animation • Locomotion',
       thumb: 'assets/images/crops/anim_boss_run.jpg',
       stageClass: '',
       videoId: 'wsLVAP0mqXw',
-      desc: 'High-energy charging run cycle for the Four-Armed Mutant Boss, balancing heavy torso weight with aggressive alternating arm swings.',
+      desc: 'Multi-limbed character locomotion and color-variation animation reel.',
       highlights: [
-        'Weight shift and follow-through animated across 4 arms and 2 legs',
-        'Seamless looping locomotion ready for game engine blend trees',
-        'Live gameplay motion breakdown video'
+        'Dynamic weight shifts across four arms and bipedal legs'
       ],
-      software: ['Autodesk Maya', 'Unity Engine'],
-      links: [{ label: 'Watch on YouTube', url: 'https://www.youtube.com/watch?v=wsLVAP0mqXw' }],
+      software: ['Autodesk Maya', '3D Animation'],
+      links: [{ label: 'Watch on YouTube ↗', url: 'https://www.youtube.com/watch?v=wsLVAP0mqXw' }],
       views: [
-        { label: 'Run Cycle Video', videoId: 'wsLVAP0mqXw' },
-        { label: 'Motion Keyframe Stills', src: 'assets/images/crops/anim_boss_run.jpg' },
+        { label: 'Play Animation Reel', videoId: 'wsLVAP0mqXw', thumb: 'assets/images/crops/anim_boss_run.jpg' },
+        { label: 'Animation Stills', src: 'assets/images/crops/anim_boss_run.jpg' },
         { label: 'Animation Sheet', src: 'assets/images/web/page_08.jpg' }
       ]
     },
     {
       id: 'shader-fresnel-ducks',
       category: 'shaders',
-      title: 'Wireframe, Fresnel & Emissive Shaders',
-      spec: 'Custom Shaders • Unity Shader Graph',
+      title: 'Material, Outline & Fresnel Shader Studies',
+      spec: 'Shader Look-Dev • 3D Rendering',
       thumb: 'assets/images/models/shader_fresnel_ducks.jpg',
       stageClass: 'stage-contain stage-brown',
-      desc: 'Suite of custom real-time shaders including rim-lit Fresnel glow, procedural wireframe contour outlines, and glass refraction.',
+      desc: 'Look-development studies exploring emissive rim glow, contour wireframe outlines, and refractive glass shaders.',
       highlights: [
-        'Node-based shader graph workflows in Unity Universal Render Pipeline (URP)',
-        'Controllable rim color, falloff exponent, and pulse speed parameters',
-        'Refractive translucent glass material with chromatic dispersion'
+        'Fresnel rim lighting, toon contour outlines, and glass caustics'
       ],
-      software: ['Unity Shader Graph', 'HLSL / C#', 'Autodesk Maya'],
+      software: ['Blender', 'Autodesk Maya', 'Shader Graph'],
       views: [
-        { label: 'Fresnel & Wireframe Showcase', src: 'assets/images/models/shader_fresnel_ducks.jpg' },
-        { label: 'Glass Sphere Refraction', src: 'assets/images/models/shader_glass_sphere.jpg' },
-        { label: 'Shader Tech Sheet', src: 'assets/images/web/page_16.jpg' }
+        { label: 'Fresnel & Outline Shaders', src: 'assets/images/models/shader_fresnel_ducks.jpg' },
+        { label: 'Glass Refraction Study', src: 'assets/images/models/shader_glass_sphere.jpg' },
+        { label: 'Shaders Sheet', src: 'assets/images/web/page_16.jpg' }
       ]
     },
 
-    // ---------------- CONCEPT & 2D (3 Items) ----------------
+    // ---------------- 2D & CONCEPT ART (3 Items) ----------------
     {
       id: 'game-oxie-death',
       category: 'art2d',
-      title: 'OXIE DEATH (OxieRun) — Game Jam Art',
-      spec: 'Key Art & GDD • 48H Game Jam',
+      title: 'OXIE DEATH (OxieRun) — 48H Game Jam Art',
+      spec: 'Key Art & Game Design • 2026',
       thumb: 'assets/images/crops/oxie_death_banner.jpg',
       stageClass: '',
-      desc: 'Key visual astronaut artwork, title typography, 2D sprite art, and Game Design Document created under the 48-hour Deadline Game Jam.',
+      desc: 'Key visual astronaut illustration, logo banner, and Game Design Document created for the 48-Hour Deadline Game Jam.',
       highlights: [
-        'High-resolution digital illustration with vibrant neon cosmos palette',
-        'Complete Game Design Document (GDD) detailing gameplay loops and hazards',
-        'Created rapidly within a strict 48-hour competitive sprint'
+        'Astronaut hero key art and hand-lettered OXIE DEATH branding',
+        'Designed core oxygen-survival platforming mechanics'
       ],
-      software: ['Photoshop', 'Game Design', '2D Digital Art'],
+      software: ['Photoshop', 'Digital Illustration', 'Game Design'],
       views: [
-        { label: 'Title Banner', src: 'assets/images/crops/oxie_death_banner.jpg' },
-        { label: 'Astronaut Key Visual', src: 'assets/images/crops/oxie_death_keyart.jpg' }
+        { label: 'OXIE DEATH Banner', src: 'assets/images/crops/oxie_death_banner.jpg' },
+        { label: 'Astronaut Key Art', src: 'assets/images/crops/oxie_death_keyart.jpg' }
       ]
     },
     {
       id: 'art2d-horror-ui',
       category: 'art2d',
-      title: 'Horror UI Interface & HUD Layouts',
-      spec: 'UI/UX Design • Graphic Design',
+      title: 'Game UI, HUD & Menu Design',
+      spec: 'UX/UI Design • Game Interfaces',
       thumb: 'assets/images/crops/horror_hud.jpg',
       stageClass: '',
-      desc: 'Atmospheric user interface layouts, inventory screens, health monitors, and main menu systems designed for survival horror games.',
+      desc: 'User interface layouts, HUD overlays, title screens, and menu systems designed for survival horror and action games.',
       highlights: [
-        'Minimalist, high-contrast HUD maintaining immersion during horror encounters',
-        'Distressed typography, grunge textures, and chromatic aberration effects',
-        'Mobile and desktop responsive game UI wireframes'
+        'Custom HUD icons, health bars, and responsive menu wireframes'
       ],
-      software: ['Adobe Photoshop', 'Adobe Illustrator', 'Figma'],
+      software: ['Photoshop', 'Illustrator', 'Figma'],
       views: [
-        { label: 'Horror Game HUD', src: 'assets/images/crops/horror_hud.jpg' },
-        { label: 'Main Menu Layout', src: 'assets/images/crops/horror_menu.jpg' },
-        { label: 'Game UI Sheet', src: 'assets/images/web/page_18.jpg' },
-        { label: 'UI Components Sheet', src: 'assets/images/web/page_20.jpg' }
+        { label: 'Horror HUD', src: 'assets/images/crops/horror_hud.jpg' },
+        { label: 'Menu Interface', src: 'assets/images/crops/horror_menu.jpg' },
+        { label: 'Game UI Sheet 18', src: 'assets/images/web/page_18.jpg' },
+        { label: 'Game UI Sheet 20', src: 'assets/images/web/page_20.jpg' }
       ]
     },
     {
       id: 'art2d-illustrations',
       category: 'art2d',
-      title: 'Stylized Character Concepts & Art',
-      spec: 'Digital Illustration • Concept Art',
+      title: '2D Character Sheets & Digital Illustrations',
+      spec: '2D Art • Concept & Illustration',
       thumb: 'assets/images/crops/noodle_art.jpg',
       stageClass: '',
-      desc: 'Collection of 2D character concept sketches, vector portraits, and whimsical digital food illustrations.',
+      desc: '2D character turnaround sheets, vector portraits, and digital paintings.',
       highlights: [
-        'Expressive character silhouettes serving as foundation for 3D modeling',
-        'Vibrant color palette and dynamic cel-shaded brushwork',
-        'Portfolio pages 21-24 visual development gallery'
+        'Character design turnaround sheets, vector art, and food illustration'
       ],
-      software: ['Adobe Photoshop', 'Procreate', 'Adobe Illustrator'],
+      software: ['Procreate', 'Photoshop', 'Illustrator'],
       views: [
-        { label: 'Whimsical Food Illustration', src: 'assets/images/crops/noodle_art.jpg' },
-        { label: 'Character Sheet 21', src: 'assets/images/web/page_21.jpg' },
-        { label: 'Character Sheet 22', src: 'assets/images/web/page_22.jpg' },
-        { label: 'Vector Art Sheet 23', src: 'assets/images/web/page_23.jpg' },
-        { label: 'Illustration Sheet 24', src: 'assets/images/web/page_24.jpg' }
+        { label: 'Digital Painting', src: 'assets/images/crops/noodle_art.jpg' },
+        { label: '2D Character Sheet', src: 'assets/images/web/page_21.jpg' },
+        { label: 'Illustrations 22', src: 'assets/images/web/page_22.jpg' },
+        { label: 'Vector Portraits 23', src: 'assets/images/web/page_23.jpg' },
+        { label: 'Artwork Sheet 24', src: 'assets/images/web/page_24.jpg' }
       ]
     }
   ];
 
   // ==========================================================================
-  // 2. GAME PROJECTS DATABASE (6 Interactive Games)
+  // 2. CURATED 6 GAME PROJECTS MODAL DATA
   // ==========================================================================
   const GAMES_DATA = {
     'game-we-are-chouri': {
-      category: 'GAME PRODUCTION',
+      category: 'GAME PROJECT • 2026',
       title: 'We Are Chouri — 2-Player Co-op Adventure',
-      desc: '2-Player split-screen puzzle action adventure. Solely responsible for 3D character modeling (Guidi & Zeppe), enemy creatures, fantasy shrine environments, and in-game 3D cutscenes.',
+      desc: 'Split-screen 3D puzzle adventure built in Unity. Designed and modeled the playable duo Guidi & Zeppe, enemy creatures, 15 fantasy props, shrine environments, and directed the opening 3D cutscene.',
       highlights: [
-        'Modeled, rigged, and animated playable heroes Guidi & Zeppe',
-        'Built Japanese mountain shrine environments, Torii gates, and caverns',
-        'Created 15 collectible fantasy sweets & ancient relic props',
-        'Directed and animated full 3D cinematic opening cutscene'
+        'Playable 3D heroes Guidi & Zeppe from concept to rigged models',
+        'Monsters, UV-unwrapped lanterns, and 15 Candyland props',
+        'In-engine Unity shrine & suspension bridge environments',
+        'Opening 3D cutscene (“Wake Up in the Forest”)'
       ],
-      software: ['Autodesk Maya', 'Substance 3D Painter', 'Unity Engine', 'Git / GitHub'],
+      software: ['Unity', 'Autodesk Maya', 'Blender', 'Substance 3D Painter'],
       views: [
-        { label: 'Character Lineup', src: 'assets/images/crops/chouri_characters.jpg' },
-        { label: 'Cutscene Animation Video', videoId: '4QMDKKF5QoQ' },
-        { label: 'Torii Shrine Environment', src: 'assets/images/crops/chouri_shrine.jpg' },
-        { label: 'Hanging Bridge Gameplay', src: 'assets/images/crops/chouri_bridge.jpg' },
-        { label: 'Character Sheet', src: 'assets/images/web/page_02.jpg' }
+        { label: 'Characters Sheet', src: 'assets/images/web/page_02.jpg' },
+        { label: '3D Cutscene Video', videoId: '4QMDKKF5QoQ', thumb: 'assets/images/crops/anim_chouri.jpg' },
+        { label: 'Monsters & UVs', src: 'assets/images/web/page_03.jpg' },
+        { label: '15 Candy Props', src: 'assets/images/web/page_04.jpg' },
+        { label: 'In-Engine World', src: 'assets/images/web/page_05.jpg' }
       ]
     },
     'game-wingbeat': {
-      category: 'GAME PRODUCTION',
-      title: 'Wingbeat — Stylized 3D Party Simulation',
-      desc: 'Vibrant party simulation game set across whimsical floating islands. Modeled the centerpiece Kraken & Tiki Island diorama, twisted fantasy foliage, and interactive props.',
+      category: 'GAME PROJECT • 2026',
+      title: 'Wingbeat — 3D Party / Simulation Game',
+      desc: 'Colorful stylized 3D game set across floating islands. Modeled the Kraken & Tiki Island diorama, twisted fantasy trees, and decorative props.',
       highlights: [
-        'Modeled the stylized tropical island with giant magenta Kraken tentacles',
-        'Created modular Tiki totems, docks, and glowing crystal props',
-        'Crafted stylized twisted fantasy trees with volumetric cloud foliage',
-        'Fully playable on itch.io'
+        'Low-poly Kraken & Tiki Island 3D diorama',
+        'Stylized twisted fantasy trees in multiple colorways',
+        'Playable live on itch.io'
       ],
-      software: ['Autodesk Maya', 'Substance 3D Painter', 'Unity Engine'],
-      links: [{ label: 'Play Wingbeat on itch.io', url: 'https://newskung.itch.io/wingbeat' }],
+      software: ['Autodesk Maya', 'Substance 3D Painter', 'Unity'],
+      links: [{ label: 'Play Wingbeat on itch.io ↗', url: 'https://newskung.itch.io/wingbeat' }],
       views: [
-        { label: 'Kraken & Tiki Island Diorama', src: 'assets/images/models/env_kraken_island.jpg' },
+        { label: 'Kraken Island Diorama', src: 'assets/images/models/env_kraken_island.jpg' },
         { label: 'Stylized Fantasy Trees', src: 'assets/images/models/env_fantasy_trees.jpg' },
-        { label: 'Island Overview Sheet', src: 'assets/images/web/page_13.jpg' }
+        { label: 'Island Sheet', src: 'assets/images/web/page_13.jpg' },
+        { label: 'Trees Sheet', src: 'assets/images/web/page_14.jpg' }
       ]
     },
     'game-oxie-death': {
-      category: '48-HOUR GAME JAM',
+      category: '48-HOUR GAME JAM • 2026',
       title: 'OXIE DEATH (OxieRun) — Game Jam Project',
-      desc: 'Fast-paced action runner developed during the 48-Hour Deadline Game Jam. Illustrated astronaut key visual, title branding, and designed core gameplay loops.',
+      desc: 'Sci-fi survival platformer created during the 48-Hour Deadline Game Jam. Illustrated the astronaut key art, title logo banner, and authored the Game Design Document.',
       highlights: [
-        'High-resolution astronaut character key visual with cosmic nebula lighting',
-        'Hand-drawn title banner typography and branding identity',
-        'Structured Game Design Document (GDD) with obstacle mechanics',
-        'Completed under strict 48-hour competitive game jam deadline'
+        'Full-resolution astronaut key visual & title banner',
+        'Oxygen-depletion survival runner mechanics'
       ],
-      software: ['Digital Painting', 'Adobe Photoshop', 'Game Design'],
+      software: ['Photoshop', 'Digital Illustration', 'Game Design'],
       views: [
-        { label: 'Title Banner', src: 'assets/images/crops/oxie_death_banner.jpg' },
-        { label: 'Astronaut Key Visual', src: 'assets/images/crops/oxie_death_keyart.jpg' }
+        { label: 'OXIE DEATH Banner', src: 'assets/images/crops/oxie_death_banner.jpg' },
+        { label: 'Astronaut Key Art', src: 'assets/images/crops/oxie_death_keyart.jpg' }
       ]
     },
     'game-no-more-rat': {
-      category: 'ROBLOX GAME PRODUCTION',
+      category: 'ROBLOX GAME PROJECT',
       title: 'No More Rat : Down The Drain',
-      desc: 'Atmospheric subterranean rodent dungeon crawler live on Roblox. Designed 6 unique mutant rat bosses, sewer dungeons, combat rigs, and weapon sets.',
+      desc: 'Hack-and-slash action game on Roblox where players control an exterminator hamster battling mutant rats. Modeled the hero and 6 boss and enemy creatures.',
       highlights: [
-        'Created 6 mutant boss monsters (Four-Armed, Dark Demon, Spiky Beast, etc.)',
-        'Rigged and animated heavy combat attacks and quadruped locomotion',
-        'Modeled modular sewer pipes, tunnels, and detective trenchcoat hero',
-        'Live title actively playable on Roblox platform'
+        'Four-Armed Mutant Rat Boss, Dark Rat Demon, and Spiky Beast Rat',
+        'Toxic Mutant Rat, Spear Rider, Kimono Rat, and Trenchcoat Hamster Hero',
+        'Live playable game on Roblox'
       ],
       software: ['Blender', 'Substance 3D Painter', 'Roblox Studio'],
-      links: [{ label: 'Play on Roblox', url: 'https://www.roblox.com/games/79475326799719/No-More-Rat' }],
+      links: [{ label: 'Play on Roblox ↗', url: 'https://www.roblox.com/games/79475326799719/No-More-Rat' }],
       views: [
-        { label: 'Dungeon Boss Showcase', src: 'assets/images/crops/roblox_keyart.jpg' },
-        { label: 'Four-Armed Run Cycle', videoId: 'wsLVAP0mqXw' },
-        { label: 'Creature Roster Sheet', src: 'assets/images/web/page_07.jpg' },
-        { label: 'Gameplay Screenshot', src: 'assets/images/crops/roblox_gameplay.jpg' }
+        { label: 'Roblox Showcase Sheet', src: 'assets/images/web/page_06.jpg' },
+        { label: 'Creature Lineup Sheet', src: 'assets/images/web/page_07.jpg' },
+        { label: 'Four-Arm Run Cycle', videoId: 'wsLVAP0mqXw', thumb: 'assets/images/crops/anim_boss_run.jpg' }
       ]
     },
     'game-juukie': {
-      category: 'GAME PRODUCTION',
+      category: 'GAME PROJECT • UNITY',
       title: 'Juukie!! The Mouse: Adventures',
-      desc: 'Dynamic 3D endless runner game. Modeled low-poly stage modules, collectible cheese props, animated player character, and obstacle hazards in Unity.',
+      desc: '3D endless runner built in Unity featuring modular stage segments, obstacles, and custom UI.',
       highlights: [
-        'Low-poly stylized environment tracks optimized for high frame rates',
-        'Collectible cheese items and animated environmental obstacles',
-        'Open source repository available on GitHub'
+        '3D environment assets, obstacle prefabs, and UI HUD',
+        'Source repository available on GitHub'
       ],
-      software: ['Unity Engine', 'Autodesk Maya', 'C# Scripting'],
-      links: [{ label: 'View GitHub Repository', url: 'https://github.com/aiyoyooo/EndlessRun_Project' }],
+      software: ['Unity', 'Autodesk Maya', 'C#'],
+      links: [{ label: 'View GitHub Repository ↗', url: 'https://github.com/aiyoyooo/EndlessRun_Project' }],
       views: [
-        { label: 'Gameplay Showcase', src: 'assets/images/web/page_18.jpg' },
-        { label: 'UI Layout Sheet', src: 'assets/images/crops/horror_hud.jpg' }
+        { label: 'Juukie & Game UI Sheet', src: 'assets/images/web/page_18.jpg' }
       ]
     },
     'game-dominion': {
-      category: 'GAME PRODUCTION',
+      category: 'STRATEGY CARD GAME',
       title: 'Dominion’s War: The Card Game',
-      desc: 'Tactical sci-fi card battler. Illustrated unit cards, designed battlefield game board layout, and crafted responsive player HUD and menu interfaces.',
+      desc: 'Turn-based strategy card game. Designed unit card frames, battlefield board layout, and player HUD.',
       highlights: [
-        'Sci-fi military unit card artwork with distinct rarity borders',
-        'Tactical grid board with deployable combat lanes',
-        'Intuitive card inspection and mana cost UI elements'
+        'Card frame illustrations, tactical board grid, and UI layout'
       ],
-      software: ['Adobe Photoshop', 'Figma', 'UI/UX Game Design'],
+      software: ['Photoshop', 'Illustrator', 'Figma'],
       views: [
-        { label: 'Card Game Board Layout', src: 'assets/images/crops/dominion_cardgame.jpg' },
-        { label: 'Horror UI Components', src: 'assets/images/crops/horror_menu.jpg' }
+        { label: 'Dominion’s War Sheet', src: 'assets/images/web/page_19.jpg' },
+        { label: 'Card Game Closeup', src: 'assets/images/crops/dominion_cardgame.jpg' }
       ]
     }
   };
 
-  // Combine databases for quick modal lookup
-  const ALL_ENTRIES = {};
-  GALLERY_ITEMS.forEach(item => { ALL_ENTRIES[item.id] = item; });
-  Object.keys(GAMES_DATA).forEach(key => { ALL_ENTRIES[key] = GAMES_DATA[key]; });
-
   // ==========================================================================
-  // 3. GALLERY RENDERING & FILTERING
+  // 3. PURE VISUAL GALLERY RENDERING, FILTERING & VIEW SWITCHING
   // ==========================================================================
   const galleryGrid = document.getElementById('pureGalleryGrid');
   const filterButtons = document.querySelectorAll('.gallery-filter-btn');
@@ -928,46 +855,43 @@
 
   let currentFilter = 'all';
 
+  function getFilteredItems() {
+    if (currentFilter === 'all') return GALLERY_ITEMS;
+    return GALLERY_ITEMS.filter(item => item.category === currentFilter);
+  }
+
   function renderGallery() {
     if (!galleryGrid) return;
+    const items = getFilteredItems();
 
-    const filtered = currentFilter === 'all'
-      ? GALLERY_ITEMS
-      : GALLERY_ITEMS.filter(item => item.category === currentFilter);
-
-    galleryGrid.innerHTML = filtered.map(item => {
+    galleryGrid.innerHTML = items.map(item => {
       const stageClass = item.stageClass ? ` ${item.stageClass}` : '';
-      const tags = (item.software || []).slice(0, 2).map(tag => `<span class="gallery-card-tag">${tag}</span>`).join('');
+      const indicator = item.videoId
+        ? '&#9654; Video'
+        : item.views && item.views.length > 1
+          ? `${item.views.length} Views`
+          : '';
 
       return `
-        <article class="gallery-card" data-modal-id="${item.id}">
-          <div class="gallery-card-media${stageClass}">
-            <span class="gallery-card-badge">${item.category.toUpperCase()}</span>
-            <img src="${item.thumb}" alt="${item.title}" class="gallery-card-img" loading="lazy" />
-          </div>
-          <div class="gallery-card-body">
-            <div class="gallery-card-meta">
-              <span>${item.spec || '3D Asset'}</span>
-            </div>
-            <h3 class="gallery-card-title">${item.title}</h3>
-            <div class="gallery-card-tags">
-              ${tags}
-            </div>
+        <article
+          class="pure-gallery-item${stageClass}"
+          data-modal-id="${item.id}"
+          tabindex="0"
+          role="button"
+          aria-label="${item.title}"
+        >
+          <img src="${item.thumb}" alt="${item.title}" loading="lazy" />
+          ${indicator ? `<span class="gallery-item-badge">${indicator}</span>` : ''}
+          <div class="gallery-item-caption">
+            <span class="gallery-item-cat">${item.spec}</span>
+            <h3 class="gallery-item-title">${item.title}</h3>
           </div>
         </article>
       `;
     }).join('');
-
-    // Attach click listeners to cards
-    galleryGrid.querySelectorAll('.gallery-card').forEach(card => {
-      card.addEventListener('click', () => {
-        const modalId = card.getAttribute('data-modal-id');
-        openModal(modalId);
-      });
-    });
   }
 
-  // Filter Buttons
+  // Filter buttons
   filterButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       filterButtons.forEach(b => b.classList.remove('active'));
@@ -979,26 +903,26 @@
         setTimeout(() => {
           renderGallery();
           galleryGrid.classList.remove('gallery-transitioning');
-        }, 180);
+        }, 150);
       }
     });
   });
 
-  // Size Switch (Grid vs Large)
+  // Grid Size Switch (2 Col Large / 3 Col Grid / 4 Col Compact)
   sizeSwitchButtons.forEach(btn => {
     btn.addEventListener('click', () => {
       sizeSwitchButtons.forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      const size = btn.getAttribute('data-size');
+      const size = btn.getAttribute('data-size') || 'grid';
       if (galleryGrid) {
-        galleryGrid.classList.remove('mode-grid', 'mode-large');
+        galleryGrid.classList.remove('mode-large', 'mode-grid', 'mode-compact');
         galleryGrid.classList.add(`mode-${size}`);
       }
     });
   });
 
   // ==========================================================================
-  // 4. ARTSTATION-STYLE LIGHTBOX MODAL
+  // 4. ARTSTATION SPLIT LIGHTBOX MODAL
   // ==========================================================================
   const artworkModal = document.getElementById('artworkModal');
   const modalBackdrop = document.getElementById('modalBackdrop');
@@ -1014,28 +938,33 @@
   const modalPrevBtn = document.getElementById('modalPrevBtn');
   const modalNextBtn = document.getElementById('modalNextBtn');
 
+  let activeModalList = GALLERY_ITEMS;
   let currentModalIndex = 0;
-  let activeEntryList = GALLERY_ITEMS;
 
   function openModal(id) {
     if (!artworkModal) return;
 
-    // Determine if it's a gallery item or game
-    const galleryIdx = GALLERY_ITEMS.findIndex(item => item.id === id);
-    if (galleryIdx !== -1) {
-      activeEntryList = GALLERY_ITEMS;
-      currentModalIndex = galleryIdx;
-    } else if (GAMES_DATA[id]) {
-      // Find within games
-      const gameKeys = Object.keys(GAMES_DATA);
-      const gameIdx = gameKeys.indexOf(id);
-      activeEntryList = gameKeys.map(k => ({ id: k, ...GAMES_DATA[k] }));
-      currentModalIndex = gameIdx !== -1 ? gameIdx : 0;
+    const filteredGallery = getFilteredItems();
+    const filteredIdx = filteredGallery.findIndex(item => item.id === id);
+
+    if (filteredIdx !== -1) {
+      activeModalList = filteredGallery;
+      currentModalIndex = filteredIdx;
     } else {
-      return;
+      const fullIdx = GALLERY_ITEMS.findIndex(item => item.id === id);
+      if (fullIdx !== -1 && !GAMES_DATA[id]) {
+        activeModalList = GALLERY_ITEMS;
+        currentModalIndex = fullIdx;
+      } else if (GAMES_DATA[id]) {
+        const gameKeys = Object.keys(GAMES_DATA);
+        activeModalList = gameKeys.map(k => ({ id: k, ...GAMES_DATA[k] }));
+        currentModalIndex = Math.max(0, gameKeys.indexOf(id));
+      } else {
+        return;
+      }
     }
 
-    displayModalContent(activeEntryList[currentModalIndex]);
+    displayModalContent(activeModalList[currentModalIndex]);
     artworkModal.classList.add('active');
     artworkModal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
@@ -1052,44 +981,32 @@
   function displayModalContent(entry) {
     if (!entry) return;
 
-    if (modalCategory) modalCategory.textContent = (entry.category || 'Artwork').toUpperCase();
+    if (modalCategory) modalCategory.textContent = entry.spec || entry.category || '3D ARTWORK';
     if (modalTitle) modalTitle.textContent = entry.title || '';
     if (modalDescription) modalDescription.textContent = entry.desc || '';
 
-    // Highlights
     if (modalHighlights) {
-      const items = entry.highlights || [];
-      modalHighlights.innerHTML = items.map(text => `<li>${text}</li>`).join('');
+      const list = entry.highlights || [];
+      modalHighlights.innerHTML = list.map(item => `<li>${item}</li>`).join('');
     }
 
-    // Software Tags
     if (modalSoftware) {
-      const software = entry.software || [];
-      modalSoftware.innerHTML = software.map(s => `<span class="as-tag-pill">${s}</span>`).join('');
+      const tools = entry.software || [];
+      modalSoftware.innerHTML = tools.map(t => `<span class="modal-tag-pill">${t}</span>`).join('');
     }
 
-    // External Link
     if (modalLinks) {
-      if (entry.links && entry.links.length > 0) {
-        modalLinks.innerHTML = entry.links.map(link => `
-          <a href="${link.url}" target="_blank" rel="noopener" class="as-btn-external">
-            <span>${link.label}</span>
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-              <polyline points="15 3 21 3 21 9"></polyline>
-              <line x1="10" y1="14" x2="21" y2="3"></line>
-            </svg>
-          </a>
-        `).join('');
-      } else {
-        modalLinks.innerHTML = '';
-      }
+      const links = entry.links || [];
+      modalLinks.innerHTML = links.map(l => `
+        <a href="${l.url}" target="_blank" rel="noopener" class="modal-btn-external">
+          <span>${l.label}</span>
+        </a>
+      `).join('');
     }
 
-    // Views & Stage
     const views = entry.views && entry.views.length > 0
       ? entry.views
-      : [{ label: 'Main View', src: entry.thumb }];
+      : [{ label: 'Render', src: entry.thumb }];
 
     renderStageView(views[0]);
 
@@ -1097,17 +1014,18 @@
       if (views.length > 1) {
         modalThumbsStage.style.display = 'flex';
         modalThumbsStage.innerHTML = views.map((v, i) => {
-          const imgSrc = v.src || entry.thumb;
+          const thumbSrc = v.thumb || v.src || entry.thumb;
           return `
-            <button class="as-thumb-btn${i === 0 ? ' active' : ''}" data-view-idx="${i}" title="${v.label}">
-              <img src="${imgSrc}" alt="${v.label}" />
+            <button type="button" class="modal-thumb-btn${i === 0 ? ' active' : ''}" data-view-idx="${i}">
+              <img src="${thumbSrc}" alt="${v.label}" />
+              <span>${v.label}</span>
             </button>
           `;
         }).join('');
 
-        modalThumbsStage.querySelectorAll('.as-thumb-btn').forEach(btn => {
+        modalThumbsStage.querySelectorAll('.modal-thumb-btn').forEach(btn => {
           btn.addEventListener('click', () => {
-            modalThumbsStage.querySelectorAll('.as-thumb-btn').forEach(b => b.classList.remove('active'));
+            modalThumbsStage.querySelectorAll('.modal-thumb-btn').forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
             const idx = parseInt(btn.getAttribute('data-view-idx') || '0', 10);
             renderStageView(views[idx]);
@@ -1122,7 +1040,6 @@
 
   function renderStageView(view) {
     if (!modalMediaStage || !view) return;
-
     if (view.videoId) {
       modalMediaStage.innerHTML = `
         <iframe
@@ -1133,198 +1050,164 @@
         ></iframe>
       `;
     } else if (view.src) {
-      modalMediaStage.innerHTML = `
-        <img src="${view.src}" alt="${view.label}" />
-      `;
+      modalMediaStage.innerHTML = `<img src="${view.src}" alt="${view.label}" />`;
     }
   }
 
-  // Modal navigation (prev/next)
-  function nextModalItem() {
-    currentModalIndex = (currentModalIndex + 1) % activeEntryList.length;
-    displayModalContent(activeEntryList[currentModalIndex]);
+  function stepModal(delta) {
+    if (!activeModalList.length) return;
+    currentModalIndex = (currentModalIndex + delta + activeModalList.length) % activeModalList.length;
+    displayModalContent(activeModalList[currentModalIndex]);
   }
 
-  function prevModalItem() {
-    currentModalIndex = (currentModalIndex - 1 + activeEntryList.length) % activeEntryList.length;
-    displayModalContent(activeEntryList[currentModalIndex]);
-  }
-
-  if (modalNextBtn) modalNextBtn.addEventListener('click', nextModalItem);
-  if (modalPrevBtn) modalPrevBtn.addEventListener('click', prevModalItem);
+  if (modalNextBtn) modalNextBtn.addEventListener('click', () => stepModal(1));
+  if (modalPrevBtn) modalPrevBtn.addEventListener('click', () => stepModal(-1));
   if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
   if (modalBackdrop) modalBackdrop.addEventListener('click', closeModal);
 
-  // Keyboard navigation
-  window.addEventListener('keydown', e => {
+  // Delegate clicks on any [data-modal-id] element
+  document.addEventListener('click', e => {
+    if (e.target.closest('a[href^="http"]')) return;
+    const trigger = e.target.closest('[data-modal-id]');
+    if (!trigger) return;
+    e.preventDefault();
+    const id = trigger.getAttribute('data-modal-id');
+    if (id) openModal(id);
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Enter' && document.activeElement && document.activeElement.hasAttribute('data-modal-id')) {
+      openModal(document.activeElement.getAttribute('data-modal-id'));
+      return;
+    }
     if (!artworkModal || !artworkModal.classList.contains('active')) return;
     if (e.key === 'Escape') closeModal();
-    if (e.key === 'ArrowRight') nextModalItem();
-    if (e.key === 'ArrowLeft') prevModalItem();
-  });
-
-  // Attach modal trigger to any static elements with [data-modal-id]
-  document.querySelectorAll('[data-modal-id]').forEach(elem => {
-    elem.addEventListener('click', e => {
-      // Don't trigger if user clicked an external <a> link inside the card
-      if (e.target.closest('a[href^="http"]')) return;
-      const modalId = elem.getAttribute('data-modal-id');
-      if (modalId) {
-        e.preventDefault();
-        openModal(modalId);
-      }
-    });
+    if (e.key === 'ArrowRight') stepModal(1);
+    if (e.key === 'ArrowLeft') stepModal(-1);
   });
 
   // ==========================================================================
-  // 5. MINIMALIST HERO BACKGROUND CAROUSEL
+  // 5. ARTIST MASTHEAD BANNER CAROUSEL
   // ==========================================================================
   const heroSlides = document.querySelectorAll('.hero-bg-media');
-  const heroSlideLabel = document.getElementById('hero-slide-label');
-  const heroSlideCurrent = document.getElementById('heroSlideCurrent');
   const heroDots = document.querySelectorAll('.hero-dot');
   const heroPrevBtn = document.getElementById('heroPrevBtn');
   const heroNextBtn = document.getElementById('heroNextBtn');
+  const heroSlideLabel = document.getElementById('hero-slide-label');
 
-  const SLIDE_LABELS = [
-    'We Are Chouri • 3D Characters',
-    'No More Rat • Boss Monsters',
-    'Wingbeat • Kraken Island Diorama',
-    'OXIE DEATH • 48H Game Jam Art'
+  const BANNER_LABELS = [
+    '3D ARTIST & GAME ASSETS • Sunset Alleyway — 3D Lighting & Environment',
+    '3D ARTIST & GAME ASSETS • We Are Chouri — In-Engine Unity Shrine',
+    '3D ARTIST & GAME ASSETS • Wingbeat — Kraken & Tiki Island 3D Diorama',
+    '3D ARTIST & GAME ASSETS • OXIE DEATH — 48H Game Jam Key Art',
+    '3D ARTIST & GAME ASSETS • Isometric Artist Studio — 3D Room Diorama'
   ];
 
-  let currentHeroSlide = 0;
-  let heroTimer = null;
+  let currentSlide = 0;
+  let bannerTimer = null;
 
-  function showHeroSlide(index) {
+  function showSlide(index) {
     if (!heroSlides.length) return;
-    currentHeroSlide = (index + heroSlides.length) % heroSlides.length;
-
-    heroSlides.forEach((slide, i) => {
-      slide.classList.toggle('active', i === currentHeroSlide);
-    });
-
-    heroDots.forEach((dot, i) => {
-      dot.classList.toggle('active', i === currentHeroSlide);
-    });
-
-    if (heroSlideCurrent) {
-      heroSlideCurrent.textContent = String(currentHeroSlide + 1).padStart(2, '0');
-    }
-    if (heroSlideLabel && SLIDE_LABELS[currentHeroSlide]) {
-      heroSlideLabel.textContent = SLIDE_LABELS[currentHeroSlide];
+    currentSlide = (index + heroSlides.length) % heroSlides.length;
+    heroSlides.forEach((s, i) => s.classList.toggle('active', i === currentSlide));
+    heroDots.forEach((d, i) => d.classList.toggle('active', i === currentSlide));
+    if (heroSlideLabel && BANNER_LABELS[currentSlide]) {
+      heroSlideLabel.textContent = BANNER_LABELS[currentSlide];
     }
   }
 
-  function startHeroTimer() {
-    stopHeroTimer();
-    heroTimer = setInterval(() => {
-      showHeroSlide(currentHeroSlide + 1);
-    }, 5500);
-  }
-
-  function stopHeroTimer() {
-    if (heroTimer) clearInterval(heroTimer);
+  function restartBannerTimer() {
+    if (bannerTimer) clearInterval(bannerTimer);
+    bannerTimer = setInterval(() => showSlide(currentSlide + 1), 5500);
   }
 
   if (heroNextBtn) {
     heroNextBtn.addEventListener('click', () => {
-      showHeroSlide(currentHeroSlide + 1);
-      startHeroTimer();
+      showSlide(currentSlide + 1);
+      restartBannerTimer();
     });
   }
   if (heroPrevBtn) {
     heroPrevBtn.addEventListener('click', () => {
-      showHeroSlide(currentHeroSlide - 1);
-      startHeroTimer();
+      showSlide(currentSlide - 1);
+      restartBannerTimer();
     });
   }
-  heroDots.forEach((dot, i) => {
+  heroDots.forEach((dot, idx) => {
     dot.addEventListener('click', () => {
-      showHeroSlide(i);
-      startHeroTimer();
+      showSlide(idx);
+      restartBannerTimer();
     });
   });
 
-  startHeroTimer();
+  restartBannerTimer();
 
   // ==========================================================================
-  // 6. SCROLL PROGRESS RIBBON & NAVBAR SCROLL BEHAVIOR
+  // 6. SCROLL PROGRESS & NAVIGATION SCROLLSPY
   // ==========================================================================
   const scrollProgressBar = document.getElementById('scrollProgressBar');
-  const navbar = document.getElementById('navbar');
   const navLinks = document.querySelectorAll('.nav-link');
-  const sections = document.querySelectorAll('section[id]');
+  const sections = ['home', 'artwork3d', 'gallery', 'gameproject', 'about', 'contact']
+    .map(id => document.getElementById(id))
+    .filter(Boolean);
 
   window.addEventListener('scroll', () => {
     const scrollY = window.scrollY;
     const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    const scrollPercent = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
-
     if (scrollProgressBar) {
-      scrollProgressBar.style.width = `${scrollPercent}%`;
+      scrollProgressBar.style.width = `${docHeight > 0 ? (scrollY / docHeight) * 100 : 0}%`;
     }
 
-    if (navbar) {
-      navbar.classList.toggle('scrolled', scrollY > 40);
-    }
-
-    // Active nav link highlight
-    let currentSection = '';
+    let currentSec = 'home';
     sections.forEach(sec => {
-      const top = sec.offsetTop - 120;
-      const height = sec.offsetHeight;
-      if (scrollY >= top && scrollY < top + height) {
-        currentSection = sec.getAttribute('id');
+      if (scrollY + 180 >= sec.offsetTop) {
+        currentSec = sec.id;
       }
     });
-
     navLinks.forEach(link => {
-      const href = link.getAttribute('href');
-      link.classList.toggle('active', href === `#${currentSection}`);
+      const isMatch = link.getAttribute('href') === `#${currentSec}`;
+      link.classList.toggle('active-link', isMatch);
     });
   }, { passive: true });
 
-  // Mobile menu toggle
   const menuToggle = document.getElementById('menuToggle');
   const navMenu = document.getElementById('navMenu');
   if (menuToggle && navMenu) {
     menuToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
+      const open = navMenu.classList.toggle('open');
+      menuToggle.setAttribute('aria-expanded', String(open));
     });
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
         navMenu.classList.remove('open');
+        menuToggle.setAttribute('aria-expanded', 'false');
       });
     });
   }
 
   // ==========================================================================
-  // 7. SCROLL REVEAL OBSERVER & PAGE LOAD CURTAIN
+  // 7. REVEAL ON SCROLL & CURTAIN
   // ==========================================================================
-  const revealElements = document.querySelectorAll('.reveal-on-scroll');
+  const revealEls = document.querySelectorAll('.reveal-on-scroll');
   if ('IntersectionObserver' in window) {
-    const observer = new IntersectionObserver((entries) => {
+    const obs = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-revealed');
-          observer.unobserve(entry.target);
+          obs.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.12 });
-
-    revealElements.forEach(el => observer.observe(el));
+    }, { threshold: 0.08 });
+    revealEls.forEach(el => obs.observe(el));
   } else {
-    revealElements.forEach(el => el.classList.add('is-revealed'));
+    revealEls.forEach(el => el.classList.add('is-revealed'));
   }
 
-  // Fade out page load curtain
   window.addEventListener('load', () => {
     const curtain = document.getElementById('pageTransitionCurtain');
     if (curtain) curtain.classList.add('loaded');
   });
 
-  // Initial gallery render
+  // Render initial gallery
   renderGallery();
-
 })();
